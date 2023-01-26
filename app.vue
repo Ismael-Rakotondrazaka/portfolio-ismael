@@ -18,6 +18,14 @@
 
     <AvatarUI class="w-full h-full max-w-[20rem] max-h-[20rem]" />
 
+    <CustomInput
+      id="name"
+      label="Name :"
+      placeholder="Your name"
+      :modelValue="name"
+      @update:modelValue="(newValue) => (name = newValue)"
+    />
+
     <p class="text-primary bg-secondary">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa vero
       repellendus expedita temporibus quisquam consequuntur odit pariatur unde
@@ -30,4 +38,6 @@
 
 <script setup>
 const { locale } = useI18n();
+
+const name = ref("");
 </script>
