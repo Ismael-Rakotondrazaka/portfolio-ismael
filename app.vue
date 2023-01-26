@@ -1,5 +1,7 @@
 <template>
   <div class="bg-sky-50">
+    <TheHeader />
+
     <h1 class="text-red-600 text-xl bg-red-600/10 text-center">Ismael</h1>
 
     <div>
