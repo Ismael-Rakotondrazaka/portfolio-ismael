@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="mb-5">
     <label v-if="label" :for="id" class="inline-block mb-1">
       {{ label }}
     </label>
 
     <input
-      class="block w-full border-2 outline-none border-secondary rounded-md focus:border-primary px-3 py-3 text-secondary"
+      class="block w-full border-2 outline-none border-secondary rounded-md focus:border-primary px-3 py-3 text-black"
       @input="$emit('update:modelValue', $event.target.value)"
       :placeholder="placeholder"
       :value="modelValue"
