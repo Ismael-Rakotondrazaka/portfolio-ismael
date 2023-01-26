@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-sky-50">
     <h1 class="text-red-600 text-xl bg-red-600/10 text-center">Ismael</h1>
 
     <div>
@@ -11,6 +11,10 @@
         <p>{{ $t("welcome") }}</p>
       </form>
     </div>
+
+    <p class="text-primary bg-secondary ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa vero repellendus expedita temporibus quisquam consequuntur odit pariatur unde aspernatur ratione!</p>
+
+    <h2 class="text-primary text-xl font-bold">Lorem, ipsum dolor.</h2>
   </div>
 </template>
 
