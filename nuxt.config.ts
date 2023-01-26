@@ -18,4 +18,16 @@ export default defineNuxtConfig({
   tailwindcss: {
     configPath: "./tailwind.config.js",
   },
+  css: [
+    "~/assets/styles/index.css",
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
+  build: {
+    transpile: [
+      "@fortawesome/fontawesome",
+      "@fortawesome/fontawesome-svg-core",
+      "@fortawesome/free-solid-svg-icons",
+      "@fortawesome/free-brands-svg-icons",
+    ],
+  },
 });
