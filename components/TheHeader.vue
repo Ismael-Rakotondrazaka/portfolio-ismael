@@ -1,7 +1,5 @@
 <template>
-  <header
-    class="fixed top-0 left-0 right-0 bg-secondary border-b-4 border-primary"
-  >
+  <header class="bg-secondary border-b-4 border-primary">
     <nav class="w-full h-full flex flex-row items-center justify-center gap-10">
       <NuxtLink
         v-for="(link, index) in links"
