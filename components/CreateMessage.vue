@@ -1,7 +1,7 @@
 <template>
   <div class="p-3 border-4 rounded-lg bg-sky-100 border-primary group">
     <h2
-      class="inline-block transition-colors text-secondary text-2xl font-bold mb-5 after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block group-hover:after:w-full"
+      class="inline-block transition-colors text-secondary text-2xl font-bold mb-5 after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block group-hover:after:w-full bg-move"
     >
       You can send me a message here
     </h2>

@@ -1,5 +1,7 @@
 <template>
   <main class="min-h-screen">
+    <TheWelcome />
+
     <h1 class="text-red-600 text-xl bg-red-600/10 text-center">Ismael</h1>
 
     <div>
@@ -15,8 +17,6 @@
     <ButtonUI> Lorem, ipsum dolor. </ButtonUI>
 
     <ButtonUI variant="outlined"> Lorem, ipsum dolor. </ButtonUI>
-
-    <AvatarUI class="w-full h-full max-w-[20rem] max-h-[20rem]" />
 
     <p class="text-primary bg-secondary">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa vero
