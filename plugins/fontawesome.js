@@ -5,6 +5,7 @@ import {
   faEnvelopeSquare,
   faGlobe,
   faPaperPlane,
+  faQuoteLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookSquare,
@@ -20,6 +21,7 @@ library.add(
   faEnvelopeSquare,
   faGlobe,
   faPaperPlane,
+  faQuoteLeft,
 
   // brands
   faFacebookSquare,

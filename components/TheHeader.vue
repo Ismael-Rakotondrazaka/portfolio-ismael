@@ -16,6 +16,10 @@
 <script setup>
 const links = ref([
   {
+    text: "About",
+    to: "/#about",
+  },
+  {
     text: "Experience",
     to: "/#experience",
   },

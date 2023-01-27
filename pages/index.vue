@@ -2,6 +2,8 @@
   <main class="min-h-screen">
     <TheWelcome />
 
+    <TheAbout />
+
     <h1 class="text-red-600 text-xl bg-red-600/10 text-center">Ismael</h1>
 
     <div>
