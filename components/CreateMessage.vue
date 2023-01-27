@@ -32,11 +32,14 @@
         cols=""
         rows=""
         placeholder="Your message"
-        class="block mb-5 w-full h-full p-3 resize-none border-2 rounded-md outline-none border-secondary focus:border-primary text-black"
+        class="block w-full h-full p-3 mb-5 text-black border-2 rounded-md outline-none resize-none border-secondary focus:border-primary"
       ></textarea>
 
       <div class="flex flex-row justify-end">
-        <ButtonUI type="submit">Send</ButtonUI>
+        <ButtonUI type="submit">
+          <FaIcon icon="fa-solid fa-paper-plane" class="mr-3"/>
+          Send
+        </ButtonUI>
       </div>
     </form>
   </div>

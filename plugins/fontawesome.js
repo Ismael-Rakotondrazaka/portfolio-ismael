@@ -1,13 +1,14 @@
 import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
-  faPhone,
-  faEnvelope,
+  faPhoneSquare,
+  faEnvelopeSquare,
   faGlobe,
+  faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import {
-  faFacebook,
-  faGithub,
+  faFacebookSquare,
+  faGithubSquare,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -15,13 +16,14 @@ config.autoAddCss = false;
 
 library.add(
   // solid
-  faPhone,
-  faEnvelope,
+  faPhoneSquare,
+  faEnvelopeSquare,
   faGlobe,
+  faPaperPlane,
 
   // brands
-  faFacebook,
-  faGithub,
+  faFacebookSquare,
+  faGithubSquare,
   faLinkedin
 );
 
