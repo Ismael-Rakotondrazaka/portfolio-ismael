@@ -1,15 +1,15 @@
 <template>
-  <footer class="w-full bg-secondary p-3 mt-32 border-t-4 border-primary">
-    <div id="contact" class="w-full flex flex-row items-center justify-evenly">
-      <div class="w-full max-w-md flex flex-col items-start gap-3">
+  <footer class="w-full p-3 mt-32 border-t-4 bg-secondary border-primary">
+    <div id="contact" class="flex flex-row items-center w-full justify-evenly">
+      <div class="flex flex-col items-start w-full max-w-md gap-3">
         <a
           v-for="(link, index) in links"
           :key="index"
           :href="link.href"
           target="_blank"
-          class="flex flex-row items-center justify-center text-white hover:text-primary transition-colors"
+          class="flex flex-row items-center justify-center text-white transition-colors hover:text-primary"
         >
-          <FaIcon :icon="link.icon" class="text-4xl mr-3" />
+          <FaIcon :icon="link.icon" class="mr-3 text-4xl" />
 
           <span
             class="inline-block after:block after:w-0 hover:after:w-full after:h-[0.15rem] after:bg-primary after:transition-all"
@@ -26,7 +26,7 @@
 
     <hr class="block w-1/2 mx-auto bg-white h-[0.15rem] my-7" />
 
-    <div class="text-center text-white my-5">
+    <div class="my-5 text-center text-white">
       &copy; copyright
       <a
         href="https://github.com/Ismael-Rakotondrazaka"
@@ -44,7 +44,7 @@
 const links = ref([
   {
     text: "Ismael-Rakotondrazaka",
-    icon: "fa-brands fa-github",
+    icon: "fa-brands fa-github-square",
     href: "https://www.github.com/Ismael-Rakotondrazaka",
   },
   {
@@ -54,17 +54,17 @@ const links = ref([
   },
   {
     text: "Ismael Rakotondrazaka",
-    icon: "fa-brands fa-facebook",
+    icon: "fa-brands fa-facebook-square",
     href: "https://www.facebook.com/ismaelrakotondrazaka",
   },
   {
     text: "ismaelrakotondrazaka@gmail.com",
-    icon: "fa-solid fa-envelope",
+    icon: "fa-solid fa-envelope-square",
     href: "mailto:ismaelrakotondrazaka@gmail.com",
   },
   {
     text: "+261 34 92 989 78",
-    icon: "fa-solid fa-phone",
+    icon: "fa-solid fa-phone-square",
     href: "tel:+261 34 92 989 78",
   },
 ]);
