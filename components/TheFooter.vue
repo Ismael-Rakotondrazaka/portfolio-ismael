@@ -7,12 +7,12 @@
           :key="index"
           :href="link.href"
           target="_blank"
-          class="flex flex-row items-center justify-center text-white transition-colors hover:text-primary"
+          class="flex flex-row items-center justify-center text-white transition-colors hover:text-primary group"
         >
           <FaIcon :icon="link.icon" class="mr-3 text-4xl" />
 
           <span
-            class="inline-block after:block after:w-0 hover:after:w-full after:h-[0.15rem] after:bg-primary after:transition-all"
+            class="inline-block after:block after:w-0 group-hover:after:w-full after:h-[0.15rem] after:bg-primary after:transition-all"
           >
             {{ link.text }}
           </span>
