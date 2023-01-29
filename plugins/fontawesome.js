@@ -6,11 +6,20 @@ import {
   faGlobe,
   faPaperPlane,
   faQuoteLeft,
+  faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookSquare,
+  faGitAlt,
+  faGithub,
   faGithubSquare,
   faLinkedin,
+  faJs,
+  faPhp,
+  faNodeJs,
+  faVuejs,
+  faLaravel,
+  faReact,
 } from "@fortawesome/free-brands-svg-icons";
 
 config.autoAddCss = false;
@@ -22,11 +31,20 @@ library.add(
   faGlobe,
   faPaperPlane,
   faQuoteLeft,
+  faStar,
 
   // brands
   faFacebookSquare,
+  faGitAlt,
+  faGithub,
   faGithubSquare,
-  faLinkedin
+  faLinkedin,
+  faJs,
+  faPhp,
+  faNodeJs,
+  faVuejs,
+  faLaravel,
+  faReact,
 );
 
 export default defineNuxtPlugin((nuxtApp) => {
