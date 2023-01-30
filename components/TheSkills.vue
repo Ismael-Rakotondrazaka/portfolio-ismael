@@ -66,6 +66,7 @@ import LogoExpressComponent from "~/components/LogoExpress.vue";
 import LogoNPMComponent from "~/components/LogoNPM.vue";
 import LogoPostmanComponent from "~/components/LogoPostman.vue";
 import LogoLinuxComponent from "~/components/LogoLinux.vue";
+import LogoTailwindCSSComponent from "~/components/LogoTailwindCSS.vue";
 
 const LogoNuxt = markRaw(LogoNuxtComponent);
 const LogoMySql = markRaw(LogoMySqlComponent);
@@ -76,6 +77,7 @@ const LogoExpress = markRaw(LogoExpressComponent);
 const LogoNPM = markRaw(LogoNPMComponent);
 const LogoPostman = markRaw(LogoPostmanComponent);
 const LogoLinux = markRaw(LogoLinuxComponent);
+const LogoTailwindCSS = markRaw(LogoTailwindCSSComponent);
 
 const technicalSkills = ref([
   {
@@ -153,6 +155,14 @@ const technicalSkills = ref([
         text: "Nuxt (2, 3)",
         component: LogoNuxt,
         bgColor: "#00c58e",
+        color: "#000",
+        mastered: true,
+      },
+      {
+        type: "component",
+        text: "Tailwind CSS",
+        component: LogoTailwindCSS,
+        bgColor: "#0ea5e9",
         color: "#000",
         mastered: true,
       },
