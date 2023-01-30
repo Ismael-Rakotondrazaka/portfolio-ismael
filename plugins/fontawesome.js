@@ -7,6 +7,7 @@ import {
   faPaperPlane,
   faQuoteLeft,
   faStar,
+  faCode,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookSquare,
@@ -32,6 +33,7 @@ library.add(
   faPaperPlane,
   faQuoteLeft,
   faStar,
+  faCode,
 
   // brands
   faFacebookSquare,
@@ -44,7 +46,7 @@ library.add(
   faNodeJs,
   faVuejs,
   faLaravel,
-  faReact,
+  faReact
 );
 
 export default defineNuxtPlugin((nuxtApp) => {
