@@ -20,16 +20,12 @@ const links = ref([
     to: "/#about",
   },
   {
-    text: "Experience",
-    to: "/#experience",
+    text: "Skills",
+    to: "/#skills",
   },
   {
     text: "Projects",
     to: "/#projects",
-  },
-  {
-    text: "Skills",
-    to: "/#skills",
   },
   {
     text: "Education",
