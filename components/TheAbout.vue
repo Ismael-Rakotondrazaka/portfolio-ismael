@@ -4,24 +4,7 @@
     class="flex flex-row items-center justify-center min-h-screen py-20 bg-secondary group"
   >
     <div class="flex flex-row items-center w-full justify-evenly">
-      <div
-        class="relative p-3 border-4 rounded-lg rounded-tr-none bg-sky-100 border-primary mr-5"
-      >
-        <FaIcon
-          icon="fa-solid fa-quote-left"
-          class="absolute top-[-2.5rem] left-[-0.2rem] text-primary text-[4rem]"
-        />
-
-        <p class="text-3xl italic font-bold text-secondary bg-move">
-          Because codes are arts,
-          <br />
-          I'm also an artist.
-        </p>
-
-        <p class="text-xs text-right text-secondary">
-          Fitia Ismael Rakotondrazaka
-        </p>
-      </div>
+      <TheQuote />
 
       <div class="max-w-2xl">
         <h1
