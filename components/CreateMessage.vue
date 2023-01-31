@@ -17,7 +17,7 @@
 
       <CustomInput
         label="Email:"
-        id="name"
+        id="email"
         type="email"
         placeholder="email@example.com"
         :modelValue="email"
