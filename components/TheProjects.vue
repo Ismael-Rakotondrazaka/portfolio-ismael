@@ -8,7 +8,7 @@
       </span>
     </h1>
 
-    <div>
+    <div class="p-3">
       <ProjectList :projects="projects" />
     </div>
   </div>

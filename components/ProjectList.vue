@@ -10,7 +10,7 @@
       :source="project.source"
       :demo="project.demo"
       :isOdd="i % 2 === 1"
-      class="mb-20 last:mb-0"
+      class="mb-10 md:mb-16 lg:mb-20 last:mb-0"
     />
 
     <div class="flex flex-wrap gap-5 mx-auto w-fit">
