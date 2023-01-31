@@ -1,6 +1,13 @@
 <template>
   <footer class="w-full p-3 mt-32 border-t-4 bg-secondary border-primary">
-    <div id="contact" class="flex flex-row items-center w-full justify-evenly">
+    <div
+      id="contact"
+      class="flex flex-row-reverse flex-wrap items-center w-full justify-evenly"
+    >
+      <div class="w-full max-w-md -translate-y-16 lg:-translate-y-32">
+        <CreateMessage class="w-full" />
+      </div>
+
       <div class="flex flex-col items-start w-full max-w-md gap-3">
         <a
           v-for="(link, index) in links"
@@ -18,13 +25,9 @@
           </span>
         </a>
       </div>
-
-      <div class="-translate-y-32">
-        <CreateMessage class="w-full" />
-      </div>
     </div>
 
-    <hr class="block w-1/2 mx-auto bg-white h-[0.15rem] my-7" />
+    <hr class="block w-2/3 md:w-1/2 mx-auto bg-white h-[0.15rem] my-7" />
 
     <div class="my-5 text-center text-white">
       &copy; copyright
