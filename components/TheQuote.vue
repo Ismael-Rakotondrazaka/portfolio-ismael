@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative p-12 mr-5 bg-no-repeat bg-cover border border-white rounded-lg rounded-tr-none bg-sky-100"
+    class="relative bg-no-repeat bg-cover border border-white rounded-lg rounded-tr-none p-7 md:p-12 bg-sky-100"
     :style="{
       backgroundImage: `url(${IllustrationCode})`,
     }"
@@ -16,7 +16,7 @@
         backgroundImage: `url(${IllustrationStarryNight})`,
       }"
     >
-      <p class="mb-3 text-4xl italic font-bold text-white">
+      <p class="mb-3 text-3xl italic font-bold text-white md:text-4xl">
         Because codes are arts,
         <br />
         I'm also an artist.

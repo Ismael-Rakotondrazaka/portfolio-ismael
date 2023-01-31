@@ -3,9 +3,9 @@
     id="about"
     class="flex flex-row items-center justify-center min-h-screen py-20 bg-secondary group"
   >
-    <div class="flex flex-row items-center w-full justify-evenly">
-      <TheQuote />
-
+    <div
+      class="flex flex-row-reverse flex-wrap items-center w-full p-3 lg:flex-nowrap justify-evenly"
+    >
       <div class="max-w-2xl">
         <h1
           class="inline-block mb-5 text-4xl font-bold text-center text-primary after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block group-hover:after:w-full"
@@ -47,10 +47,12 @@
           >
           and their
           <span class="underline text-primary underline-offset-4">promises</span
-          >. I'm still learning them. It is interested to combine them with the
+          >. I'm still learning them. It is interesting to combine them with the
           web development.
         </p>
       </div>
+
+      <TheQuote class="w-full mt-10 lg:mr-5 md:mt-14 lg:mt-0 md:w-auto" />
     </div>
   </div>
 </template>
