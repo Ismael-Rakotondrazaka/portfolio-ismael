@@ -3,21 +3,25 @@
     id="education"
     class="relative flex flex-row items-center justify-center min-h-screen py-20"
   >
-    <div class="absolute top-[10%] right-[20%] w-20">
+    <div
+      class="absolute top-[5%] left-[20%] lg:left-auto lg:right-[20%] w-7 md:w-12 lg:w-20"
+    >
       <FaIcon
         icon="fa-solid fa-graduation-cap"
         class="text-primary w-full !h-auto hover:animate-spin"
       />
     </div>
 
-    <div class="absolute bottom-[10%] right-[30%] w-20">
+    <div class="absolute bottom-[10%] right-[30%] w-7 md:w-12 lg:w-20">
       <FaIcon
         icon="fa-solid fa-chalkboard-user"
         class="text-primary w-full !h-auto hover:animate-bounce"
       />
     </div>
 
-    <div class="absolute top-[40%] left-[3%] w-20">
+    <div
+      class="absolute top-[40%] right-[3%] lg:right-auto lg:left-[3%] w-7 md:w-12 lg:w-20"
+    >
       <FaIcon
         icon="fa-solid fa-school"
         class="text-primary w-full !h-auto hover:animate-ping"
@@ -26,7 +30,7 @@
 
     <div class="w-full max-w-5xl">
       <h1
-        class="inline-block mb-5 text-4xl font-bold text-center text-primary after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full"
+        class="inline-block pl-3 lg:pl-0 mb-5 text-4xl font-bold text-center text-primary after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full"
       >
         Education
       </h1>
