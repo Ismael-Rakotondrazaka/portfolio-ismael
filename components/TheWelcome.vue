@@ -1,5 +1,26 @@
 <template>
-  <div class="min-h-screen flex flex-row items-center justify-evenly">
+  <div class="relative min-h-screen flex flex-row items-center justify-evenly">
+    <div class="absolute top-1/4 left-[2%] w-20">
+      <FaIcon
+        icon="fa-solid fa-code"
+        class="text-primary w-full !h-auto hover:animate-spin"
+      />
+    </div>
+
+    <div class="absolute top-[40%] right-[4%] w-20 rotate-12">
+      <FaIcon
+        icon="fa-solid fa-globe"
+        class="text-primary w-full !h-auto hover:animate-bounce"
+      />
+    </div>
+
+    <div class="absolute bottom-[10%] right-[60%] w-20 -rotate-12">
+      <FaIcon
+        icon="fa-solid fa-terminal"
+        class="text-primary w-full !h-auto hover:animate-ping"
+      />
+    </div>
+
     <div>
       <p class="mb-5">
         <span class="font-bold text-2xl text-gray-500">Hi, I am</span>

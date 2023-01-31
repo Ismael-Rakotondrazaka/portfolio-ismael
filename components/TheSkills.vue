@@ -1,5 +1,26 @@
 <template>
-  <div id="skills" class="min-h-screen py-20 group,">
+  <div id="skills" class="relative min-h-screen py-20">
+    <div class="absolute top-[10%] left-[10%] w-20">
+      <FaIcon
+        icon="fa-solid fa-star"
+        class="text-primary w-full !h-auto hover:animate-spin"
+      />
+    </div>
+
+    <div class="absolute top-[40%] right-[10%] w-20">
+      <FaIcon
+        icon="fa-solid fa-code"
+        class="text-primary w-full !h-auto hover:animate-spin"
+      />
+    </div>
+
+    <div class="absolute bottom-[20%] left-[3%] w-20">
+      <FaIcon
+        icon="fa-solid fa-id-card-alt"
+        class="text-primary w-full !h-auto hover:animate-ping"
+      />
+    </div>
+
     <h1 class="mb-5 text-4xl font-bold text-center text-primary">
       <span
         class="inline-block after:w-0 after:h-[0.2rem] after:transition-all after:bg-primary after:block hover:after:w-full"
@@ -10,7 +31,7 @@
 
     <div class="w-full max-w-5xl mx-auto mb-10">
       <h2
-        class="font-bold bg-secondary text-xl text-primary px-3 py-5 underline underline-offset-4"
+        class="px-3 py-5 text-xl font-bold underline bg-secondary text-primary underline-offset-4"
       >
         Technical skills
       </h2>
@@ -18,10 +39,10 @@
       <div
         v-for="(skillGroup, i) in technicalSkills"
         :key="i"
-        class="pt-2 px-3 pb-5 bg-primary odd:bg-opacity-10 even:bg-opacity-20"
+        class="px-3 pt-2 pb-5 bg-primary odd:bg-opacity-10 even:bg-opacity-20"
       >
         <h3
-          class="text-lg font-bold mb-3 underline underline-offset-4 text-secondary"
+          class="mb-3 text-lg font-bold underline underline-offset-4 text-secondary"
         >
           {{ skillGroup.title }}
         </h3>
@@ -32,7 +53,7 @@
 
     <div class="w-full max-w-5xl mx-auto">
       <h2
-        class="font-bold bg-secondary text-xl text-primary px-3 py-5 underline underline-offset-4"
+        class="px-3 py-5 text-xl font-bold underline bg-secondary text-primary underline-offset-4"
       >
         Soft skills
       </h2>
@@ -40,10 +61,10 @@
       <div
         v-for="(skill, i) in softSkills"
         :key="i"
-        class="pt-2 px-3 pb-5 bg-primary odd:bg-opacity-10 even:bg-opacity-20"
+        class="px-3 pt-2 pb-5 bg-primary odd:bg-opacity-10 even:bg-opacity-20"
       >
         <h3
-          class="text-lg font-bold mb-3 underline underline-offset-4 text-secondary"
+          class="mb-3 text-lg font-bold underline underline-offset-4 text-secondary"
         >
           {{ skill.title }}
         </h3>
