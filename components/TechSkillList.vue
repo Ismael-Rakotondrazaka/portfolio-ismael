@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex flex-row flex-wrap items-stretch gap-3">
+  <ul class="flex flex-row flex-wrap items-stretch gap-2 lg:gap-3">
     <TechSkillItem
       v-for="(skill, index) in skills"
       :key="index"
@@ -11,7 +11,7 @@
       :color="skill.color"
       :type="skill.type"
       :mastered="skill.mastered"
-      class="w-full max-w-[10rem]"
+      class="w-full max-w-[6rem] lg:max-w-[10rem]"
     />
   </ul>
 </template>

@@ -1,20 +1,20 @@
 <template>
   <div id="skills" class="relative min-h-screen py-20">
-    <div class="absolute top-[10%] left-[10%] w-20">
+    <div class="absolute top-[3%] left-[10%] w-7 md:w-12 lg:w-20">
       <FaIcon
         icon="fa-solid fa-star"
         class="text-primary w-full !h-auto hover:animate-spin"
       />
     </div>
 
-    <div class="absolute top-[40%] right-[10%] w-20">
+    <div class="absolute top-[40%] right-[10%] w-7 md:w-12 lg:w-20">
       <FaIcon
         icon="fa-solid fa-code"
         class="text-primary w-full !h-auto hover:animate-spin"
       />
     </div>
 
-    <div class="absolute bottom-[20%] left-[3%] w-20">
+    <div class="absolute bottom-[2%] left-[3%] w-7 md:w-12 lg:w-20">
       <FaIcon
         icon="fa-solid fa-id-card-alt"
         class="text-primary w-full !h-auto hover:animate-ping"
