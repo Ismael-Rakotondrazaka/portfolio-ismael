@@ -1,8 +1,29 @@
 <template>
   <div
     id="education"
-    class="flex flex-row items-center justify-center min-h-screen py-20"
+    class="relative flex flex-row items-center justify-center min-h-screen py-20"
   >
+    <div class="absolute top-[10%] right-[20%] w-20">
+      <FaIcon
+        icon="fa-solid fa-graduation-cap"
+        class="text-primary w-full !h-auto hover:animate-spin"
+      />
+    </div>
+
+    <div class="absolute bottom-[10%] right-[30%] w-20">
+      <FaIcon
+        icon="fa-solid fa-chalkboard-user"
+        class="text-primary w-full !h-auto hover:animate-bounce"
+      />
+    </div>
+
+    <div class="absolute top-[40%] left-[3%] w-20">
+      <FaIcon
+        icon="fa-solid fa-school"
+        class="text-primary w-full !h-auto hover:animate-ping"
+      />
+    </div>
+
     <div class="w-full max-w-5xl">
       <h1
         class="inline-block mb-5 text-4xl font-bold text-center text-primary after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full"

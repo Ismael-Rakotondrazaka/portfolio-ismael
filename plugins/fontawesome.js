@@ -8,6 +8,11 @@ import {
   faQuoteLeft,
   faStar,
   faCode,
+  faTerminal,
+  faGraduationCap,
+  faSchool,
+  faChalkboardUser,
+  faIdCardAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookSquare,
@@ -34,6 +39,11 @@ library.add(
   faQuoteLeft,
   faStar,
   faCode,
+  faTerminal,
+  faGraduationCap,
+  faSchool,
+  faChalkboardUser,
+  faIdCardAlt,
 
   // brands
   faFacebookSquare,
