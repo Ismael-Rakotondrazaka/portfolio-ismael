@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative py-20 min-h-screen flex flex-row flex-wrap lg:flex-nowrap items-center justify-evenly"
+    class="relative flex flex-row flex-wrap items-center min-h-screen py-20 lg:flex-nowrap justify-evenly"
   >
     <div class="absolute top-16 lg:top-1/5 left-[2%] w-7 md:w-12 lg:w-20">
       <FaIcon
@@ -25,9 +25,9 @@
       />
     </div>
 
-    <div class="p-3 mb-10 md:mb-0 w-full lg:w-auto">
+    <div class="w-full p-3 mb-10 md:mb-0 lg:w-auto">
       <p class="mb-5">
-        <span class="font-bold text-lg md:text-2xl text-gray-500">
+        <span class="text-lg font-bold text-gray-500 md:text-2xl">
           Hi, I am
         </span>
 
@@ -58,7 +58,7 @@
       <img
         src="~/assets/images/profiles/profile.png"
         alt=""
-        class="w-full h-full object-cover"
+        class="object-cover w-full h-full"
       />
     </div>
   </div>
