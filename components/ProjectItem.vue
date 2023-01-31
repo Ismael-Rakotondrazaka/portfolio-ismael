@@ -1,9 +1,22 @@
 <template>
   <li
-    class="flex items-center justify-center w-full max-w-5xl mx-auto overflow-hidden border border-white rounded-lg bg-sky-200"
-    :class="[isOdd ? 'flex-row' : 'flex-row-reverse']"
+    class="flex flex-wrap items-center justify-center w-full max-w-md mx-auto overflow-hidden border border-white rounded-lg lg:flex-nowrap md:max-w-lg lg:max-w-5xl bg-sky-200"
+    :class="[isOdd ? 'flex-row-reverse' : 'flex-row']"
   >
-    <div class="w-2/3 h-full p-3">
+    <div
+      class="object-cover w-full max-h-[20rem] md:max-h-[28rem] overflow-hidden"
+      :class="[
+        isOdd ? 'rounded-lg lg:rounded-l-none' : 'rounded-lg lg:rounded-r-none',
+      ]"
+    >
+      <img
+        :src="imgSrc"
+        alt=""
+        class="object-cover w-full h-full transition-all duration-300 hover:scale-110"
+      />
+    </div>
+
+    <div class="w-full h-full p-3 lg:w-2/3">
       <div class="mb-6">
         <h2 class="mb-3 text-2xl font-bold text-secondary">{{ name }}</h2>
 
@@ -43,17 +56,6 @@
           </span>
         </a>
       </div>
-    </div>
-
-    <div
-      class="object-cover w-full max-h-[28rem] max-w-md overflow-hidden"
-      :class="[isOdd ? 'rounded-r-lg' : 'rounded-l-lg']"
-    >
-      <img
-        :src="imgSrc"
-        alt=""
-        class="object-cover w-full h-full transition-all duration-300 hover:scale-110"
-      />
     </div>
   </li>
 </template>
