@@ -15,64 +15,86 @@
 </template>
 
 <script setup>
-/* TODO add real illustration */
-import IllustrationMiChat from "~/assets/images/illustrations/illustration-mi-chat.jpg";
-import IllustrationAgendapp from "~/assets/images/illustrations/illustration-agendapp.jpg";
-import IllustrationMinili from "~/assets/images/illustrations/illustration-minili.jpg";
-import IllustrationFoodies from "~/assets/images/illustrations/illustration-foodies.jpg";
+import IllustrationMiChat from "~/assets/images/illustrations/illustration-mi-chat.png";
+import IllustrationAgendapp from "~/assets/images/illustrations/illustration-agendapp.png";
+import IllustrationMinili from "~/assets/images/illustrations/illustration-minili.png";
+import IllustrationFoodies from "~/assets/images/illustrations/illustration-foodies.png";
+import IllustrationDHTML2022 from "~/assets/images/illustrations/illustration-dhtml-2022.png";
+import IllustrationNaturePortfolio from "~/assets/images/illustrations/illustration-nature-portfolio.png";
+import IllustrationFiber from "~/assets/images/illustrations/illustration-fiber.png";
 
-/* TODO add real description */
 const projects = ref([
   {
     name: "mi-chat",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suntdeleniti unde explicabo atque quibusdam veniam hic itaquedignissimos? Labore tempore commodi veritatis ad non ipsum maioressint natus dolore aut. Lorem ipsum dolor sit amet consecteturadipisicing elit. Commodi obcaecati perspiciatis et ab! Aliquamdolor eveniet, optio molestiae asperiores voluptate. Lorem ipsumdolor sit amet consectetur adipisicing elit. Expedita errordignissimos hic consequatur dolore minima incidunt quibusdam sequisimilique quas.",
+      "mi-chat is an instant messaging web application.\nIt has some advanced features, like sending text message, video, and images. Messages can be deleted.\nUsers can send and receive friend requests.\nCreating group chats is also an interesting feature with mi-chat, many users can discuss together.\nSearch function is also available in each feature of the app.",
     imgSrc: IllustrationMiChat,
-    technos: ["Vue", "Tailwind CSS", "Express", "MySql"],
+    technos: ["Vue", "Tailwind CSS", "Express", "SocketIO", "MySql"],
+    source: "https://github.com/Ismael-Rakotondrazaka/mi-chat",
     demo: "https://mi-chat.onrender.com",
   },
   {
     name: "agendapp",
     description:
-      "Lorem ipsum dolor sit estiae asperiores voluptate. Lorem ipsumdolor sit amet consectetur adipisicing elit. Expedita errordignissimos hic consequatur dolore minima incidunt quibusdam sequisimilique quas.",
+      "Agendapp is a web application that manage schedules.\nUsers can create many events, update and delete them.\nThere are an overview per month and overview per year features, with statistics.",
     imgSrc: IllustrationAgendapp,
     technos: [
       "Vue",
       "Tailwind CSS",
-      "Express",
       "Typescript",
+      "Express",
+      "SocketIO",
       "Jest",
       "MongoDB",
     ],
-    source: "https://github.com/Ismael-Rakotondrazaka/agendapp.git",
+    source: "https://github.com/Ismael-Rakotondrazaka/agendapp",
     demo: "https://agendapp.onrender.com",
   },
   {
     name: "minili",
     description:
-      "Lorem ipsum dolor sit estiae asperiores voluptate. Lorem ipsumdolor sit amet consectetur adipisicing elit. Expedita errordignissimos hic consequatur dolore minima incidunt quibusdam sequisimilique quas. t estiae asperiores voluptate. Lorem ipsumdolor sit amet consectetur adipisicing elit. Expedita errordignissimos hic consequatu",
+      "minili is a webapp that give a short version of any links.\nThe given links can be reversed if needed.",
     imgSrc: IllustrationMinili,
     technos: ["Vue", "Tailwind CSS", "Express", "MongoDB"],
-    source: "https://github.com/Ismael-Rakotondrazaka/minili.git",
+    source: "https://github.com/Ismael-Rakotondrazaka/minili",
     demo: "https://minili.onrender.com",
+  },
+
+  {
+    name: "DHTML-2022",
+    description:
+      "DHTML-2022 was created to put into practice the basic of Javascript for the web: functions, event handlers, DOM manipulation...\nIt is responsive and have the trendy glassmorphism look.",
+    imgSrc: IllustrationDHTML2022,
+    technos: ["HTML", "CSS", "Javascript"],
+    source: "https://github.com/Ismael-Rakotondrazaka/dhtml-2022",
+    demo: "https://dhtml-2022.onrender.com",
   },
   {
     name: "Foodies",
     description:
-      "Lorem ipsum dolor sit estiae asperiores voluptate. Lorem ipsumdolor sit amet consectetur adipisicing elit. Expedita errordignissimos.",
+      "This is an integration of a template I found on Dribble. The purpose is to test out Tailwind CSS, and it is very easy to associate with the Vue's syntax.",
     imgSrc: IllustrationFoodies,
     technos: ["Vue", "Tailwind CSS"],
-    source: "https://github.com/Ismael-Rakotondrazaka/foodies.git",
-    demo: "https://foodies.onrender.com",
+    source: "https://github.com/Ismael-Rakotondrazaka/foodies",
+    demo: "https://template-foodies.onrender.com",
   },
   {
-    name: "DHTML-2022",
+    name: "Nature Portfolio",
     description:
-      "Lorem ipsum dolor sit estiae asperiores voluptate. Lorem ipsumdolor sit amet consectetur adipisicing elit. Expedita errordignissimos.sit amet consectetur adipisicing elit. Expedita errordignissimos.",
-    imgSrc: IllustrationMiChat,
-    technos: ["HTML", "CSS", "Javascript"],
-    source: "https://github.com/Ismael-Rakotondrazaka/dhtml-2022.git",
-    demo: "https://dhtml-2022.onrender.com",
+      "This website is an integration of a template from W3Schools. I use Bootstrap and Vue to make it.",
+    imgSrc: IllustrationNaturePortfolio,
+    technos: ["Vue", "Bootstrap"],
+    source: "https://github.com/Ismael-Rakotondrazaka/nature-portfolio",
+    demo: "https://nature-portfolio.onrender.com",
+  },
+  {
+    name: "Fiber",
+    description:
+      "I like the design, so I decided to integrate it with Vue and Bootstrap.",
+    imgSrc: IllustrationFiber,
+    technos: ["Vue", "Bootstrap"],
+    source: "https://github.com/Ismael-Rakotondrazaka/fiber",
+    demo: "https://template-fiber.onrender.com",
   },
 ]);
 </script>
