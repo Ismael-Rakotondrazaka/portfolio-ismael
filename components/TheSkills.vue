@@ -264,19 +264,18 @@ const technicalSkills = ref([
   },
 ]);
 
-// TODO add real content
 const softSkills = ref([
   {
     title: "Dynamic and organized",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ex accusantium similique explicabo sed iste praesentium, corrupti obcaecati maiores eligendi.",
+    text: 'I am very active when there is a task assigned to me. But it doesn\'t mean that I am doing it disorderly, I am able to make the stuff in "the rules of art".',
   },
   {
     title: "Teamwork",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ex accusantium similique explicabo sed iste praesentium, corrupti obcaecati maiores eligendi. Consectetur adipisicing elit. Inventore ex accusantium similique explicabo sed iste praesentium, corrupti obcaecati maiores eligendi.",
+    text: "I understand the importance of teamwork, and I can contribute to any team I am a part of. I can also be autonomous and act on my own when needed.",
   },
   {
     title: "Adaptability",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ex accusantium similique explicabo sed iste praesentium, corrupti obcaecati maiores eligendi. Consectetur adipisicing elit. Inventore ex accusantium similique.",
+    text: "I am like a water that can fit into any shape of container. It means I am able to adapt in every situation. And if it is new to me, I can learn it easily.",
   },
 ]);
 </script>
