@@ -30,4 +30,12 @@ export default defineNuxtConfig({
       "@fortawesome/free-brands-svg-icons",
     ],
   },
+  runtimeConfig: {
+    smtpHost: process.env.SMTP_HOST,
+    smtpPort: process.env.SMTP_PORT,
+    smtpUser: process.env.SMTP_USER,
+    smtpPass: process.env.SMTP_PASS,
+    emailDefaultReceiver: process.env.EMAIL_DEFAULT_RECEIVER,
+    emailDefaultSubject: process.env.EMAIL_DEFAULT_SUBJECT,
+  },
 });
