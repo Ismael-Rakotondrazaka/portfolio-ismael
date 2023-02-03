@@ -37,5 +37,6 @@ export default defineNuxtConfig({
     smtpPass: process.env.SMTP_PASS,
     emailDefaultReceiver: process.env.EMAIL_DEFAULT_RECEIVER,
     emailDefaultSubject: process.env.EMAIL_DEFAULT_SUBJECT,
+    isServiceAvailable: process.env.IS_SERVICE_AVAILABLE,
   },
 });
