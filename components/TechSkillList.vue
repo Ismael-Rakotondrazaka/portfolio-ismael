@@ -2,6 +2,17 @@
   <ul class="flex flex-row flex-wrap items-stretch gap-2 lg:gap-3">
     <TechSkillItem
       v-for="(skill, index) in skills"
+      v-motion="{
+        initial: {
+          scale: 0,
+        },
+        visibleOnce: {
+          scale: 1,
+          transition: {
+            delay: index * 50,
+          },
+        },
+      }"
       :key="index"
       :icon="skill.icon"
       :src="skill.src"
