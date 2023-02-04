@@ -5,13 +5,20 @@
     </label>
 
     <input
-      class="block w-full border-2 outline-none border-secondary rounded-md focus:border-primary px-3 py-3 text-black"
+      class="block w-full px-3 py-3 text-black border-2 rounded-md outline-none border-secondary focus:border-primary"
+      :class="[
+        {
+          '!border-red-500': error,
+        },
+      ]"
       @input="$emit('update:modelValue', $event.target.value)"
       :placeholder="placeholder"
       :value="modelValue"
       :type="type"
       :id="id"
     />
+
+    <ErrorPresenter :error="error" />
   </div>
 </template>
 
@@ -38,6 +45,11 @@ defineProps({
   id: {
     type: String,
     required: true,
+  },
+  error: {
+    type: [String, null],
+    required: false,
+    default: null,
   },
 });
 </script>
