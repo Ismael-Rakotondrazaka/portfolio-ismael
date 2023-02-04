@@ -11,6 +11,19 @@
     />
 
     <div
+      v-motion="{
+        initial: {
+          y: 5,
+        },
+        enter: {
+          y: 0,
+          transition: {
+            repeat: Infinity,
+            repeatType: 'reverse',
+            duration: 1200,
+          },
+        },
+      }"
       class="p-5 bg-opacity-50 bg-no-repeat bg-cover border border-white rounded-lg rounded-tr-none"
       :style="{
         backgroundImage: `url(${IllustrationStarryNight})`,
