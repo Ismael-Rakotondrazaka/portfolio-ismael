@@ -27,26 +27,108 @@
 
     <div class="w-full p-3 mb-10 md:mb-0 lg:w-auto">
       <p class="mb-5">
-        <span class="text-lg font-bold text-gray-500 md:text-2xl">
+        <span
+          v-motion="{
+            initial: {
+              x: -100,
+              opacity: 0,
+            },
+            visibleOnce: {
+              x: 0,
+              opacity: 1,
+              transition: {
+                duration: 500,
+              },
+            },
+          }"
+          class="inline-block text-lg font-bold text-gray-500 md:text-2xl"
+        >
           Hi, I am
         </span>
 
         <br />
 
         <span
-          class="font-bold text-2xl md:text-4xl text-primary after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full"
+          v-motion="{
+            initial: {
+              x: -100,
+              opacity: 0,
+            },
+            visibleOnce: {
+              x: 0,
+              opacity: 1,
+              transition: {
+                delay: 400,
+                duration: 500,
+              },
+            },
+          }"
+          class="font-bold inline-block text-2xl md:text-4xl text-primary after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full"
         >
           Fitia Ismael Rakotondrazaka
         </span>
       </p>
 
-      <h1 class="font-bold text-5xl md:text-[4rem] bg-move leading-[1]">
-        A professional
+      <h1
+        class="font-bold text-4xl md:text-[4rem] bg-move leading-[1] whitespace-pre-wrap"
+      >
+        <span
+          class="inline-block"
+          v-motion="{
+            initial: {
+              y: 100,
+              opacity: 0,
+            },
+            visibleOnce: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                delay: i * 50 + 500,
+              },
+            },
+          }"
+          v-for="(letter, i) in professionSplitted1"
+          :key="i"
+        >
+          {{ letter }}
+        </span>
+
         <br />
-        web developer
+
+        <span
+          class="inline-block"
+          v-motion="{
+            initial: {
+              y: 100,
+              opacity: 0,
+            },
+            visibleOnce: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                delay: i * 50 + 700 + 500,
+              },
+            },
+          }"
+          v-for="(letter, i) in professionSplitted2"
+          :key="i"
+        >
+          {{ letter }}
+        </span>
       </h1>
 
       <NuxtLink
+        v-motion="{
+          initial: {
+            scale: 0,
+          },
+          visibleOnce: {
+            scale: 1,
+            transition: {
+              delay: 7 * 50 + 700 + 500,
+            },
+          },
+        }"
         to="/#contact"
         class="mt-7 inline-block px-5 py-3 font-bold uppercase border-2 rounded-md border-secondary ring-2 transition-all after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full text-white bg-secondary hover:border-white ring-secondary"
       >
@@ -56,6 +138,21 @@
 
     <div class="p-3 w-full h-full max-w-[26rem] max-h-[26rem]">
       <img
+        v-motion="{
+          initial: {
+            scale: 0,
+          },
+          visibleOnce: {
+            scale: 1,
+            transition: {
+              type: 'spring',
+              stiffness: 300,
+              damping: 20,
+              mass: 1,
+              delay: 500,
+            },
+          },
+        }"
         src="~/assets/images/profiles/profile.png"
         alt=""
         class="object-cover w-full h-full"
@@ -64,6 +161,9 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const professionSplitted1 = "A professional".split("");
+const professionSplitted2 = "web developer".split("");
+</script>
 
 <style scoped></style>
