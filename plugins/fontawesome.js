@@ -13,6 +13,8 @@ import {
   faSchool,
   faChalkboardUser,
   faIdCardAlt,
+  faExclamationCircle,
+  faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookSquare,
@@ -44,6 +46,8 @@ library.add(
   faSchool,
   faChalkboardUser,
   faIdCardAlt,
+  faExclamationCircle,
+  faCheckCircle,
 
   // brands
   faFacebookSquare,
