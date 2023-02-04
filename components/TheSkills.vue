@@ -88,6 +88,7 @@ import LogoNPMComponent from "~/components/LogoNPM.vue";
 import LogoPostmanComponent from "~/components/LogoPostman.vue";
 import LogoLinuxComponent from "~/components/LogoLinux.vue";
 import LogoTailwindCSSComponent from "~/components/LogoTailwindCSS.vue";
+import LogoSocketIOComponent from "~/components/LogoSocketIO.vue";
 
 const LogoNuxt = markRaw(LogoNuxtComponent);
 const LogoMySql = markRaw(LogoMySqlComponent);
@@ -99,6 +100,7 @@ const LogoNPM = markRaw(LogoNPMComponent);
 const LogoPostman = markRaw(LogoPostmanComponent);
 const LogoLinux = markRaw(LogoLinuxComponent);
 const LogoTailwindCSS = markRaw(LogoTailwindCSSComponent);
+const LogoSocketIO = markRaw(LogoSocketIOComponent);
 
 const technicalSkills = ref([
   {
@@ -185,6 +187,14 @@ const technicalSkills = ref([
         component: LogoTailwindCSS,
         bgColor: "#0ea5e9",
         color: "#000",
+        mastered: true,
+      },
+      {
+        type: "component",
+        text: "SocketIO",
+        component: LogoSocketIO,
+        bgColor: "#000",
+        color: "#fff",
         mastered: true,
       },
     ],
