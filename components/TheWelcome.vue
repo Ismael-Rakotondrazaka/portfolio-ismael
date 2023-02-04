@@ -43,7 +43,7 @@
           }"
           class="inline-block text-lg font-bold text-gray-500 md:text-2xl"
         >
-          Hi, I am
+          {{ greetingPre }}
         </span>
 
         <br />
@@ -65,7 +65,7 @@
           }"
           class="font-bold inline-block text-2xl md:text-4xl text-primary after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full"
         >
-          Fitia Ismael Rakotondrazaka
+          {{ fullName }}
         </span>
       </p>
 
@@ -88,7 +88,7 @@
             },
           }"
           v-for="(letter, i) in professionSplitted1"
-          :key="i"
+          :key="i + locale"
         >
           {{ letter }}
         </span>
@@ -111,7 +111,7 @@
             },
           }"
           v-for="(letter, i) in professionSplitted2"
-          :key="i"
+          :key="i + locale"
         >
           {{ letter }}
         </span>
@@ -132,7 +132,7 @@
         to="/#contact"
         class="mt-7 inline-block px-5 py-3 font-bold uppercase border-2 rounded-md border-secondary ring-2 transition-all after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full text-white bg-secondary hover:border-white ring-secondary"
       >
-        Contact me
+        {{ contactButtonText }}
       </NuxtLink>
     </div>
 
@@ -162,8 +162,31 @@
 </template>
 
 <script setup>
-const professionSplitted1 = "A professional".split("");
-const professionSplitted2 = "web developer".split("");
+const { t, locale } = useI18n({
+  useScope: "global",
+  messages: {
+    en: {
+      greetingPre: "Hi, I am",
+      fullName: "Fitia Ismael Rakotondrazaka",
+      professionPart1: "A professional",
+      professionPart2: "web developer",
+      contactButtonText: "Contact me",
+    },
+    fr: {
+      greetingPre: "Bonjour, je suis",
+      fullName: "Rakotondrazaka Fitia Ismael",
+      professionPart1: "Un développeur",
+      professionPart2: "web professionnel",
+      contactButtonText: "Me contacter",
+    },
+  },
+});
+
+const greetingPre = computed(() => t("greetingPre"));
+const fullName = computed(() => t("fullName"));
+const professionSplitted1 = computed(() => t("professionPart1").split(""));
+const professionSplitted2 = computed(() => t("professionPart2").split(""));
+const contactButtonText = computed(() => t("contactButtonText"));
 </script>
 
 <style scoped></style>

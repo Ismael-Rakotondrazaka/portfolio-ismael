@@ -11,30 +11,79 @@
       >
         {{ link.text }}
       </NuxtLink>
+
+      <div>
+        <span
+          :class="[locale === 'fr' ? 'text-primary font-bold' : 'text-white']"
+        >
+          fr
+        </span>
+
+        <CustomSwitcher
+          :isActive="isSwitcherActive"
+          @on="switcherOnHandler"
+          @off="switcherOffHandler"
+          class="mx-1"
+        />
+
+        <span
+          :class="[locale === 'en' ? 'text-primary font-bold' : 'text-white']"
+        >
+          en
+        </span>
+      </div>
     </nav>
   </header>
 </template>
 
 <script setup>
-const links = ref([
+const { locale, t } = useI18n({
+  useScope: "global",
+  messages: {
+    en: {
+      aboutHeader: "About",
+      skillsHeader: "Skills",
+      projectsHeader: "Projects",
+      educationHeader: "Education",
+      contactHeader: "Contact",
+    },
+    fr: {
+      aboutHeader: "A propos",
+      skillsHeader: "Compétences",
+      projectsHeader: "Projets",
+      educationHeader: "Education",
+      contactHeader: "Contact",
+    },
+  },
+});
+
+const isSwitcherActive = computed(() => locale.value === "en");
+const switcherOnHandler = () => {
+  locale.value = "en";
+};
+const switcherOffHandler = () => {
+  locale.value = "fr";
+};
+
+const links = computed(() => [
   {
-    text: "About",
+    text: t("aboutHeader"),
     to: "/#about",
   },
   {
-    text: "Skills",
+    text: t("skillsHeader"),
     to: "/#skills",
   },
   {
-    text: "Projects",
+    text: t("projectsHeader"),
     to: "/#projects",
   },
   {
-    text: "Education",
+    text: t("educationHeader"),
     to: "/#education",
   },
   {
-    text: "Contact",
+    text: t("contactHeader"),
     to: "/#contact",
   },
 ]);
