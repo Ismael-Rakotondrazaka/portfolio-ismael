@@ -48,10 +48,10 @@ const { locale, t } = useI18n({
       contactHeader: "Contact",
     },
     fr: {
-      aboutHeader: "A propos",
+      aboutHeader: "À propos",
       skillsHeader: "Compétences",
       projectsHeader: "Projets",
-      educationHeader: "Education",
+      educationHeader: "Éducation",
       contactHeader: "Contact",
     },
   },
