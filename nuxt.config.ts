@@ -1,5 +1,65 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: "Portfolio Ismael | A professional web developer",
+      meta: [
+        {
+          name: "title",
+          content: "Portfolio Ismael | A professional web developer",
+        },
+        {
+          name: "description",
+          content:
+            "The portfolio of Fitia Ismael Rakotondrazaka, a professional web developer.",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:url",
+          content: "https://portfolio-ismael.onrender.com/",
+        },
+        {
+          property: "og:title",
+          content: "Portfolio Ismael | A professional web developer",
+        },
+        {
+          property: "og:description",
+          content:
+            "The portfolio of Fitia Ismael Rakotondrazaka, a professional web developer.",
+        },
+        {
+          property: "og:image",
+          content:
+            "https://portfolio-ismael.onrender.com/images/illustrations/illustration-portfolio-ismael.png",
+        },
+        {
+          property: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          property: "twitter:url",
+          content: "https://portfolio-ismael.onrender.com/",
+        },
+        {
+          property: "twitter:title",
+          content: "Portfolio Ismael | A professional web developer",
+        },
+        {
+          property: "twitter:description",
+          content:
+            "The portfolio of Fitia Ismael Rakotondrazaka, a professional web developer.",
+        },
+        {
+          property: "twitter:image",
+          content:
+            "https://portfolio-ismael.onrender.com/images/illustrations/illustration-portfolio-ismael.png",
+        },
+      ],
+    },
+  },
   modules: ["@vueuse/motion/nuxt", "@nuxtjs/tailwindcss", "@nuxtjs/i18n"],
   i18n: {
     vueI18n: {
