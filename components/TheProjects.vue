@@ -26,7 +26,7 @@ const { t } = useI18n({
   useScope: "global",
   messages: {
     en: {
-      theProjectsTilte: "Projects",
+      theProjectsTitle: "Projects",
       miChatDescription:
         "mi-chat is an instant messaging web application.\nIt has some advanced features, like sending text message, video, and images. Messages can be deleted.\nUsers can send and receive friend requests.\nCreating group chats is also an interesting feature with mi-chat, many users can discuss together.\nSearch function is also available in each feature of the app.",
       agendappDescription:
@@ -43,7 +43,7 @@ const { t } = useI18n({
         "I like the design, so I decided to integrate it with Vue and Bootstrap.",
     },
     fr: {
-      theProjectsTilte: "Projets",
+      theProjectsTitle: "Projets",
       miChatDescription:
         "mi-chat est une application web de messagerie instantanée.\nElle possède des fonctionnalités avancées, telles que l'envoi de messages, de vidéos et de photos.\nLes utilisateurs peuvent envoyer et recevoir des demandes d'amis.\nLa création de discussions de groupe est également une fonctionnalité intéressante avec mi-chat, de nombreux utilisateurs peuvent discuter ensemble.\nLa fonction de recherche est aussi disponible pour chaque fonctionnalité de l'application.",
       agendappDescription:
