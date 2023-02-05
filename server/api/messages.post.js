@@ -24,12 +24,18 @@ export default defineEventHandler(async (event) => {
     });
 
     return {
-      message: "Your message has been successfully sent.",
+      message: {
+        en: "Your message has been successfully sent.",
+        fr: "Votre message a été envoyé avec succès.",
+      },
     };
   } else {
     throw createError({
       status: 503,
-      message: "Sorry, the service is not available.",
+      message: {
+        en: "Sorry, the service is not available.",
+        fr: "Désolé, le service n'est pas disponible.",
+      },
     });
   }
 });

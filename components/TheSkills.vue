@@ -23,18 +23,16 @@
 
     <h1 class="mb-5 text-4xl font-bold text-center text-primary">
       <span
+        v-t="'theSkillsTitle'"
         class="inline-block after:w-0 after:h-[0.2rem] after:transition-all after:bg-primary after:block hover:after:w-full"
-      >
-        Skills
-      </span>
+      />
     </h1>
 
     <div class="w-full max-w-5xl mx-auto mb-10">
       <h2
+        v-t="'technicalSkillsTitle'"
         class="px-3 py-5 text-xl font-bold underline bg-secondary text-primary underline-offset-4"
-      >
-        Technical skills
-      </h2>
+      />
 
       <div
         v-for="(skillGroup, i) in technicalSkills"
@@ -53,10 +51,9 @@
 
     <div class="w-full max-w-5xl mx-auto">
       <h2
+        v-t="'softSkillsTitle'"
         class="px-3 py-5 text-xl font-bold underline bg-secondary text-primary underline-offset-4"
-      >
-        Soft skills
-      </h2>
+      />
 
       <div
         v-for="(skill, i) in softSkills"
@@ -102,9 +99,51 @@ const LogoLinux = markRaw(LogoLinuxComponent);
 const LogoTailwindCSS = markRaw(LogoTailwindCSSComponent);
 const LogoSocketIO = markRaw(LogoSocketIOComponent);
 
-const technicalSkills = ref([
+const { t } = useI18n({
+  useScope: "global",
+  messages: {
+    en: {
+      theSkillsTitle: "Skills",
+      technicalSkillsTitle: "Technical skills",
+      softSkillsTitle: "Soft skills",
+      programmingLanguagesTitle: "Programming languages",
+      frameworksLibrariesTitle: "Frameworks and libraries",
+      databasesTitle: "Databases",
+      toolsExtraTitle: "Tools and extras",
+      dynamicOrganizedTitle: "Dynamic and organized",
+      dynamicOrganizedDescription:
+        'I am very active when there is a task assigned to me. But it doesn\'t mean that I am doing it disorderly, I am able to make the stuff in "the rules of art".',
+      teamworkTitle: "Teamwork and collaboration",
+      teamWorkDescription:
+        "I understand the importance of teamwork, and I can contribute to any team I am a part of. I can also be autonomous and act on my own when needed.",
+      adaptabilityTitle: "Adaptability",
+      adaptabilityDescription:
+        "I am like water that can fit into any shape of container. It means I am able to adapt in every situation. And if it is new to me, I can learn it easily.",
+    },
+    fr: {
+      theSkillsTitle: "Compétences",
+      technicalSkillsTitle: "Compétences techniques",
+      softSkillsTitle: "Aptitudes générales",
+      programmingLanguagesTitle: "Languages de programmation",
+      frameworksLibrariesTitle: "Frameworks et bibliothèques",
+      databasesTitle: "Bases de données",
+      toolsExtraTitle: "Outils et suppléments",
+      dynamicOrganizedTitle: "Dynamique et organisé",
+      dynamicOrganizedDescription:
+        "Je suis très actif lorsqu'il y a une tâche qui m'est assignée. Mais ça ne veut pas dire que je le fais dans le désordre, je suis capable de faire les choses dans \"les règles de l'art\".",
+      teamworkTitle: "Travail d'équipe et collaboration",
+      teamWorkDescription:
+        "Je comprends l'importance du travail d'équipe et je peux contribuer à n'importe quelle équipe dont je fais partie. Je sais aussi être autonome et agir seul quand la situation le requiert.",
+      adaptabilityTitle: "Adaptabilité",
+      adaptabilityDescription:
+        "Je suis comme de l'eau qui peut se tenir dans n'importe quelle forme de récipient. Cela signifie que je suis capable de m'adapter à toutes les situations. Et si c'est nouveau pour moi, je peux l'apprendre facilement.",
+    },
+  },
+});
+
+const technicalSkills = computed(() => [
   {
-    title: "Programming languages",
+    title: t("programmingLanguagesTitle"),
     skills: [
       {
         type: "icon",
@@ -133,7 +172,7 @@ const technicalSkills = ref([
     ],
   },
   {
-    title: "Frameworks and libraries",
+    title: t("frameworksLibrariesTitle"),
     skills: [
       {
         type: "icon",
@@ -200,7 +239,7 @@ const technicalSkills = ref([
     ],
   },
   {
-    title: "Databases",
+    title: t("databasesTitle"),
     skills: [
       {
         type: "component",
@@ -229,7 +268,7 @@ const technicalSkills = ref([
     ],
   },
   {
-    title: "Tools and extras",
+    title: t("toolsExtraTitle"),
     skills: [
       {
         type: "icon",
@@ -274,18 +313,18 @@ const technicalSkills = ref([
   },
 ]);
 
-const softSkills = ref([
+const softSkills = computed(() => [
   {
-    title: "Dynamic and organized",
-    text: 'I am very active when there is a task assigned to me. But it doesn\'t mean that I am doing it disorderly, I am able to make the stuff in "the rules of art".',
+    title: t("dynamicOrganizedTitle"),
+    text: t("dynamicOrganizedDescription"),
   },
   {
-    title: "Teamwork",
-    text: "I understand the importance of teamwork, and I can contribute to any team I am a part of. I can also be autonomous and act on my own when needed.",
+    title: t("teamworkTitle"),
+    text: t("teamWorkDescription"),
   },
   {
-    title: "Adaptability",
-    text: "I am like a water that can fit into any shape of container. It means I am able to adapt in every situation. And if it is new to me, I can learn it easily.",
+    title: t("adaptabilityTitle"),
+    text: t("adaptabilityDescription"),
   },
 ]);
 </script>

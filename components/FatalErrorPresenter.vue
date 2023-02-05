@@ -13,6 +13,20 @@
 <script setup>
 import { FetchError } from "ofetch";
 
+const { locale, t } = useI18n({
+  useScope: "global",
+  messages: {
+    en: {
+      defaultErrorMessage:
+        "Something is not working properly. Please try again.",
+    },
+    fr: {
+      defaultErrorMessage:
+        "Quelque chose ne fonctionne pas correctement. Veuillez réessayer.",
+    },
+  },
+});
+
 const props = defineProps({
   error: {
     type: [Error, null],
@@ -22,7 +36,7 @@ const props = defineProps({
 });
 
 const errorMessage = computed(() => {
-  let result = "Something is not working properly. Please, try again.";
+  let result = t("defaultErrorMessage");
 
   if (
     props.error &&
@@ -30,7 +44,7 @@ const errorMessage = computed(() => {
     [400, 503].includes(props.error?.statusCode) &&
     props.error?.data?.message
   ) {
-    result = props.error.data.message;
+    result = props.error.data.message[locale.value] || result;
   }
 
   return result;

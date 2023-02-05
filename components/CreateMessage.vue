@@ -1,10 +1,9 @@
 <template>
   <div class="p-3 border-4 rounded-lg bg-sky-100 border-primary group">
     <h2
+      v-t="'createMessageTitle'"
       class="inline-block transition-colors text-secondary text-2xl font-bold mb-5 after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block group-hover:after:w-full bg-move"
-    >
-      You can send me a message here
-    </h2>
+    />
 
     <form @submit.prevent="createMessageHandler" action="" method="POST">
       <SuccessPresenter :success="success" class="mb-5" />
@@ -12,33 +11,33 @@
       <FatalErrorPresenter :error="fatalError" class="mb-5" />
 
       <CustomInput
-        label="Name:"
+        :label="t('nameLabel')"
         id="name"
-        placeholder="John Smith"
+        :placeholder="t('namePlaceholder')"
         :modelValue="name"
         @update:modelValue="(newValue) => (name = newValue)"
         :error="errors.name"
       />
 
       <CustomInput
-        label="Email:"
+        :label="t('emailLabel')"
         id="email"
         type="email"
-        placeholder="email@example.com"
+        :placeholder="t('emailPlaceholder')"
         :modelValue="email"
         @update:modelValue="(newValue) => (email = newValue)"
         :error="errors.email"
       />
 
-      <label for="message" class="inline-block mb-1">Message:</label>
+      <label v-t="'messageLabel'" for="message" class="inline-block mb-1" />
       <div class="mb-5">
         <textarea
-          name="content"
+          name="message"
           v-model="message"
           id="message"
           cols=""
           rows=""
-          placeholder="Your message"
+          :placeholder="t('messagePlaceholder')"
           class="block w-full h-full p-3 text-black border-2 rounded-md outline-none resize-none border-secondary focus:border-primary"
           :class="[
             {
@@ -61,6 +60,55 @@
 
 <script setup>
 import { watch } from "vue";
+
+const { t, locale } = useI18n({
+  useScope: "global",
+  messages: {
+    en: {
+      createMessageTitle: "You can send me a message here",
+      nameLabel: "Name:",
+      namePlaceholder: "Your name",
+      emailLabel: "Email:",
+      emailPlaceholder: "youremail{'@'}example.com",
+      messageLabel: "Message:",
+      messagePlaceholder: "You message",
+      nameRequired: "The name is required.",
+      nameLong:
+        "The name is too long ({count} characters is the maximum allowed). Please try again.",
+      emailRequired: "The email is required.",
+      emailInvalid: "The email is not valid. Please try again.",
+      messageRequired: "The message is required.",
+      messageLong:
+        "The message is too long ({count} characters is the maximum allowed). Please try again.",
+      sendMessageButtonText: "Send",
+      sendingMessageButtonText: "Sending...",
+      defaultErrorMessage:
+        "Something is not working properly. Please try again.",
+    },
+    fr: {
+      createMessageTitle: "Vous pouvez m'envoyer un message ici",
+      nameLabel: "Nome :",
+      namePlaceholder: "Votre nom",
+      emailLabel: "Email:",
+      emailPlaceholder: "votreemail{'@'}exemple.com",
+      messageLabel: "Message:",
+      messagePlaceholder: "Votre message",
+      nameRequired: "Le nom is obligatoire.",
+      nameLong:
+        "Le nom est trop long ({count} caractères est le maximum autorisé). Veuillez réessayer.",
+      emailRequired: "L'email est obligatoire.",
+      emailInvalid: "L'email n'est pas valide. Veuillez réessayer.",
+      messageRequired: "Le message est obligatoire",
+      messageLong:
+        "Le message est trop long ({count} caractères est le maximum autorisé). Veuillez réessayer.",
+      sendMessageButtonText: "Envoyer",
+      sendingMessageButtonText: "En cours...",
+      defaultErrorMessage:
+        "Quelque chose ne fonctionne pas correctement. Veuillez réessayer.",
+    },
+  },
+});
+
 const name = ref("");
 const email = ref("");
 const message = ref("");
@@ -87,9 +135,11 @@ const nameChangeHandler = (newValue) => {
   let trimmed = newValue.trim().replace(/\s+/g, "");
 
   if (trimmed.length === 0) {
-    errors.value.name = "The name is required.";
+    errors.value.name = t("nameRequired");
   } else if (trimmed.length > maxLength) {
-    errors.value.name = `The name is too long (${maxLength} characters is the maximum allowed). Please try again.`;
+    errors.value.name = t("nameLong", {
+      count: maxLength,
+    });
   } else {
     errors.value.name = null;
   }
@@ -101,13 +151,13 @@ const emailChangeHandler = (newValue) => {
   const trimmed = newValue.trim();
 
   if (trimmed.length === 0) {
-    errors.value.email = "The email is required.";
+    errors.value.email = t("emailRequired");
   } else if (
     !/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/g.test(
       trimmed
     )
   ) {
-    errors.value.email = "The email is not valid. Please try again.";
+    errors.value.email = t("emailInvalid");
   } else {
     errors.value.email = null;
   }
@@ -120,9 +170,11 @@ const messageChangeHandler = (newValue) => {
   const maxLength = 2000;
 
   if (trimmed.length === 0) {
-    errors.value.message = "The message is required.";
+    errors.value.message = t("messageRequired");
   } else if (trimmed.length > maxLength) {
-    errors.value.message = `The message is too long (${maxLength} characters is the maximum allowed). Please try again.`;
+    errors.value.message = t("messageLong", {
+      count: maxLength,
+    });
   } else {
     errors.value.message = null;
   }
@@ -131,7 +183,9 @@ const messageChangeHandler = (newValue) => {
 const createMessageProcessing = ref(false);
 
 const buttonText = computed(() =>
-  createMessageProcessing.value ? "Sending..." : "Send"
+  createMessageProcessing.value
+    ? t("sendingMessageButtonText")
+    : t("sendMessageButtonText")
 );
 
 const resetData = () => {
@@ -176,10 +230,9 @@ const createMessageHandler = async () => {
 
       if (fetchError.value) {
         fatalError.value =
-          fetchError?.value ||
-          new Error(`Something is not working properly. Please try again.`);
+          fetchError?.value || new Error(t("defaultErrorMessage"));
       } else {
-        success.value = responseData.value.message;
+        success.value = responseData.value.message[locale];
 
         // remove the success message and resetData after a few time
         setTimeout(() => {

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex flex-row flex-wrap items-center min-h-screen py-20 lg:flex-nowrap justify-evenly"
+    class="relative flex flex-row flex-wrap items-center min-h-screen pt-24 pb-20 lg:flex-nowrap justify-evenly"
   >
     <div class="absolute top-16 lg:top-1/5 left-[2%] w-7 md:w-12 lg:w-20">
       <FaIcon
@@ -28,9 +28,10 @@
     <div class="w-full p-3 mb-10 md:mb-0 lg:w-auto">
       <p class="mb-5">
         <span
+          v-t="'greetingPre'"
           v-motion="{
             initial: {
-              x: -100,
+              x: -20,
               opacity: 0,
             },
             visibleOnce: {
@@ -42,13 +43,12 @@
             },
           }"
           class="inline-block text-lg font-bold text-gray-500 md:text-2xl"
-        >
-          Hi, I am
-        </span>
+        />
 
         <br />
 
         <span
+          v-t="'fullName'"
           v-motion="{
             initial: {
               x: -100,
@@ -64,16 +64,14 @@
             },
           }"
           class="font-bold inline-block text-2xl md:text-4xl text-primary after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full"
-        >
-          Fitia Ismael Rakotondrazaka
-        </span>
+        />
       </p>
 
       <h1
-        class="font-bold text-4xl md:text-[4rem] bg-move leading-[1] whitespace-pre-wrap"
+        class="font-bold text-4xl md:text-[4rem] leading-[1] whitespace-pre-wrap"
       >
         <span
-          class="inline-block"
+          class="inline-block bg-move"
           v-motion="{
             initial: {
               y: 100,
@@ -88,7 +86,7 @@
             },
           }"
           v-for="(letter, i) in professionSplitted1"
-          :key="i"
+          :key="i + locale"
         >
           {{ letter }}
         </span>
@@ -96,7 +94,7 @@
         <br />
 
         <span
-          class="inline-block"
+          class="inline-block bg-move"
           v-motion="{
             initial: {
               y: 100,
@@ -111,13 +109,14 @@
             },
           }"
           v-for="(letter, i) in professionSplitted2"
-          :key="i"
+          :key="i + locale"
         >
           {{ letter }}
         </span>
       </h1>
 
       <NuxtLink
+        v-t="'contactButtonText'"
         v-motion="{
           initial: {
             scale: 0,
@@ -131,9 +130,7 @@
         }"
         to="/#contact"
         class="mt-7 inline-block px-5 py-3 font-bold uppercase border-2 rounded-md border-secondary ring-2 transition-all after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full text-white bg-secondary hover:border-white ring-secondary"
-      >
-        Contact me
-      </NuxtLink>
+      />
     </div>
 
     <div class="p-3 w-full h-full max-w-[26rem] max-h-[26rem]">
@@ -162,8 +159,28 @@
 </template>
 
 <script setup>
-const professionSplitted1 = "A professional".split("");
-const professionSplitted2 = "web developer".split("");
+const { t, locale } = useI18n({
+  useScope: "global",
+  messages: {
+    en: {
+      greetingPre: "Hi, I am",
+      fullName: "Fitia Ismael Rakotondrazaka",
+      professionPart1: "A professional",
+      professionPart2: "web developer",
+      contactButtonText: "Contact me",
+    },
+    fr: {
+      greetingPre: "Bonjour, je suis",
+      fullName: "Rakotondrazaka Fitia Ismael",
+      professionPart1: "Un développeur",
+      professionPart2: "web professionnel",
+      contactButtonText: "Me contacter",
+    },
+  },
+});
+
+const professionSplitted1 = computed(() => t("professionPart1").split(""));
+const professionSplitted2 = computed(() => t("professionPart2").split(""));
 </script>
 
 <style scoped></style>
