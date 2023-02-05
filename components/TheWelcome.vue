@@ -31,7 +31,7 @@
           v-t="'greetingPre'"
           v-motion="{
             initial: {
-              x: -100,
+              x: -20,
               opacity: 0,
             },
             visibleOnce: {
@@ -68,10 +68,10 @@
       </p>
 
       <h1
-        class="font-bold text-4xl md:text-[4rem] bg-move leading-[1] whitespace-pre-wrap"
+        class="font-bold text-4xl md:text-[4rem] leading-[1] whitespace-pre-wrap"
       >
         <span
-          class="inline-block"
+          class="inline-block bg-move"
           v-motion="{
             initial: {
               y: 100,
@@ -94,7 +94,7 @@
         <br />
 
         <span
-          class="inline-block"
+          class="inline-block bg-move"
           v-motion="{
             initial: {
               y: 100,
