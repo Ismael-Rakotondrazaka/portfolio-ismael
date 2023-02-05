@@ -188,20 +188,6 @@ const buttonText = computed(() =>
     : t("sendMessageButtonText")
 );
 
-const resetData = () => {
-  name.value = "";
-  email.value = "";
-  success.value;
-  message.value = "";
-
-  // errors will be there but overwrite it here
-  errors.value = {
-    email: null,
-    message: null,
-    name: null,
-  };
-};
-
 const createMessageHandler = async () => {
   // recheck because we don't want the watcher to be immediate
   nameChangeHandler(name.value);
@@ -232,13 +218,7 @@ const createMessageHandler = async () => {
         fatalError.value =
           fetchError?.value || new Error(t("defaultErrorMessage"));
       } else {
-        success.value = responseData.value.message[locale];
-
-        // remove the success message and resetData after a few time
-        setTimeout(() => {
-          success.value = null;
-          resetData();
-        }, 10000);
+        success.value = responseData.value.message[locale.value];
       }
 
       createMessageProcessing.value = false;
