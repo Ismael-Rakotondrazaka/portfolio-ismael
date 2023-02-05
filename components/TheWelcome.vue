@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex flex-row flex-wrap items-center min-h-screen py-20 lg:flex-nowrap justify-evenly"
+    class="relative flex flex-row flex-wrap items-center min-h-screen pt-24 pb-20 lg:flex-nowrap justify-evenly"
   >
     <div class="absolute top-16 lg:top-1/5 left-[2%] w-7 md:w-12 lg:w-20">
       <FaIcon
