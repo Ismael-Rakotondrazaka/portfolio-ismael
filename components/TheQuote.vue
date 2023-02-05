@@ -29,13 +29,12 @@
         backgroundImage: `url(${IllustrationStarryNight})`,
       }"
     >
-      <p class="mb-3 text-3xl italic font-bold text-white md:text-4xl">
-        Because codes are arts,
-        <br />
-        I'm also an artist.
-      </p>
+      <p
+        v-t="'theQuoteText'"
+        class="mb-3 text-3xl italic font-bold text-white whitespace-pre-wrap md:text-4xl"
+      />
 
-      <p class="text-sm text-right text-white">Fitia Ismael Rakotondrazaka</p>
+      <p v-t="'fullName'" class="text-sm text-right text-white" />
     </div>
   </div>
 </template>
@@ -43,6 +42,19 @@
 <script setup>
 import IllustrationStarryNight from "~/assets/images/illustrations/illustration-starry-night.jpg";
 import IllustrationCode from "~/assets/images/illustrations/illustration-code.png";
+
+useI18n({
+  useScope: "global",
+  messages: {
+    en: {
+      theQuoteText: "Because codes are arts, \nI'm also an artist.",
+    },
+    fr: {
+      theQuoteText:
+        "Puisque les codes sont des arts,\nje suis aussi un artiste.",
+    },
+  },
+});
 </script>
 
 <style scoped></style>
