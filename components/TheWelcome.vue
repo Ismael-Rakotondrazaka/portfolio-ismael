@@ -28,6 +28,7 @@
     <div class="w-full p-3 mb-10 md:mb-0 lg:w-auto">
       <p class="mb-5">
         <span
+          v-t="'greetingPre'"
           v-motion="{
             initial: {
               x: -100,
@@ -42,13 +43,12 @@
             },
           }"
           class="inline-block text-lg font-bold text-gray-500 md:text-2xl"
-        >
-          {{ greetingPre }}
-        </span>
+        />
 
         <br />
 
         <span
+          v-t="'fullName'"
           v-motion="{
             initial: {
               x: -100,
@@ -64,9 +64,7 @@
             },
           }"
           class="font-bold inline-block text-2xl md:text-4xl text-primary after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full"
-        >
-          {{ fullName }}
-        </span>
+        />
       </p>
 
       <h1
@@ -118,6 +116,7 @@
       </h1>
 
       <NuxtLink
+        v-t="'contactButtonText'"
         v-motion="{
           initial: {
             scale: 0,
@@ -131,9 +130,7 @@
         }"
         to="/#contact"
         class="mt-7 inline-block px-5 py-3 font-bold uppercase border-2 rounded-md border-secondary ring-2 transition-all after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full text-white bg-secondary hover:border-white ring-secondary"
-      >
-        {{ contactButtonText }}
-      </NuxtLink>
+      />
     </div>
 
     <div class="p-3 w-full h-full max-w-[26rem] max-h-[26rem]">
@@ -182,11 +179,8 @@ const { t, locale } = useI18n({
   },
 });
 
-const greetingPre = computed(() => t("greetingPre"));
-const fullName = computed(() => t("fullName"));
 const professionSplitted1 = computed(() => t("professionPart1").split(""));
 const professionSplitted2 = computed(() => t("professionPart2").split(""));
-const contactButtonText = computed(() => t("contactButtonText"));
 </script>
 
 <style scoped></style>
