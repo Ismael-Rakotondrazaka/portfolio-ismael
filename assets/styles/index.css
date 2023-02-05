@@ -1,0 +1,27 @@
+html {
+    scroll-behavior: smooth;
+    --color-primary: #00b7ff;
+    --color-secondary: #002451;
+}
+
+body {
+    background-color: #f0f9ff;
+}
+
+.bg-move {
+    --bg-size: 400%;
+    background: linear-gradient(90deg,
+            var(--color-secondary),
+            var(--color-primary),
+            var(--color-secondary)) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 8s infinite linear;
+}
+
+@keyframes move-bg {
+    to {
+        background-position: var(--bg-size) 0;
+    }
+}
