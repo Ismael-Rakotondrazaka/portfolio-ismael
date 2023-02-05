@@ -61,7 +61,7 @@
 <script setup>
 import { watch } from "vue";
 
-const { t } = useI18n({
+const { t, locale } = useI18n({
   useScope: "global",
   messages: {
     en: {
@@ -232,7 +232,7 @@ const createMessageHandler = async () => {
         fatalError.value =
           fetchError?.value || new Error(t("defaultErrorMessage"));
       } else {
-        success.value = responseData.value.message;
+        success.value = responseData.value.message[locale];
 
         // remove the success message and resetData after a few time
         setTimeout(() => {
