@@ -60,7 +60,12 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@vueuse/motion/nuxt", "@nuxtjs/tailwindcss", "@nuxtjs/i18n"],
+  modules: [
+    "@vueuse/motion/nuxt",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/i18n",
+    "@nuxt/image",
+  ],
   i18n: {
     vueI18n: {
       legacy: false,
