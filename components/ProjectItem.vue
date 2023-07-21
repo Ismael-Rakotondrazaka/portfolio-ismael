@@ -14,6 +14,7 @@
         alt=""
         sizes="sm:500px md:800px lg:100%"
         class="duration-300 hover:scale-110"
+        format="webp"
       />
     </div>
 
