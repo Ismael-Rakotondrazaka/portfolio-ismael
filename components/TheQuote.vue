@@ -44,7 +44,7 @@ useI18n({
   useScope: "global",
   messages: {
     en: {
-      theQuoteText: "Because codes are arts, \nI'm also an artist.",
+      theQuoteText: "Since codes are arts, \nI'm also an artist.",
     },
     fr: {
       theQuoteText:
