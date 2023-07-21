@@ -19,6 +19,7 @@
       :name="project.name"
       :description="project.description"
       :imgSrc="project.imgSrc"
+      :imgAlt="project.imgAlt"
       :technos="project.technos"
       :source="project.source"
       :demo="project.demo"

@@ -14,14 +14,6 @@
 </template>
 
 <script setup>
-import IllustrationMiChat from "~/assets/images/illustrations/illustration-mi-chat.png";
-import IllustrationAgendapp from "~/assets/images/illustrations/illustration-agendapp.png";
-import IllustrationMinili from "~/assets/images/illustrations/illustration-minili.png";
-import IllustrationFoodies from "~/assets/images/illustrations/illustration-foodies.png";
-import IllustrationDHTML2022 from "~/assets/images/illustrations/illustration-dhtml-2022.png";
-import IllustrationNaturePortfolio from "~/assets/images/illustrations/illustration-nature-portfolio.png";
-import IllustrationFiber from "~/assets/images/illustrations/illustration-fiber.png";
-
 const { t } = useI18n({
   useScope: "global",
   messages: {
@@ -66,15 +58,17 @@ const projects = computed(() => [
   {
     name: "mi-chat",
     description: t("miChatDescription"),
-    imgSrc: IllustrationMiChat,
+    imgSrc: "/images/illustrations/illustration-mi-chat.png",
     technos: ["Vue", "Tailwind CSS", "Express", "SocketIO", "MySql"],
+    imgAlt: "Illustration mi-chat",
     source: "https://github.com/Ismael-Rakotondrazaka/mi-chat",
     demo: "https://mi-chat.onrender.com",
   },
   {
     name: "agendapp",
     description: t("agendappDescription"),
-    imgSrc: IllustrationAgendapp,
+    imgSrc: "/images/illustrations/illustration-agendapp.png",
+    imgAlt: "Illustration agendapp",
     technos: [
       "Vue",
       "Tailwind CSS",
@@ -90,7 +84,8 @@ const projects = computed(() => [
   {
     name: "minili",
     description: t("miniliDescription"),
-    imgSrc: IllustrationMinili,
+    imgSrc: "/images/illustrations/illustration-minili.png",
+    imgAlt: "Illustration minili",
     technos: ["Vue", "Tailwind CSS", "Express", "MongoDB"],
     source: "https://github.com/Ismael-Rakotondrazaka/minili",
     demo: "https://minili.onrender.com",
@@ -98,7 +93,8 @@ const projects = computed(() => [
   {
     name: "DHTML-2022",
     description: t("DHTML2022Description"),
-    imgSrc: IllustrationDHTML2022,
+    imgSrc: "/images/illustrations/illustration-dhtml-2022.png",
+    imgAlt: "Illustration DHTML-2022",
     technos: ["HTML", "CSS", "Javascript"],
     source: "https://github.com/Ismael-Rakotondrazaka/dhtml-2022",
     demo: "https://dhtml-2022.onrender.com",
@@ -106,7 +102,8 @@ const projects = computed(() => [
   {
     name: "Foodies",
     description: t("foodiesDescription"),
-    imgSrc: IllustrationFoodies,
+    imgSrc: "/images/illustrations/illustration-foodies.png",
+    imgAlt: "Illustration Foodies",
     technos: ["Vue", "Tailwind CSS"],
     source: "https://github.com/Ismael-Rakotondrazaka/foodies",
     demo: "https://template-foodies.onrender.com",
@@ -114,7 +111,8 @@ const projects = computed(() => [
   {
     name: "Nature Portfolio",
     description: t("naturePortfolioDescription"),
-    imgSrc: IllustrationNaturePortfolio,
+    imgSrc: "/images/illustrations/illustration-nature-portfolio.png",
+    imgAlt: "Illustration Nature Portfolio",
     technos: ["Vue", "Bootstrap"],
     source: "https://github.com/Ismael-Rakotondrazaka/nature-portfolio",
     demo: "https://nature-portfolio.onrender.com",
@@ -122,7 +120,8 @@ const projects = computed(() => [
   {
     name: "Fiber",
     description: t("fiberDescription"),
-    imgSrc: IllustrationFiber,
+    imgSrc: "/images/illustrations/illustration-fiber.png",
+    imgAlt: "Illustration Fiber",
     technos: ["Vue", "Bootstrap"],
     source: "https://github.com/Ismael-Rakotondrazaka/fiber",
     demo: "https://template-fiber.onrender.com",

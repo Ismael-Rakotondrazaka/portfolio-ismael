@@ -19,6 +19,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@vueuse/motion": "^2.0.0",
+    "ipx": "^1.2.0",
+    "libvips": "^0.0.2",
+    "node-gyp": "^9.4.0",
     "nodemailer": "^6.9.4"
   }
 }

@@ -2,7 +2,7 @@
   <div
     class="relative bg-no-repeat bg-cover border border-white rounded-lg rounded-tr-none p-7 md:p-12 bg-sky-100"
     :style="{
-      backgroundImage: `url(${IllustrationCode})`,
+      backgroundImage: `url(/images/illustrations/illustration-starry-night.jpg)`,
     }"
   >
     <FaIcon
@@ -26,7 +26,7 @@
       }"
       class="p-5 bg-opacity-50 bg-no-repeat bg-cover border border-white rounded-lg rounded-tr-none"
       :style="{
-        backgroundImage: `url(${IllustrationStarryNight})`,
+        backgroundImage: `url(/images/illustrations/illustration-starry-night.jpg)`,
       }"
     >
       <p
@@ -40,9 +40,6 @@
 </template>
 
 <script setup>
-import IllustrationStarryNight from "~/assets/images/illustrations/illustration-starry-night.jpg";
-import IllustrationCode from "~/assets/images/illustrations/illustration-code.png";
-
 useI18n({
   useScope: "global",
   messages: {
