@@ -27,6 +27,8 @@ const { t } = useI18n({
         "minili is a web app that give a short version of any links.\nThe given links can be reversed if needed.",
       hackerrankBadgeDescription:
         "The Hackerrank Badge API is a tool that allows users to obtain their Hackerrank badge images through a specific URL. Users can request badge images by providing their Hackerrank username and specifying the desired image format.",
+      carSalesManagementDescription:
+        "This user-friendly web application simplifies car sales for dealerships and sales professionals. It efficiently handles car inventory, client data, and purchase transactions. The platform offers stock tracking, a customer database, and downloadable bills for each transaction. With easy-to-understand data analytics and mobile compatibility, the web app streamlines car sales and boosts customer satisfaction.",
       DHTML2022Description:
         "DHTML-2022 was created to put into practice the basic of Javascript for the web: functions, event handlers, DOM manipulation...\nIt is responsive and have the trendy glassmorphism look.",
       coffeeAromaDescription:
@@ -48,6 +50,8 @@ const { t } = useI18n({
         "minili est une application Web qui donne une version courte de tous les liens.\nLes liens donnés peuvent être inversés si nécessaire.",
       hackerrankBadgeDescription:
         "L'API Hackerrank Badge est un outil qui permet aux utilisateurs d'obtenir les images de leurs badges Hackerrank via une URL spécifique. Les utilisateurs peuvent demander les images de leurs badges en fournissant leur nom d'utilisateur Hackerrank et en spécifiant le format d'image souhaité.",
+      carSalesManagementDescription:
+        "Cette application web facilite les ventes de voitures pour les concessionnaires et les professionnels de la vente. Elle gère efficacement l'inventaire des voitures, les informations des clients et les transactions d'achat. La plateforme propose un suivi des stocks, une base de données client et des factures téléchargeables pour chaque transaction. Avec des analyses de données faciles à comprendre et une compatibilité mobile, cette application web optimise les ventes de voitures et améliore la satisfaction des clients.",
       DHTML2022Description:
         "DHTML-2022 a été créé pour mettre en pratique les bases de Javascript pour le web : fonctions, gestion d'événements, manipulation du DOM...\nLe site est responsive et a l'aspect tendance glassmorphisme.",
       coffeeAromaDescription:
@@ -104,6 +108,14 @@ const projects = computed(() => [
     imgSrc: "/images/illustrations/illustration-hackerrank-badge.webp",
     imgAlt: "Illustration hackerrank-badge",
     technos: ["Express", "Puppeteer", "node-cache-manager"],
+    source: "https://github.com/Ismael-Rakotondrazaka/hackerrank-badge",
+  },
+  {
+    name: "car-sales-management",
+    description: t("carSalesManagementDescription"),
+    imgSrc: "/images/illustrations/illustration-car-sales-management.png",
+    imgAlt: "Illustration car-sales-management",
+    technos: ["PHP", "MySQL", "Bootstrap"],
     source: "https://github.com/Ismael-Rakotondrazaka/hackerrank-badge",
   },
   {
