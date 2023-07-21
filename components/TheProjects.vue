@@ -29,6 +29,8 @@ const { t } = useI18n({
         "The Hackerrank Badge API is a tool that allows users to obtain their Hackerrank badge images through a specific URL. Users can request badge images by providing their Hackerrank username and specifying the desired image format.",
       DHTML2022Description:
         "DHTML-2022 was created to put into practice the basic of Javascript for the web: functions, event handlers, DOM manipulation...\nIt is responsive and have the trendy glassmorphism look.",
+      coffeeAromaDescription:
+        "Inspired by a captivating monochrome design I discovered online, I brought it to life using React and Tailwind CSS. The project showcases the elegance of brown tones throughout the interface.",
       foodiesDescription:
         "This is an integration of a template I found on Dribble. The purpose is to test out Tailwind CSS, and it is very easy to associate with the Vue's syntax.",
       naturePortfolioDescription:
@@ -48,6 +50,8 @@ const { t } = useI18n({
         "L'API Hackerrank Badge est un outil qui permet aux utilisateurs d'obtenir les images de leurs badges Hackerrank via une URL spécifique. Les utilisateurs peuvent demander les images de leurs badges en fournissant leur nom d'utilisateur Hackerrank et en spécifiant le format d'image souhaité.",
       DHTML2022Description:
         "DHTML-2022 a été créé pour mettre en pratique les bases de Javascript pour le web : fonctions, gestion d'événements, manipulation du DOM...\nLe site est responsive et a l'aspect tendance glassmorphisme.",
+      coffeeAromaDescription:
+        "Inspiré par un captivant design monochrome découvert en ligne, je l'ai concrétisé en utilisant React et Tailwind CSS. Le projet met en valeur l'élégance des tons marron à travers l'interface.",
       foodiesDescription:
         "Ceci est une intégration d'un modèle que j'ai trouvé sur Dribble. Le but est de tester Tailwind CSS, et il est très facile à associer à la syntaxe de Vue.",
       naturePortfolioDescription:
@@ -110,6 +114,15 @@ const projects = computed(() => [
     technos: ["HTML", "CSS", "Javascript"],
     source: "https://github.com/Ismael-Rakotondrazaka/dhtml-2022",
     demo: "https://dhtml-2022.onrender.com",
+  },
+  {
+    name: "Coffee Aroma",
+    description: t("coffeeAromaDescription"),
+    imgSrc: "/images/illustrations/illustration-coffee-aroma.png",
+    imgAlt: "Illustration Coffee Aroma",
+    technos: ["React", "Tailwind CSS"],
+    source: "https://github.com/Ismael-Rakotondrazaka/coffee-aroma",
+    demo: "https://template-coffee-aroma.onrender.com/",
   },
   {
     name: "Foodies",
