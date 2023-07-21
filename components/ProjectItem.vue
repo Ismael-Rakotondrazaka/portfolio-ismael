@@ -11,7 +11,7 @@
     >
       <nuxt-img
         :src="imgSrc"
-        alt=""
+        :alt="imgAlt"
         sizes="sm:500px md:800px lg:100%"
         class="duration-300 hover:scale-110"
         format="webp"
@@ -76,6 +76,11 @@ defineProps({
   imgSrc: {
     type: String,
     required: true,
+  },
+  imgAlt: {
+    type: String,
+    required: false,
+    default: "",
   },
   technos: {
     type: Array,

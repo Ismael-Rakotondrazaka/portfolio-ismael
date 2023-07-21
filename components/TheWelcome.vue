@@ -152,6 +152,7 @@
       sizes="sm:90vw md:50vw lg:400px"
       src="/images/profiles/profile.png"
       format="webp"
+      alt="Ismael profile image"
     />
   </div>
 </template>
