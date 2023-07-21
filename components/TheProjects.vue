@@ -25,6 +25,8 @@ const { t } = useI18n({
         "Agendapp is a web application that manage schedules.\nUsers can create many events, update and delete them.\nThere are an overview per month and overview per year features, with statistics.",
       miniliDescription:
         "minili is a web app that give a short version of any links.\nThe given links can be reversed if needed.",
+      hackerrankBadgeDescription:
+        "The Hackerrank Badge API is a tool that allows users to obtain their Hackerrank badge images through a specific URL. Users can request badge images by providing their Hackerrank username and specifying the desired image format.",
       DHTML2022Description:
         "DHTML-2022 was created to put into practice the basic of Javascript for the web: functions, event handlers, DOM manipulation...\nIt is responsive and have the trendy glassmorphism look.",
       foodiesDescription:
@@ -42,6 +44,8 @@ const { t } = useI18n({
         "Agendapp est une application web qui gère les tâches et les horaires.\nLes utilisateurs peuvent créer de nombreux événements, les mettre à jour et les supprimer. Il y a un aperçu par mois, un aperçu par année avec des statistiques, d'autres fonctionnalités.",
       miniliDescription:
         "minili est une application Web qui donne une version courte de tous les liens.\nLes liens donnés peuvent être inversés si nécessaire.",
+      hackerrankBadgeDescription:
+        "L'API Hackerrank Badge est un outil qui permet aux utilisateurs d'obtenir les images de leurs badges Hackerrank via une URL spécifique. Les utilisateurs peuvent demander les images de leurs badges en fournissant leur nom d'utilisateur Hackerrank et en spécifiant le format d'image souhaité.",
       DHTML2022Description:
         "DHTML-2022 a été créé pour mettre en pratique les bases de Javascript pour le web : fonctions, gestion d'événements, manipulation du DOM...\nLe site est responsive et a l'aspect tendance glassmorphisme.",
       foodiesDescription:
@@ -89,6 +93,14 @@ const projects = computed(() => [
     technos: ["Vue", "Tailwind CSS", "Express", "MongoDB"],
     source: "https://github.com/Ismael-Rakotondrazaka/minili",
     demo: "https://minili.onrender.com",
+  },
+  {
+    name: "hackerrank-badge",
+    description: t("hackerrankBadgeDescription"),
+    imgSrc: "/images/illustrations/illustration-hackerrank-badge.webp",
+    imgAlt: "Illustration hackerrank-badge",
+    technos: ["Express", "Puppeteer", "node-cache-manager"],
+    source: "https://github.com/Ismael-Rakotondrazaka/hackerrank-badge",
   },
   {
     name: "DHTML-2022",
