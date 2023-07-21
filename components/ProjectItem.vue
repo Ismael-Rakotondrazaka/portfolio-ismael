@@ -9,10 +9,11 @@
         isOdd ? 'rounded-lg lg:rounded-l-none' : 'rounded-lg lg:rounded-r-none',
       ]"
     >
-      <img
+      <nuxt-img
         :src="imgSrc"
         alt=""
-        class="object-cover w-full h-full transition-all duration-300 hover:scale-110"
+        sizes="sm:500px md:800px lg:100%"
+        class="duration-300 hover:scale-110"
       />
     </div>
 

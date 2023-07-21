@@ -97,4 +97,8 @@ export default defineNuxtConfig({
     emailDefaultSubject: process.env.EMAIL_DEFAULT_SUBJECT,
     isServiceAvailable: process.env.IS_SERVICE_AVAILABLE,
   },
+  image: {
+    quality: 100,
+    format: ["webp"],
+  },
 });

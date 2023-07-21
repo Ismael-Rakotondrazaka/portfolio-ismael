@@ -133,28 +133,25 @@
       />
     </div>
 
-    <div class="p-3 w-full h-full max-w-[26rem] max-h-[26rem]">
-      <img
-        v-motion="{
-          initial: {
-            scale: 0,
+    <nuxt-img
+      v-motion="{
+        initial: {
+          scale: 0,
+        },
+        visibleOnce: {
+          scale: 1,
+          transition: {
+            type: 'spring',
+            stiffness: 300,
+            damping: 20,
+            mass: 1,
+            delay: 500,
           },
-          visibleOnce: {
-            scale: 1,
-            transition: {
-              type: 'spring',
-              stiffness: 300,
-              damping: 20,
-              mass: 1,
-              delay: 500,
-            },
-          },
-        }"
-        src="~/assets/images/profiles/profile.png"
-        alt=""
-        class="object-cover w-full h-full"
-      />
-    </div>
+        },
+      }"
+      sizes="sm:90vw md:50vw lg:400px"
+      src="/images/profiles/profile.png"
+    />
   </div>
 </template>
 
