@@ -2,7 +2,7 @@
   <div
     class="relative bg-no-repeat bg-cover border border-white rounded-lg rounded-tr-none p-7 md:p-12 bg-sky-100"
     :style="{
-      backgroundImage: `url(/images/illustrations/illustration-starry-night.jpg)`,
+      backgroundImage: `url(/images/illustrations/illustration-code.png)`,
     }"
   >
     <FaIcon
