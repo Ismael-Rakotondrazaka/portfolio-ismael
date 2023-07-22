@@ -57,7 +57,7 @@ const props = defineProps({
 });
 
 const step = 3;
-const initial = 3;
+const initial = 5;
 
 const count = ref(initial);
 const projectsToShow = computed(() => props.projects.slice(0, count.value));
