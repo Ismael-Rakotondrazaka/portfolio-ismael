@@ -98,15 +98,6 @@ const projects = computed(() => [
     demo: "https://agendapp.onrender.com",
   },
   {
-    name: "minili",
-    description: t("miniliDescription"),
-    imgSrc: "/images/illustrations/illustration-minili.png",
-    imgAlt: "Illustration minili",
-    technos: ["Vue", "Tailwind CSS", "Express", "MongoDB"],
-    source: "https://github.com/Ismael-Rakotondrazaka/minili",
-    demo: "https://minili.onrender.com",
-  },
-  {
     name: "hackerrank-badge",
     description: t("hackerrankBadgeDescription"),
     imgSrc: "/images/illustrations/illustration-hackerrank-badge.webp",
@@ -130,6 +121,15 @@ const projects = computed(() => [
     technos: ["Vue", "Bootstrap"],
     source: "https://github.com/code-verse-unity/materials-crud",
     demo: "https://materials-crud.onrender.com",
+  },
+  {
+    name: "minili",
+    description: t("miniliDescription"),
+    imgSrc: "/images/illustrations/illustration-minili.png",
+    imgAlt: "Illustration minili",
+    technos: ["Vue", "Tailwind CSS", "Express", "MongoDB"],
+    source: "https://github.com/Ismael-Rakotondrazaka/minili",
+    demo: "https://minili.onrender.com",
   },
   {
     name: "DHTML-2022",
