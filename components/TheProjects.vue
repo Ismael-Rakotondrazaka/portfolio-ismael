@@ -120,7 +120,7 @@ const projects = computed(() => [
     imgSrc: "/images/illustrations/illustration-car-sales-management.png",
     imgAlt: "Illustration car-sales-management",
     technos: ["PHP", "MySQL", "Bootstrap"],
-    source: "https://github.com/Ismael-Rakotondrazaka/hackerrank-badge",
+    source: "https://github.com/code-verse-unity/car-sales-management",
   },
   {
     name: "materials-crud",
