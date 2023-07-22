@@ -29,6 +29,8 @@ const { t } = useI18n({
         "The Hackerrank Badge API is a tool that allows users to obtain their Hackerrank badge images through a specific URL. Users can request badge images by providing their Hackerrank username and specifying the desired image format.",
       carSalesManagementDescription:
         "This user-friendly web application simplifies car sales for dealerships and sales professionals. It efficiently handles car inventory, client data, and purchase transactions. The platform offers stock tracking, a customer database, and downloadable bills for each transaction. With easy-to-understand data analytics and mobile compatibility, the web app streamlines car sales and boosts customer satisfaction.",
+      materialsCrudDescription:
+        "An efficient and practical application tailored for seamless material management. This powerful tool empowers you to add, modify, and remove data entries effortlessly. Stay organized with a structured table display of all material records. The application also provides a clear summary of the total material quantity, categorized for your convenience.",
       DHTML2022Description:
         "DHTML-2022 was created to put into practice the basic of Javascript for the web: functions, event handlers, DOM manipulation...\nIt is responsive and have the trendy glassmorphism look.",
       coffeeAromaDescription:
@@ -52,6 +54,8 @@ const { t } = useI18n({
         "L'API Hackerrank Badge est un outil qui permet aux utilisateurs d'obtenir les images de leurs badges Hackerrank via une URL spécifique. Les utilisateurs peuvent demander les images de leurs badges en fournissant leur nom d'utilisateur Hackerrank et en spécifiant le format d'image souhaité.",
       carSalesManagementDescription:
         "Cette application web facilite les ventes de voitures pour les concessionnaires et les professionnels de la vente. Elle gère efficacement l'inventaire des voitures, les informations des clients et les transactions d'achat. La plateforme propose un suivi des stocks, une base de données client et des factures téléchargeables pour chaque transaction. Avec des analyses de données faciles à comprendre et une compatibilité mobile, cette application web optimise les ventes de voitures et améliore la satisfaction des clients.",
+      materialsCrudDescription:
+        "Une application efficace et pratique conçue pour une gestion fluide des matériels. Cet outil puissant vous permet d'ajouter, de modifier et de supprimer facilement des entrées de données. Restez organisé avec un affichage structuré sous forme de tableau de tous les enregistrements de matériel. L'application fournit également un résumé clair de la quantité totale de matériel, catégorisée pour votre commodité.",
       DHTML2022Description:
         "DHTML-2022 a été créé pour mettre en pratique les bases de Javascript pour le web : fonctions, gestion d'événements, manipulation du DOM...\nLe site est responsive et a l'aspect tendance glassmorphisme.",
       coffeeAromaDescription:
@@ -117,6 +121,15 @@ const projects = computed(() => [
     imgAlt: "Illustration car-sales-management",
     technos: ["PHP", "MySQL", "Bootstrap"],
     source: "https://github.com/Ismael-Rakotondrazaka/hackerrank-badge",
+  },
+  {
+    name: "materials-crud",
+    description: t("materialsCrudDescription"),
+    imgSrc: "/images/illustrations/illustration-materials-crud.png",
+    imgAlt: "Illustration materials-crud",
+    technos: ["Vue", "Bootstrap"],
+    source: "https://github.com/code-verse-unity/materials-crud",
+    demo: "https://materials-crud.onrender.com",
   },
   {
     name: "DHTML-2022",
