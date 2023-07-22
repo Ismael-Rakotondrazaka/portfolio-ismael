@@ -53,7 +53,7 @@ const links = ref([
   {
     text: "Fitia Ismael Rakotondrazaka",
     icon: "fa-brands fa-linkedin",
-    href: "https://www.linkedin.com/in/ismaelrakotondrazaka",
+    href: "https://www.linkedin.com/in/ismael-rakotondrazaka",
   },
   {
     text: "Ismael Rakotondrazaka",
