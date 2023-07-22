@@ -4,11 +4,11 @@
       v-for="(project, i) in projectsToShow"
       v-motion="{
         initial: {
-          x: 50 * (i % 2 ? -1 : 1),
+          scale: 0.7,
           opacity: 0,
         },
-        visibleOnce: {
-          x: 0,
+        enter: {
+          scale: 1,
           opacity: 1,
           transition: {
             duration: 500,
