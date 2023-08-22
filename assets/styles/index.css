@@ -12,6 +12,7 @@ html {
   scroll-behavior: smooth;
   --color-primary: #00b7ff;
   --color-secondary: #002451;
+  --color-tertiary: #FFD700;
 }
 
 body {

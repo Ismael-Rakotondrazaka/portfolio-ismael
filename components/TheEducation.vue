@@ -29,10 +29,12 @@
     </div>
 
     <div class="w-full max-w-5xl">
-      <h1
-        v-t="'theEducationTitle'"
-        class="inline-block pl-3 lg:pl-0 mb-5 text-4xl font-bold text-center text-primary after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full"
-      />
+      <h1 class="text-4xl font-bold text-center mb-7 text-tertiary">
+        <span
+          v-t="'theEducationTitle'"
+          class="inline-block after:w-0 after:h-[0.2rem] after:transition-all after:bg-tertiary after:block hover:after:w-full"
+        />
+      </h1>
 
       <EducationList :educations="educations" />
     </div>
