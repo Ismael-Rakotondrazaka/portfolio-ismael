@@ -21,17 +21,17 @@
       />
     </div>
 
-    <h1 class="mb-5 text-4xl font-bold text-center text-primary">
+    <h1 class="mb-5 text-4xl font-bold text-center text-tertiary">
       <span
         v-t="'theSkillsTitle'"
-        class="inline-block after:w-0 after:h-[0.2rem] after:transition-all after:bg-primary after:block hover:after:w-full"
+        class="inline-block after:w-0 after:h-[0.2rem] after:transition-all after:bg-tertiary after:block hover:after:w-full"
       />
     </h1>
 
     <div class="w-full max-w-5xl mx-auto mb-10">
       <h2
         v-t="'technicalSkillsTitle'"
-        class="px-3 py-5 text-xl font-bold underline bg-secondary text-primary underline-offset-4"
+        class="px-3 py-5 text-xl font-bold underline bg-secondary text-tertiary underline-offset-4"
       />
 
       <div
@@ -52,7 +52,7 @@
     <div class="w-full max-w-5xl mx-auto">
       <h2
         v-t="'softSkillsTitle'"
-        class="px-3 py-5 text-xl font-bold underline bg-secondary text-primary underline-offset-4"
+        class="px-3 py-5 text-xl font-bold underline bg-secondary text-tertiary underline-offset-4"
       />
 
       <div

@@ -9,7 +9,7 @@
       <div class="max-w-2xl">
         <h1
           v-t="'theAboutTitle'"
-          class="inline-block mb-5 text-4xl font-bold text-center text-primary after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full"
+          class="inline-block mb-5 text-4xl font-bold text-center text-tertiary after:w-0 after:h-[0.15rem] after:transition-all after:bg-tertiary after:block hover:after:w-full"
         />
 
         <p v-t="'aboutP1'" class="mb-3 text-base tracking-wide text-white" />
@@ -24,7 +24,7 @@
 
         <p v-t="'aboutP3'" class="mb-3 text-base tracking-wide text-white" />
 
-        <h2 v-t="'storyBegunTitle'" class="text-lg font-bold text-primary" />
+        <h2 v-t="'storyBegunTitle'" class="text-lg font-bold text-tertiary" />
 
         <p class="mb-3 text-base tracking-wide text-white whitespace-pre-wrap">
           {{ t("storyP1.part1") }}

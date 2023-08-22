@@ -1,9 +1,9 @@
 <template>
   <div id="projects" class="min-h-screen py-20 bg-secondary">
-    <h1 class="text-4xl font-bold text-center mb-7 text-primary">
+    <h1 class="text-4xl font-bold text-center mb-7 text-tertiary">
       <span
         v-t="'theProjectsTitle'"
-        class="inline-block after:w-0 after:h-[0.2rem] after:transition-all after:bg-primary after:block hover:after:w-full"
+        class="inline-block after:w-0 after:h-[0.2rem] after:transition-all after:bg-tertiary after:block hover:after:w-full"
       />
     </h1>
 
