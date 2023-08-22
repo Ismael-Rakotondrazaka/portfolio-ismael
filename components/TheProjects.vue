@@ -23,6 +23,8 @@ const { t } = useI18n({
         "mi-chat is an instant messaging web application.\nIt has some advanced features, like sending text message, video, and images. Messages can be deleted.\nUsers can send and receive friend requests.\nCreating group chats is also an interesting feature with mi-chat, many users can discuss together.\nSearch function is also available in each feature of the app.",
       agendappDescription:
         "Agendapp is a web application that manage schedules.\nUsers can create many events, update and delete them.\nThere are an overview per month and overview per year features, with statistics.",
+      quizwizDescription:
+        "QuizWiz is an engaging and educational web application that aims to combine learning and enjoyment through the world of Vue.js, a popular JavaScript framework. Designed with both beginners and seasoned developers in mind, QuizWiz offers an interactive and entertaining way to deepen your understanding of Vue.js concepts while having fun.",
       miniliDescription:
         "minili is a web app that give a short version of any links.\nThe given links can be reversed if needed.",
       hackerrankBadgeDescription:
@@ -48,6 +50,8 @@ const { t } = useI18n({
         "mi-chat est une application web de messagerie instantanée.\nElle possède des fonctionnalités avancées, telles que l'envoi de messages, de vidéos et de photos.\nLes utilisateurs peuvent envoyer et recevoir des demandes d'amis.\nLa création de discussions de groupe est également une fonctionnalité intéressante avec mi-chat, de nombreux utilisateurs peuvent discuter ensemble.\nLa fonction de recherche est aussi disponible pour chaque fonctionnalité de l'application.",
       agendappDescription:
         "Agendapp est une application web qui gère les tâches et les horaires.\nLes utilisateurs peuvent créer de nombreux événements, les mettre à jour et les supprimer. Il y a un aperçu par mois, un aperçu par année avec des statistiques, d'autres fonctionnalités.",
+      quizwizDescription:
+        "QuizWiz est une application Web engageante et éducative qui vise à combiner apprentissage et plaisir à travers le monde de Vue.js, un framework JavaScript populaire. Conçu pour les développeurs débutants et chevronnés, QuizWiz offre un moyen interactif et divertissant d'approfondir votre compréhension des concepts de Vue.js tout en vous amusant.",
       miniliDescription:
         "minili est une application Web qui donne une version courte de tous les liens.\nLes liens donnés peuvent être inversés si nécessaire.",
       hackerrankBadgeDescription:
@@ -96,6 +100,14 @@ const projects = computed(() => [
     ],
     source: "https://github.com/Ismael-Rakotondrazaka/agendapp",
     demo: "https://agendapp.onrender.com",
+  },
+  {
+    name: "QuizWiz",
+    description: t("quizwizDescription"),
+    imgSrc: "/images/illustrations/illustration-quizwiz.png",
+    imgAlt: "Illustration QuizWiz",
+    technos: ["Vue", "Tailwind CSS", "Laravel", "MySQL"],
+    source: "https://github.com/Ismael-Rakotondrazaka/quizwiz",
   },
   {
     name: "hackerrank-badge",
