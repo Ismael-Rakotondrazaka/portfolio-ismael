@@ -60,7 +60,12 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@vueuse/motion/nuxt", "@nuxtjs/tailwindcss", "@nuxtjs/i18n"],
+  modules: [
+    "@vueuse/motion/nuxt",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/i18n",
+    "@nuxt/image",
+  ],
   i18n: {
     vueI18n: {
       legacy: false,
@@ -91,5 +96,9 @@ export default defineNuxtConfig({
     emailDefaultReceiver: process.env.EMAIL_DEFAULT_RECEIVER,
     emailDefaultSubject: process.env.EMAIL_DEFAULT_SUBJECT,
     isServiceAvailable: process.env.IS_SERVICE_AVAILABLE,
+  },
+  image: {
+    quality: 100,
+    format: ["webp"],
   },
 });

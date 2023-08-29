@@ -4,11 +4,11 @@
       v-for="(project, i) in projectsToShow"
       v-motion="{
         initial: {
-          x: 50 * (i % 2 ? -1 : 1),
+          scale: 0.7,
           opacity: 0,
         },
-        visibleOnce: {
-          x: 0,
+        enter: {
+          scale: 1,
           opacity: 1,
           transition: {
             duration: 500,
@@ -19,6 +19,7 @@
       :name="project.name"
       :description="project.description"
       :imgSrc="project.imgSrc"
+      :imgAlt="project.imgAlt"
       :technos="project.technos"
       :source="project.source"
       :demo="project.demo"
@@ -56,7 +57,7 @@ const props = defineProps({
 });
 
 const step = 3;
-const initial = 3;
+const initial = 5;
 
 const count = ref(initial);
 const projectsToShow = computed(() => props.projects.slice(0, count.value));
