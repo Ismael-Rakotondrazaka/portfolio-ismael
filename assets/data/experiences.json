@@ -1,0 +1,12 @@
+[
+  {
+    "company": {
+      "name": "Viseo, Oceantrade",
+      "website": "https://oceantrade.mg"
+    },
+    "period": "experiences.oceantrade.period",
+    "description": "experiences.oceantrade.description",
+    "technos": ["Nuxt.js", "Vue.js", "MySQL"],
+    "post": "experiences.oceantrade.post"
+  }
+]

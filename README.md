@@ -24,4 +24,4 @@ Preview
 npm run preview
 ```
 
-## Designed and built by [Fitia Ismael Rakotondrazaka](https://gitub.com/Ismael-Rakotondrazaka)
+## Designed and built by [Fitia Ismael RAKOTONDRAZAKA](https://gitub.com/Ismael-Rakotondrazaka)

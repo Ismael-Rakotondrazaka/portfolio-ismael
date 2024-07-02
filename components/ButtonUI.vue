@@ -1,26 +1,24 @@
 <template>
-  <button
-    class="mt-7 inline-block px-5 py-3 font-bold uppercase border-2 rounded-md border-secondary ring-2 transition-all after:w-0 after:h-[0.15rem] after:transition-all after:bg-primary after:block hover:after:w-full text-white bg-secondary hover:border-white ring-secondary"
-    :class="[mainClass]"
-  >
-    <slot />
+  <button class="group" :class="[mainClass]">
+    <span class="underline-slide-inactive group-hover:underline-slide-active">
+      <slot />
+    </span>
   </button>
 </template>
 
-<script setup>
-const props = defineProps({
-  variant: {
-    type: String,
-    required: false,
-    default: "solid",
-    validator: (value) => ["solid", "outlined"].includes(value),
-  },
+<script lang="ts" setup>
+interface Props {
+  variant?: "solid" | "outlined";
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  variant: "solid",
 });
 
 const mainClass = computed(() => {
-  let variantClass = {
-    solid: "text-white bg-secondary hover:border-white ring-secondary",
-    outlined: "text-secondary bg-white ring-transparent hover:ring-secondary",
+  const variantClass = {
+    solid: "button-solid",
+    outlined: "button-outlined",
   };
 
   return variantClass[props.variant];

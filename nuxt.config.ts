@@ -1,104 +1,141 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app: {
-    head: {
-      title: "Portfolio Ismael | A professional web developer",
-      meta: [
-        {
-          name: "title",
-          content: "Portfolio Ismael | A professional web developer",
-        },
-        {
-          name: "description",
-          content:
-            "The portfolio of Fitia Ismael Rakotondrazaka, a professional web developer.",
-        },
-        {
-          property: "og:type",
-          content: "website",
-        },
-        {
-          property: "og:url",
-          content: "https://portfolio-ismael.onrender.com/",
-        },
-        {
-          property: "og:title",
-          content: "Portfolio Ismael | A professional web developer",
-        },
-        {
-          property: "og:description",
-          content:
-            "The portfolio of Fitia Ismael Rakotondrazaka, a professional web developer.",
-        },
-        {
-          property: "og:image",
-          content:
-            "https://portfolio-ismael.onrender.com/images/illustrations/illustration-portfolio-ismael.png",
-        },
-        {
-          property: "twitter:card",
-          content: "summary_large_image",
-        },
-        {
-          property: "twitter:url",
-          content: "https://portfolio-ismael.onrender.com/",
-        },
-        {
-          property: "twitter:title",
-          content: "Portfolio Ismael | A professional web developer",
-        },
-        {
-          property: "twitter:description",
-          content:
-            "The portfolio of Fitia Ismael Rakotondrazaka, a professional web developer.",
-        },
-        {
-          property: "twitter:image",
-          content:
-            "https://portfolio-ismael.onrender.com/images/illustrations/illustration-portfolio-ismael.png",
-        },
-      ],
-    },
+  experimental: {
+    asyncContext: true,
   },
+
+  devtools: {
+    enabled: true,
+  },
+
+  typescript: {
+    typeCheck: false,
+  },
+
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
+
+  css: ["~/assets/styles/main.css"],
+
+  site: {
+    indexable: true,
+    name: "Portfolio",
+    description: "RAKOTONDRAZAKA Fitia Ismael, un développeur professionnel",
+    defaultLocale: "fr",
+  },
+
+  routeRules: {
+    "/": { prerender: false },
+    "/fr": { prerender: true },
+    "/en": { prerender: true },
+  },
+
   modules: [
-    "@vueuse/motion/nuxt",
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/i18n",
     "@nuxt/image",
+    "@nuxt/fonts",
+    "@nuxt/eslint",
+    "@nuxtjs/seo",
+    "@vee-validate/nuxt",
+    "@nuxt/icon",
+    "@vueuse/motion/nuxt",
+    "@nuxtjs/color-mode",
+    "@bg-dev/nuxt-naiveui",
+    "nuxt-zod-i18n",
+    "@nuxtjs/i18n",
+    "@pinia/nuxt",
   ],
+
   i18n: {
-    vueI18n: {
-      legacy: false,
-      locale: "en",
+    strategy: "prefix",
+    langDir: "locales",
+    locales: [
+      {
+        name: "English",
+        code: "en",
+        iso: "en-US",
+        file: "en.json",
+      },
+      {
+        name: "Français",
+        code: "fr",
+        iso: "fr-FR",
+        file: "fr.json",
+      },
+    ],
+    defaultLocale: "fr",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      alwaysRedirect: true,
       fallbackLocale: "fr",
+      redirectOn: "root",
+    },
+    experimental: {
+      localeDetector: "./localeDetector.ts",
     },
   },
-  tailwindcss: {
-    configPath: "./tailwind.config.js",
+
+  zodI18n: {
+    /**
+     * Since we choose to use "en" and "fr" as locales' code,
+     * we have to tell zod errors to use those codes.
+     */
+    localeCodesMapping: {
+      "en-GB": "en",
+      "fr-FR": "fr",
+    },
+    useModuleLocale: true,
   },
-  css: [
-    "~/assets/styles/index.css",
-    "@fortawesome/fontawesome-svg-core/styles.css",
-  ],
-  build: {
-    transpile: [
-      "@fortawesome/fontawesome",
-      "@fortawesome/fontawesome-svg-core",
-      "@fortawesome/free-solid-svg-icons",
-      "@fortawesome/free-brands-svg-icons",
+
+  icon: {
+    customCollections: [
+      {
+        prefix: "internal",
+        dir: "./assets/icons",
+      },
     ],
   },
+
+  colorMode: {
+    preference: "light", // default value of $colorMode.preference
+    fallback: "light", // fallback value if not system preference found
+    componentName: "ColorScheme",
+    classPrefix: "",
+    classSuffix: "",
+    storageKey: "color-mode",
+  },
+
+  tailwindcss: {
+    exposeConfig: {
+      write: true,
+      level: 2,
+    },
+    config: {
+      darkMode: "class",
+    },
+  },
+
+  ogImage: {
+    enabled: false,
+  },
+
   runtimeConfig: {
-    smtpHost: process.env.SMTP_HOST,
-    smtpPort: process.env.SMTP_PORT,
-    smtpUser: process.env.SMTP_USER,
-    smtpPass: process.env.SMTP_PASS,
-    emailDefaultReceiver: process.env.EMAIL_DEFAULT_RECEIVER,
-    emailDefaultSubject: process.env.EMAIL_DEFAULT_SUBJECT,
-    isServiceAvailable: process.env.IS_SERVICE_AVAILABLE,
+    smtpHost: "",
+    smtpPort: "",
+    smtpUser: "",
+    smtpPassword: "",
+    public: {
+      informationEmail: "",
+      informationPhoneNumber: "",
+      informationFullName: "",
+      appUrl: "http://localhost:3000",
+    },
   },
-  image: {
-    quality: 100,
-    format: ["webp"],
-  },
+
+  compatibilityDate: "2024-07-02",
 });
