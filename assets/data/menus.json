@@ -1,0 +1,65 @@
+[
+  {
+    "id": "home",
+    "to": {
+      "name": "index",
+      "hash": "#home"
+    },
+    "textKey": "header.home",
+    "icon": "mdi:home"
+  },
+  {
+    "id": "about",
+    "to": {
+      "name": "index",
+      "hash": "#about"
+    },
+    "textKey": "header.about",
+    "icon": "mdi:information"
+  },
+  {
+    "id": "skills",
+    "to": {
+      "name": "index",
+      "hash": "#skills"
+    },
+    "textKey": "header.skills",
+    "icon": "mdi:star"
+  },
+  {
+    "id": "projects",
+    "to": {
+      "name": "index",
+      "hash": "#projects"
+    },
+    "textKey": "header.projects",
+    "icon": "mdi:folder"
+  },
+  {
+    "id": "experience",
+    "to": {
+      "name": "index",
+      "hash": "#experience"
+    },
+    "textKey": "header.experience",
+    "icon": "mdi:briefcase"
+  },
+  {
+    "id": "education",
+    "to": {
+      "name": "index",
+      "hash": "#education"
+    },
+    "textKey": "header.education",
+    "icon": "mdi:school"
+  },
+  {
+    "id": "contact",
+    "to": {
+      "name": "index",
+      "hash": "#contact"
+    },
+    "textKey": "header.contact",
+    "icon": "mdi:email"
+  }
+]
