@@ -74,9 +74,9 @@
 </template>
 
 <script lang="ts" setup>
-import programmingLanguages from "~/assets/data/programmingLanguages.json";
-import frameworksLibraries from "~/assets/data/frameworksLibraries.json";
 import databases from "~/assets/data/databases.json";
+import frameworksLibraries from "~/assets/data/frameworksLibraries.json";
+import programmingLanguages from "~/assets/data/programmingLanguages.json";
 import toolsExtra from "~/assets/data/toolsExtra.json";
 
 const { t, rt, tm } = useI18n({
