@@ -1,0 +1,49 @@
+[
+  {
+    "type": "icon",
+    "title": "Git",
+    "iconName": "internal:git",
+    "bgColor": "#F34F29",
+    "color": "#000",
+    "mastered": true
+  },
+  {
+    "type": "icon",
+    "title": "GitHub",
+    "iconName": "internal:github",
+    "bgColor": "#000",
+    "color": "#fff",
+    "mastered": true
+  },
+  {
+    "type": "icon",
+    "title": "Docker",
+    "iconName": "internal:docker",
+    "bgColor": "#019BC6",
+    "color": "#fff",
+    "mastered": false
+  },
+  {
+    "type": "icon",
+    "title": "Linux",
+    "iconName": "internal:linux",
+    "bgColor": "#FFCE14",
+    "color": "#000"
+  },
+  {
+    "type": "icon",
+    "title": "Postman",
+    "iconName": "internal:postman",
+    "bgColor": "#ff6c37",
+    "color": "#000",
+    "mastered": true
+  },
+  {
+    "type": "icon",
+    "title": "NPM",
+    "iconName": "internal:npm",
+    "bgColor": "#cb3837",
+    "color": "#fff",
+    "mastered": true
+  }
+]

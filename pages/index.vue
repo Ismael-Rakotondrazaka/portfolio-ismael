@@ -8,12 +8,16 @@
 
     <TheProjects />
 
+    <TheExperience />
+
     <TheEducation />
   </main>
 </template>
 
-<script setup>
-const { locale } = useI18n();
+<script lang="ts" setup>
+definePageMeta({
+  title: "RAKOTONDRAZAKA Fitia Ismael",
+});
 </script>
 
 <style lang="scss" scoped></style>

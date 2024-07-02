@@ -1,27 +1,62 @@
 {
+  "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxt/image": "^1.0.0-rc.1",
-    "@nuxtjs/i18n": "^8.0.0-beta.8",
-    "@nuxtjs/tailwindcss": "^6.8.0",
-    "nuxt": "3.6.5"
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "prepare": "husky"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-brands-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/vue-fontawesome": "^3.0.3",
-    "@vueuse/motion": "^2.0.0",
-    "ipx": "^1.2.0",
-    "libvips": "^0.0.2",
-    "node-gyp": "^9.4.0",
-    "nodemailer": "^6.9.4"
+    "@bg-dev/nuxt-naiveui": "^1.14.0",
+    "@nuxt/eslint": "^0.3.13",
+    "@nuxt/fonts": "^0.7.1",
+    "@nuxt/icon": "^1.0.0",
+    "@nuxt/image": "^1.7.0",
+    "@nuxtjs/color-mode": "^3.4.2",
+    "@nuxtjs/i18n": "^8.3.1",
+    "@nuxtjs/seo": "^2.0.0-rc.11",
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "@pinia/nuxt": "^0.5.1",
+    "@vueuse/motion": "^2.2.3",
+    "http-status-codes": "^2.3.0",
+    "nodemailer": "^6.9.14",
+    "nuxt": "^3.12.3",
+    "nuxt-zod-i18n": "^1.8.1",
+    "pinia": "^2.1.7",
+    "typed.js": "^2.1.0",
+    "winston": "^3.13.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "xss": "^1.0.15",
+    "zod": "^3.23.8",
+    "zod-form-data": "^2.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@iconify-json/mdi": "^1.1.67",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/node": "^20.14.9",
+    "@types/nodemailer": "^6.4.15",
+    "@vee-validate/nuxt": "^4.13.1",
+    "@vee-validate/zod": "^4.13.1",
+    "eslint": "^9.5.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.11",
+    "prettier": "^3.3.2",
+    "prettier-plugin-organize-imports": "^4.0.0",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "typescript": "^5.5.3",
+    "vue-tsc": "^2.0.24"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }
