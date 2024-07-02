@@ -198,7 +198,8 @@
           "text": "Send",
           "loadingText": "Sending..."
         }
-      }
+      },
+      "success": "Message sent successfully."
     }
   }
 }

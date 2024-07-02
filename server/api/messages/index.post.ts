@@ -23,7 +23,8 @@ const __handler__: ToEventHandler<StoreMessageRequest> = async (event) => {
     });
 
     return {
-      message: JSON.stringify(body),
+      // @ts-expect-error Type instantiation is excessively deep and possibly infinite
+      message: translator.t("messages.store.success"),
     };
   } catch (error) {
     throw Exception.fromUnknown({

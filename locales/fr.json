@@ -198,7 +198,8 @@
           "text": "Envoyer",
           "loadingText": "Envoi en cours..."
         }
-      }
+      },
+      "success": "Message envoyé avec succès."
     }
   }
 }
