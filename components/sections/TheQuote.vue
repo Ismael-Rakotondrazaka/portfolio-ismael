@@ -33,7 +33,7 @@
       <n-flex>
         <n-p
           v-t="'quote.content'"
-          class="whitespace-pre-wrap text-3xl font-bold italic text-white md:text-4xl"
+          class="whitespace-pre-wrap text-xl font-bold italic text-white md:text-2xl lg:text-3xl"
         />
 
         <n-p v-t="'author.fullName'" class="self-end text-white" />
