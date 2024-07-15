@@ -13,7 +13,7 @@
     />
 
     <n-flex vertical size="large" justify="center" align="center">
-      <Icon v-if="type === 'icon'" size="5rem" :name="iconName!" />
+      <Icon v-if="type === 'icon'" :size="iconWidth" :name="iconName!" />
 
       <img
         v-else-if="type === 'image'"
@@ -44,6 +44,10 @@ withDefaults(defineProps<TechSkill>(), {
   iconName: undefined,
   imageSrc: undefined,
 });
+
+const { isMobileOrTablet } = useWindowWidthStore();
+
+const iconWidth = computed(() => (isMobileOrTablet ? "3rem" : "5rem"));
 </script>
 
 <style scoped></style>
