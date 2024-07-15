@@ -1,0 +1,150 @@
+[
+  {
+    "name": "openmind",
+    "description": "projects.OpenMind.description",
+    "imgSrc": "/images/illustrations/illustration-openmind.png",
+    "technos": ["Nuxt", "Vue", "PrimeVue", "Prisma", "PostgreSQL"],
+    "imgAlt": "Illustration openmind",
+    "source": "https://github.com/Ismael-Rakotondrazaka/openmind",
+    "demo": "https://openmind.onrender.com"
+  },
+  {
+    "name": "campus-flow",
+    "description": "projects.CampusFlow.description",
+    "imgSrc": "/images/illustrations/illustration-campus-flow.png",
+    "technos": ["React", "Nitro (Nuxt server engine)", "Prisma", "PostgreSQL"],
+    "imgAlt": "Illustration campus-flow",
+    "source": "https://github.com/Ismael-Rakotondrazaka/campus-flow",
+    "demo": "https://lumierebourg.vercel.app"
+  },
+  {
+    "name": "mi-chat",
+    "description": "projects.miChat.description",
+    "imgSrc": "/images/illustrations/illustration-mi-chat.png",
+    "technos": ["Vue", "Tailwind CSS", "Express", "SocketIO", "MySql"],
+    "imgAlt": "Illustration mi-chat",
+    "source": "https://github.com/Ismael-Rakotondrazaka/mi-chat",
+    "demo": "https://mi-chat.onrender.com"
+  },
+  {
+    "name": "agendapp",
+    "description": "projects.agendapp.description",
+    "imgSrc": "/images/illustrations/illustration-agendapp.png",
+    "imgAlt": "Illustration agendapp",
+    "technos": [
+      "Vue",
+      "Tailwind CSS",
+      "Typescript",
+      "Express",
+      "SocketIO",
+      "Jest",
+      "MongoDB"
+    ],
+    "source": "https://github.com/Ismael-Rakotondrazaka/agendapp",
+    "demo": "https://agendapp.onrender.com"
+  },
+  {
+    "name": "Portfolio",
+    "description": "projects.portfolio-ismael.description",
+    "imgSrc": "/images/illustrations/illustration-portfolio-ismael.png",
+    "imgAlt": "Illustration Portfolio Ismael",
+    "technos": ["Nuxt", "Naive UI", "Tailwind CSS"],
+    "source": "https://github.com/Ismael-Rakotondrazaka/portfolio-ismael",
+    "demo": "https://portfolio-ismael.onrender.com"
+  },
+  {
+    "name": "QuizWiz",
+    "description": "projects.quizwiz.description",
+    "imgSrc": "/images/illustrations/illustration-quizwiz.png",
+    "imgAlt": "Illustration QuizWiz",
+    "technos": ["Vue", "Tailwind CSS", "Laravel", "MySQL"],
+    "source": "https://github.com/Ismael-Rakotondrazaka/quizwiz"
+  },
+  {
+    "name": "edupay",
+    "description": "projects.EduPay.description",
+    "imgSrc": "/images/illustrations/illustration-edupay.png",
+    "technos": ["Java Server Page", "Tailwind CSS", "PostgreSQL"],
+    "imgAlt": "Illustration edupay",
+    "source": "https://github.com/RasolomananaOlivier/edupay"
+  },
+  {
+    "name": "hackerrank-badge",
+    "description": "projects.hackerrankBadge.description",
+    "imgSrc": "/images/illustrations/illustration-hackerrank-badge.webp",
+    "imgAlt": "Illustration hackerrank-badge",
+    "technos": ["Express", "Puppeteer", "node-cache-manager"],
+    "source": "https://github.com/Ismael-Rakotondrazaka/hackerrank-badge"
+  },
+  {
+    "name": "car-sales-management",
+    "description": "projects.carSalesManagement.description",
+    "imgSrc": "/images/illustrations/illustration-car-sales-management.png",
+    "imgAlt": "Illustration car-sales-management",
+    "technos": ["PHP", "MySQL", "Bootstrap"],
+    "source": "https://github.com/code-verse-unity/car-sales-management"
+  },
+  {
+    "name": "materials-crud",
+    "description": "projects.materialsCrud.description",
+    "imgSrc": "/images/illustrations/illustration-materials-crud.png",
+    "imgAlt": "Illustration materials-crud",
+    "technos": ["Vue", "Bootstrap"],
+    "source": "https://github.com/code-verse-unity/materials-crud",
+    "demo": "https://materials-crud.onrender.com"
+  },
+  {
+    "name": "minili",
+    "description": "projects.minili.description",
+    "imgSrc": "/images/illustrations/illustration-minili.png",
+    "imgAlt": "Illustration minili",
+    "technos": ["Vue", "Tailwind CSS", "Express", "MongoDB"],
+    "source": "https://github.com/Ismael-Rakotondrazaka/minili",
+    "demo": "https://minili.onrender.com"
+  },
+  {
+    "name": "DHTML-2022",
+    "description": "projects.DHTML2022.description",
+    "imgSrc": "/images/illustrations/illustration-dhtml-2022.png",
+    "imgAlt": "Illustration DHTML-2022",
+    "technos": ["HTML", "CSS", "Javascript"],
+    "source": "https://github.com/Ismael-Rakotondrazaka/dhtml-2022",
+    "demo": "https://dhtml-2022.onrender.com"
+  },
+  {
+    "name": "Coffee Aroma",
+    "description": "projects.coffeeAroma.description",
+    "imgSrc": "/images/illustrations/illustration-coffee-aroma.png",
+    "imgAlt": "Illustration Coffee Aroma",
+    "technos": ["React", "Tailwind CSS"],
+    "source": "https://github.com/Ismael-Rakotondrazaka/coffee-aroma",
+    "demo": "https://template-coffee-aroma.onrender.com/"
+  },
+  {
+    "name": "Foodies",
+    "description": "projects.foodies.description",
+    "imgSrc": "/images/illustrations/illustration-foodies.png",
+    "imgAlt": "Illustration Foodies",
+    "technos": ["Vue", "Tailwind CSS"],
+    "source": "https://github.com/Ismael-Rakotondrazaka/foodies",
+    "demo": "https://template-foodies.onrender.com"
+  },
+  {
+    "name": "Nature Portfolio",
+    "description": "projects.naturePortfolio.description",
+    "imgSrc": "/images/illustrations/illustration-nature-portfolio.png",
+    "imgAlt": "Illustration Nature Portfolio",
+    "technos": ["Vue", "Bootstrap"],
+    "source": "https://github.com/Ismael-Rakotondrazaka/nature-portfolio",
+    "demo": "https://nature-portfolio.onrender.com"
+  },
+  {
+    "name": "Fiber",
+    "description": "projects.fiber.description",
+    "imgSrc": "/images/illustrations/illustration-fiber.png",
+    "imgAlt": "Illustration Fiber",
+    "technos": ["Vue", "Bootstrap"],
+    "source": "https://github.com/Ismael-Rakotondrazaka/fiber",
+    "demo": "https://template-fiber.onrender.com"
+  }
+]

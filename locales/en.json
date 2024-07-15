@@ -1,0 +1,205 @@
+{
+  "author": {
+    "fullName": "Fitia Ismael RAKOTONDRAZAKA",
+    "status": "A professional developer"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "welcome": {
+    "greeting": "Hi, I am",
+    "cta": {
+      "text": "Contact me"
+    },
+    "cv": {
+      "text": "Download my CV"
+    },
+    "professions": {
+      "list": [
+        "A Web Developer",
+        "A Software Engineer",
+        "A Full Stack Developer",
+        "A Backend Expert",
+        "A Frontend Specialist",
+        "A Tech Innovator",
+        "A Solution Architect",
+        "A Continuous Learner",
+        "A Team Collaborator"
+      ]
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "I am a young developer from Madagascar with strong skills in both backend and frontend development. My goal is to create robust web services.",
+    "p2": "I started with basic HTML and CSS when I was 15 years old and wrote my first {helloWorld} {codingStart}. Now, I can build any web app with ease, regardless of its complexity.",
+    "p2Args": {
+      "helloWorld": "\"Hello world\"",
+      "codingStart": "at 17 years old"
+    },
+    "p3": "I am open to any opportunity where I can contribute and grow. If you have a job or internship that aligns with my skills, don't hesitate to contact me.",
+    "storyBegunTitle": "The Story Has Just Begun...",
+    "p4": "I have developed a passion for web development. Currently, I'm also drawn to the {competitiveProgramming}, the {artificialIntelligence}, and their {promises}. I'm still learning about them and find it interesting to combine them with web development.",
+    "p4Args": {
+      "competitiveProgramming": "Competitive Programming",
+      "artificialIntelligence": "Artificial Intelligence",
+      "promises": "promises"
+    }
+  },
+  "quote": {
+    "content": "Since codes are arts, \nI'm also an artist...\nIt's like painting and literature, we create something beautiful from almost nothing, from a blank canvas, blank pages, empty files."
+  },
+  "skills": {
+    "title": "Skills",
+    "technicalSkills": {
+      "title": "Technical Skills",
+      "programmingLanguages": {
+        "title": "Programming Languages"
+      },
+      "frameworksLibraries": {
+        "title": "Frameworks and Libraries"
+      },
+      "databases": {
+        "title": "Databases"
+      },
+      "toolsExtra": {
+        "title": "Tools and Extras"
+      }
+    },
+    "softSkills": {
+      "title": "Soft Skills",
+      "list": [
+        {
+          "title": "Dynamic and Organized",
+          "description": "I am very active when a task is assigned to me. However, this does not mean I work disorderly; I am able to accomplish tasks 'by the book'."
+        },
+        {
+          "title": "Teamwork and Collaboration",
+          "description": "I understand the importance of teamwork and can effectively contribute to any team I am part of. I am also capable of working autonomously when necessary."
+        },
+        {
+          "title": "Adaptability",
+          "description": "I am like water that can fit into any shape of container, meaning I can adapt to any situation. If something is new to me, I can learn it easily."
+        }
+      ]
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "OpenMind": {
+      "description": "OpenMind is a dynamic web blog application that transforms the way you share and engage with content. Create captivating articles on a wide range of topics and connect with a vibrant community. Save articles to read later, leave thoughtful comments, follow inspiring authors, and express your feelings with a variety of reactions (like, love, and more). OpenMind makes every interaction meaningful and every voice heard."
+    },
+    "EduPay": {
+      "description": "EduPay is a comprehensive web application designed to streamline the management of university student scholarships. From tracking payments to generating PDF bills, EduPay handles it all with ease. The application also sends email reminders to students who haven't collected their payments on time, ensuring everyone stays informed and up-to-date."
+    },
+    "CampusFlow": {
+      "description": "CampusFlow is a comprehensive web application designed to enhance campus life management. It efficiently handles various student requests, including those who want to join campus lodgings and those seeking to renew their contracts. The app also supports maintenance management, allowing residents to report issues and admins to assign maintainers. Additionally, admins can create announcements, keeping residents informed and up-to-date."
+    },
+    "miChat": {
+      "description": "mi-chat is an instant messaging web application. It has advanced features like sending text messages, videos, and images. Messages can be deleted. Users can send and receive friend requests. Creating group chats is another interesting feature, allowing many users to discuss together. A search function is available in each feature of the app."
+    },
+    "agendapp": {
+      "description": "Agendapp is a web application that manages schedules. Users can create, update, and delete many events. It provides an overview per month and per year, along with statistics."
+    },
+    "portfolio-ismael": {
+      "description": "My portfolio is a showcase of my skills, projects, and professional journey as a developer. It highlights my expertise in development through various interactive and visually appealing projects. The portfolio also includes detailed descriptions of each project, my technical stack, and the technologies I am proficient in. It's designed to provide a comprehensive view of my capabilities and achievements in the field of development."
+    },
+    "quizwiz": {
+      "description": "QuizWiz is an engaging and educational web application that combines learning and enjoyment through the world of Vue.js, a popular JavaScript framework. Designed for both beginners and seasoned developers, QuizWiz offers an interactive and entertaining way to deepen your understanding of Vue.js concepts while having fun."
+    },
+    "minili": {
+      "description": "minili is a web app that provides a short version of any link. The given links can be reversed if needed."
+    },
+    "hackerrankBadge": {
+      "description": "The Hackerrank Badge API is a tool that allows users to obtain their Hackerrank badge images through a specific URL. Users can request badge images by providing their Hackerrank username and specifying the desired image format."
+    },
+    "carSalesManagement": {
+      "description": "This user-friendly web application simplifies car sales for dealerships and sales professionals. It efficiently handles car inventory, client data, and purchase transactions. The platform offers stock tracking, a customer database, and downloadable bills for each transaction. With easy-to-understand data analytics and mobile compatibility, the web app streamlines car sales and boosts customer satisfaction."
+    },
+    "materialsCrud": {
+      "description": "An efficient and practical application tailored for seamless material management. This powerful tool empowers you to add, modify, and remove data entries effortlessly. Stay organized with a structured table display of all material records. The application also provides a clear summary of the total material quantity, categorized for your convenience."
+    },
+    "DHTML2022": {
+      "description": "DHTML-2022 was created to practice the basics of JavaScript for the web: functions, event handlers, DOM manipulation, etc. It is responsive and has a trendy glassmorphism look."
+    },
+    "coffeeAroma": {
+      "description": "Inspired by a captivating monochrome design I discovered online, I brought it to life using React and Tailwind CSS. The project showcases the elegance of brown tones throughout the interface."
+    },
+    "foodies": {
+      "description": "This is an integration of a template I found on Dribble. The purpose is to test out Tailwind CSS, and it is very easy to associate with Vue's syntax."
+    },
+    "naturePortfolio": {
+      "description": "This website is an integration of a template from W3Schools. I used Bootstrap and Vue to create it."
+    },
+    "fiber": {
+      "description": "I liked the design, so I decided to integrate it with Vue and Bootstrap."
+    }
+  },
+  "experiences": {
+    "title": "Experiences",
+    "oceantrade": {
+      "description": "Redesign of the websites for the Viseo Group and Oceantrade, from initial conception to final deployment.",
+      "post": "Intern Developer",
+      "period": "September - December 2023"
+    }
+  },
+  "educations": {
+    "title": "Education",
+    "list": [
+      {
+        "title": "Professional license",
+        "description": "\"Software Engineering and Database\" course",
+        "location": "École Nationale d'Informatique - University of Fianarantsoa",
+        "period": "2020 - Present"
+      },
+      {
+        "title": "Graduate from high school",
+        "description": "Serie C with honors",
+        "location": "Lycée Moderne Ampefiloha - Antananarivo",
+        "period": "2019"
+      }
+    ]
+  },
+  "errors": {
+    "default": "Something is not working properly. Please try again.",
+    "requests": {
+      "defaults": {
+        "badRequest": "The request is invalid.",
+        "notFound": "The resource is not found.",
+        "forbidden": "You do not have permission to access this resource.",
+        "unauthorize": "You are not authorized.",
+        "internalServer": "An internal server error has occurred.",
+        "notImplemented": "This functionality is not implemented."
+      }
+    }
+  },
+  "messages": {
+    "store": {
+      "form": {
+        "title": "You can send me a message here",
+        "name": {
+          "label": "Name:",
+          "placeholder": "Your name"
+        },
+        "email": {
+          "label": "Email:",
+          "placeholder": "youremail{'@'}example.com"
+        },
+        "content": {
+          "label": "Message:",
+          "placeholder": "Your message"
+        },
+        "cta": {
+          "text": "Send",
+          "loadingText": "Sending..."
+        }
+      },
+      "success": "Message sent successfully."
+    }
+  }
+}

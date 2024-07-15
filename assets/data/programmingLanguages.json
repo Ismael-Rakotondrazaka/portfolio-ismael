@@ -1,0 +1,34 @@
+[
+  {
+    "type": "icon",
+    "title": "JavaScript (ES6+)",
+    "iconName": "internal:javascript",
+    "bgColor": "#F0DB4F",
+    "color": "#000",
+    "mastered": true
+  },
+  {
+    "type": "icon",
+    "title": "PHP (7+)",
+    "iconName": "internal:php",
+    "bgColor": "#6181B6",
+    "color": "#000",
+    "mastered": true
+  },
+  {
+    "type": "icon",
+    "title": "TypeScript",
+    "iconName": "internal:typescript",
+    "bgColor": "#007acc",
+    "color": "#fff",
+    "mastered": true
+  },
+  {
+    "type": "icon",
+    "title": "Python",
+    "iconName": "internal:python",
+    "bgColor": "#FFD845",
+    "color": "#fff",
+    "mastered": false
+  }
+]

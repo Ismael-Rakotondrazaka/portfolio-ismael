@@ -1,0 +1,34 @@
+[
+  {
+    "type": "icon",
+    "title": "MySql",
+    "iconName": "internal:mysql",
+    "bgColor": "#00618A",
+    "color": "#fff",
+    "mastered": true
+  },
+  {
+    "type": "icon",
+    "title": "PostgreSQL",
+    "iconName": "internal:postgresql",
+    "bgColor": "#336791",
+    "color": "#fff",
+    "mastered": true
+  },
+  {
+    "type": "icon",
+    "title": "MongoDB",
+    "iconName": "internal:mongo-db",
+    "bgColor": "#4FAA41",
+    "color": "#000",
+    "mastered": true
+  },
+  {
+    "type": "icon",
+    "title": "SQLite",
+    "iconName": "internal:sqlite",
+    "bgColor": "#95d7f4",
+    "color": "#000",
+    "mastered": true
+  }
+]
