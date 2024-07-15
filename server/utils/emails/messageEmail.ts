@@ -36,10 +36,10 @@ export class MessageEmail {
     return EmailSender.send({
       from: informationEmail,
       to: email,
-      subject: "Thank You for Reaching Out!",
+      subject: "Merci de m'avoir contacté(e) !",
       html: EmailLayoutFormatter.format({
         body: `<h2 style="color:#000">Merci de m'avoir contacté(e) !</h2><p style="font-size:11pt;font-family:sans-serif;color:#000">Bonjour ${receiverName},<br>Merci de m'avoir contacté via mon portfolio ! Ceci est une réponse automatique pour vous informer que j'ai bien reçu votre message et que je vais l'examiner sous peu.</p><p style="font-size:11pt;font-family:sans-serif;color:#000">Si votre demande est urgente, n'hésitez pas à me contacter directement à <a href="mailto:${informationPhoneNumber}" style="color:#0563c1">${informationPhoneNumber}</a>. Sinon, je vous répondrai dès que possible.</p><p style="font-size:11pt;font-family:sans-serif;color:#000">Merci de votre intérêt.</p><p style="font-size:11pt;font-family:sans-serif;color:#000">Bien cordialement,</p>`,
-        title: "Thank You for Reaching Out!",
+        title: "Merci de m'avoir contacté(e) !",
       }),
     });
   }
