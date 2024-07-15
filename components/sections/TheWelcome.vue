@@ -114,10 +114,10 @@
           target="_blank"
           to="/documents/CV-RAKOTONDRAZAKA Fitia Ismael.pdf"
           :external="true"
-          class="group !text-primary button-outlined"
+          class="group text-nowrap !text-primary button-outlined"
         >
           <span
-            class="underline-slide-inactive group-hover:underline-slide-active"
+            class="text-nowrap underline-slide-inactive group-hover:underline-slide-active"
           >
             <Icon name="mdi:file-pdf" class="mr-3" />
 

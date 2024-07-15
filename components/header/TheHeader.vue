@@ -8,7 +8,9 @@
     </template>
 
     <template #title>
-      <n-text class="text-white">{{ $t("author.fullName") }}</n-text>
+      <n-text class="!text-ellipsis text-white">{{
+        $t("author.fullName")
+      }}</n-text>
     </template>
 
     <template v-if="!windowWidthStore.isMobileOrTablet" #subtitle>
