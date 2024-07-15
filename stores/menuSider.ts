@@ -1,5 +1,5 @@
 export const useMenuSiderStore = defineStore("menuSider", () => {
-  const isShown = ref(true);
+  const isShown = ref(false);
 
   const show = () => {
     isShown.value = true;
