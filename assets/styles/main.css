@@ -10,6 +10,11 @@ body {
     background-color: #f0f9ff;
 }
 
+html,
+body {
+    font-family: "Fira Code", monospace !important;
+}
+
 .bg-move {
     --bg-size: 400%;
     background: linear-gradient(90deg,

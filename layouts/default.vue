@@ -7,7 +7,11 @@
         <TheHeader @menu:clicked="onMenuClickedHandler" />
       </n-layout-header>
 
-      <n-layout-content content-style="" class="my-16" :native-scrollbar="true">
+      <n-layout-content
+        content-style=""
+        class="my-20 lg:my-16"
+        :native-scrollbar="true"
+      >
         <slot />
       </n-layout-content>
 
