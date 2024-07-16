@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <div class="lg:top-1/5 absolute left-[2%] top-16 w-7 md:w-12 lg:w-20">
+    <div class="lg:top-1/5 absolute left-[2%] top-10 w-7 md:w-12 lg:w-20">
       <Icon
         name="mdi:code-tags"
         class="text-3xl text-secondary hover:animate-spin md:text-5xl"
@@ -70,60 +70,63 @@
                 },
               },
             }"
-            class="text-secondary md:text-4xl"
+            class="text-2xl text-secondary md:text-4xl"
           />
         </div>
 
         <ProfessionAutoTyped />
-        <ButtonUI
-          v-motion="{
-            initial: {
-              scale: 0,
-              opacity: 0,
-            },
-            visibleOnce: {
-              scale: 1,
-              opacity: 1,
-              transition: {
-                delay: 700 + 500,
+
+        <div class="flex flex-wrap items-center justify-start gap-5">
+          <ButtonUI
+            v-motion="{
+              initial: {
+                scale: 0,
+                opacity: 0,
               },
-            },
-          }"
-          class="mr-3"
-          @click="onContactClickHandler"
-        >
-          <Icon name="internal:phone-square" class="mr-3" />
-
-          {{ $t("welcome.cta.text") }}
-        </ButtonUI>
-
-        <NuxtLink
-          v-motion="{
-            initial: {
-              scale: 0,
-              opacity: 0,
-            },
-            visibleOnce: {
-              scale: 1,
-              opacity: 1,
-              transition: {
-                delay: 700 + 500,
+              visibleOnce: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  delay: 700 + 500,
+                },
               },
-            },
-          }"
-          target="_blank"
-          to="/documents/CV-RAKOTONDRAZAKA Fitia Ismael.pdf"
-          :external="true"
-          class="group text-nowrap !text-primary button-outlined"
-        >
-          <span
-            class="text-nowrap underline-slide-inactive group-hover:underline-slide-active"
+            }"
+            class="mr-3"
+            @click="onContactClickHandler"
           >
-            <Icon name="mdi:file-pdf" class="mr-3" />
+            <Icon name="internal:phone-square" class="mr-3" />
 
-            {{ $t("welcome.cv.text") }}</span
+            {{ $t("welcome.cta.text") }}
+          </ButtonUI>
+
+          <NuxtLink
+            v-motion="{
+              initial: {
+                scale: 0,
+                opacity: 0,
+              },
+              visibleOnce: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  delay: 700 + 500,
+                },
+              },
+            }"
+            target="_blank"
+            to="/documents/CV-RAKOTONDRAZAKA Fitia Ismael.pdf"
+            :external="true"
+            class="group inline-block text-nowrap !text-primary button-outlined"
           >
-        </NuxtLink>
+            <span
+              class="text-nowrap underline-slide-inactive group-hover:underline-slide-active"
+            >
+              <Icon name="mdi:file-pdf" class="mr-3" />
+
+              {{ $t("welcome.cv.text") }}</span
+            >
+          </NuxtLink>
+        </div>
       </div>
 
       <NuxtImg

@@ -1,6 +1,6 @@
 <template>
   <h1
-    class="mb-5 whitespace-pre-wrap text-2xl font-bold leading-[1.5] md:text-[3rem]"
+    class="mb-5 whitespace-pre-wrap text-xl font-bold leading-[1.5] md:text-[3rem]"
   >
     <span
       id="auto-typed"

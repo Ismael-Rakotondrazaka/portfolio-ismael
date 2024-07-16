@@ -40,8 +40,4 @@ useHead({
 });
 </script>
 
-<style>
-html {
-  font-family: "Fira Code", monospace;
-}
-</style>
+<style scoped></style>

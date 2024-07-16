@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative rounded-lg rounded-tr-none border border-white bg-sky-100 bg-cover bg-no-repeat p-7 md:p-12"
+    class="relative rounded-lg rounded-tr-none border border-white bg-sky-100 bg-cover bg-no-repeat p-3 md:p-7 lg:p-12"
     :style="{
       backgroundImage: `url(/images/illustrations/illustration-code.png)`,
     }"
@@ -8,7 +8,7 @@
     <Icon
       name="mdi:format-quote-open"
       size="7rem"
-      class="absolute left-[-0.2rem] top-[-2.5rem] text-[4rem] text-secondary"
+      class="absolute left-[-0.2rem] top-[-4rem] text-[4rem] text-secondary"
     />
 
     <div
@@ -25,7 +25,7 @@
           },
         },
       }"
-      class="rounded-lg rounded-tr-none border border-white bg-opacity-50 bg-cover bg-no-repeat p-5"
+      class="rounded-lg rounded-tr-none border border-white bg-opacity-50 bg-cover bg-no-repeat p-3 md:p-5"
       :style="{
         backgroundImage: `url(/images/illustrations/illustration-starry-night.jpg)`,
       }"
