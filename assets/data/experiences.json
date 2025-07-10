@@ -1,12 +1,31 @@
 [
   {
     "company": {
+      "name": "MALAGASY INNOVATIVE TEACHERS",
+      "website": "https://www.innovativeteachers.net"
+    },
+    "period": "experiences.mit.period",
+    "description": "experiences.mit.description",
+    "technos": [
+      "Nuxt.js",
+      "Vue.js",
+      "PostgreSQL",
+      "Google Cloud Platforme"
+    ],
+    "post": "experiences.mit.post"
+  },
+  {
+    "company": {
       "name": "Viseo, Oceantrade",
       "website": "https://oceantrade.mg"
     },
     "period": "experiences.oceantrade.period",
     "description": "experiences.oceantrade.description",
-    "technos": ["Nuxt.js", "Vue.js", "MySQL"],
+    "technos": [
+      "Nuxt.js",
+      "Vue.js",
+      "MySQL"
+    ],
     "post": "experiences.oceantrade.post"
   }
 ]

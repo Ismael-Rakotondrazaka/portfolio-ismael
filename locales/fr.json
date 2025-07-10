@@ -125,10 +125,15 @@
   },
   "experiences": {
     "title": "Experiences",
+    "mit": {
+      "description": "Projet réalisé en autonomie, de la conception à la mise en production. Plateforme complète de formation en ligne pour les enseignants malgaches avec gestion des modules, quizz, productions guidées, évaluations corrigées, attestations automatiques, forum instantané et rappels par email/SMS.",
+      "post": "Développeur Web, Freelance",
+      "period": "Septembre 2024 – Mars 2025"
+    },
     "oceantrade": {
       "description": "Refonte des sites web du groupe Viseo et d'Oceantrade, de la conception initiale au déploiement final.",
       "post": "Développeur stagiaire",
-      "period": "Septembre - Décembre 2023"
+      "period": "Septembre 2023 - Décembre 2023"
     }
   },
   "educations": {
