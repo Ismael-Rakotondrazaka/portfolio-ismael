@@ -15,6 +15,7 @@ const __handler__: ToEventHandler<StoreMessageRequest> = async (event) => {
       email: body.email,
       content: body.content,
       name: body.name,
+      phoneNumber: body.phoneNumber,
     });
 
     await MessageEmail.sendAcknowledgment({

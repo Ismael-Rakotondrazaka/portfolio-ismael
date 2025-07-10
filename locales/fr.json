@@ -190,6 +190,10 @@
           "label": "Email :",
           "placeholder": "votreemail{'@'}exemple.com"
         },
+        "phoneNumber": {
+          "label": "Téléphone :",
+          "placeholder": "+261 34 00 00 00"
+        },
         "content": {
           "label": "Message :",
           "placeholder": "Votre message"

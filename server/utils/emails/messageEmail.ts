@@ -6,16 +6,17 @@ export class MessageEmail {
   public static sendToInformation(arg: {
     email: string;
     content: string;
+    phoneNumber: string;
     name: string;
   }) {
-    const { email, name, content } = arg;
+    const { email, name, content, phoneNumber } = arg;
     const runtimeConfig = useRuntimeConfig();
 
     const informationEmail: string = runtimeConfig.public
       .informationEmail as string;
 
     return EmailSender.send({
-      text: `From ${Satinizer.satinize(name)},\n${Satinizer.satinize(content)}`,
+      text: `${Satinizer.satinize(name)}\n${Satinizer.satinize(content)}\n${Satinizer.satinize(phoneNumber)}`,
       from: email,
       subject: "Message via portfolio",
       to: informationEmail,
@@ -38,7 +39,7 @@ export class MessageEmail {
       to: email,
       subject: "Merci de m'avoir contacté(e) !",
       html: EmailLayoutFormatter.format({
-        body: `<h2 style="color:#000">Merci de m'avoir contacté(e) !</h2><p style="font-size:11pt;font-family:sans-serif;color:#000">Bonjour ${receiverName},<br>Merci de m'avoir contacté via mon portfolio ! Ceci est une réponse automatique pour vous informer que j'ai bien reçu votre message et que je vais l'examiner sous peu.</p><p style="font-size:11pt;font-family:sans-serif;color:#000">Si votre demande est urgente, n'hésitez pas à me contacter directement à <a href="mailto:${informationPhoneNumber}" style="color:#0563c1">${informationPhoneNumber}</a>. Sinon, je vous répondrai dès que possible.</p><p style="font-size:11pt;font-family:sans-serif;color:#000">Merci de votre intérêt.</p><p style="font-size:11pt;font-family:sans-serif;color:#000">Bien cordialement,</p>`,
+        body: `<h2 style="color:#000">Merci de m'avoir contacté(e) !</h2><p style="font-size:11pt;font-family:sans-serif;color:#000">Bonjour ${receiverName},<br>Merci de m'avoir contacté via mon portfolio ! Ceci est une réponse automatique pour vous informer que j'ai bien reçu votre message et que je vais l'examiner sous peu.</p><p style="font-size:11pt;font-family:sans-serif;color:#000">Si votre demande est urgente, n'hésitez pas à me contacter directement au <a href="mailto:${informationPhoneNumber}" style="color:#0563c1">${informationPhoneNumber}</a>. Sinon, je vous répondrai dès que possible.</p><p style="font-size:11pt;font-family:sans-serif;color:#000">Merci de votre intérêt.</p><p style="font-size:11pt;font-family:sans-serif;color:#000">Bien cordialement,</p>`,
         title: "Merci de m'avoir contacté(e) !",
       }),
     });

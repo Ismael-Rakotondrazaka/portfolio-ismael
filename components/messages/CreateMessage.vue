@@ -20,6 +20,15 @@
         v-bind="emailProps"
       />
 
+      <CustomInput
+        id="phoneNumber"
+        v-model:value="phoneNumber"
+        :label="$t('messages.store.form.phoneNumber.label')"
+        type="string"
+        :placeholder="$t('messages.store.form.phoneNumber.placeholder')"
+        v-bind="phoneNumberProps"
+      />
+
       <CustomTextArea
         id="content"
         v-bind="contentProps"
@@ -55,6 +64,10 @@ const { handleSubmit, defineField, isSubmitting, setErrors, resetForm } =
 
 const [name, nameProps] = defineField("name", makeFormFieldProps<string>);
 const [email, emailProps] = defineField("email", makeFormFieldProps<string>);
+const [phoneNumber, phoneNumberProps] = defineField(
+  "phoneNumber",
+  makeFormFieldProps<string>,
+);
 const [content, contentProps] = defineField(
   "content",
   makeFormFieldProps<string>,
