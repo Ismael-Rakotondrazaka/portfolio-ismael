@@ -50,22 +50,27 @@
 </template>
 
 <script lang="ts" setup>
-import type { Project } from '~/utils';
-
 import { ButtonGroup } from '~/components/ui/button-group';
 
-interface Props extends /* @vue-ignore */ Project {
-  rank: number;
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  demo: null,
-  description: null,
-  imgAlt: '',
-  isOdd: false,
-  source: null,
-  technos: () => [],
-});
+const props = withDefaults(
+  defineProps<{
+    demo?: null | string;
+    description?: null | string;
+    imgAlt?: string;
+    imgSrc: string;
+    name: string;
+    rank: number;
+    source?: null | string;
+    technos?: string[];
+  }>(),
+  {
+    demo: null,
+    description: null,
+    imgAlt: '',
+    source: null,
+    technos: () => [],
+  }
+);
 
 const isOdd = computed(() => props.rank % 2 === 1);
 

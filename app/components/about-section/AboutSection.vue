@@ -66,7 +66,7 @@
       <Button as-child variant="outline" class="mb-3">
         <NuxtLink
           target="_blank"
-          to="/documents/CV-RAKOTONDRAZAKA Fitia Ismael.pdf"
+          to="/documents/cv-rakotondrazaka-fitia-ismael.pdf"
           :external="true"
         >
           <Icon name="mdi:file-pdf" />

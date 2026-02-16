@@ -10,7 +10,8 @@ import type { ButtonVariants } from '.';
 
 import { buttonVariants } from '.';
 
-interface Props extends /* @vue-ignore */ PrimitiveProps {
+interface Props extends PrimitiveProps {
+  asChild?: boolean;
   class?: HTMLAttributes['class'];
   size?: ButtonVariants['size'];
   variant?: ButtonVariants['variant'];
@@ -18,6 +19,7 @@ interface Props extends /* @vue-ignore */ PrimitiveProps {
 
 const props = withDefaults(defineProps<Props>(), {
   as: 'button',
+  asChild: undefined,
   class: undefined,
   size: 'default',
   variant: 'default',
