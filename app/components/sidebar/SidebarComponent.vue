@@ -33,6 +33,8 @@ const menuOptions = computed(() =>
     label: t(menu.textKey),
   }))
 );
+
+const config = useRuntimeConfig();
 </script>
 
 <template>
@@ -48,7 +50,7 @@ const menuOptions = computed(() =>
             </div>
             <div class="flex flex-col gap-0.5 leading-none">
               <span class="font-semibold">Portfolio</span>
-              <span class="">v1.0.0</span>
+              <span class="">v{{ config.public.appVersion }}</span>
             </div>
           </SidebarMenuButton>
         </SidebarMenuItem>

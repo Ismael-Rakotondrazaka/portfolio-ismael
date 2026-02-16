@@ -1,0 +1,28 @@
+services:
+  app:
+    image: portfolio:${APP_VERSION:-latest}
+    container_name: portfolio
+    build:
+      context: .
+      args:
+        APP_VERSION: ${APP_VERSION:-latest}
+    environment:
+      NUXT_PUBLIC_APP_URL: ${NUXT_PUBLIC_APP_URL}
+      NUXT_PUBLIC_APP_VERSION: ${NUXT_PUBLIC_APP_VERSION}
+      NUXT_SITE_URL: ${NUXT_SITE_URL}
+      NUXT_BREVO_SMTP_KEY: ${NUXT_BREVO_SMTP_KEY}
+      NUXT_PUBLIC_CONTACT_EMAIL: ${NUXT_PUBLIC_CONTACT_EMAIL}
+      NUXT_PUBLIC_CONTACT_FULL_NAME: ${NUXT_PUBLIC_CONTACT_FULL_NAME}
+      NUXT_PUBLIC_CONTACT_PHONE_NUMBER: ${NUXT_PUBLIC_CONTACT_PHONE_NUMBER}
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`www.ismaelrakoto.com`) || Host(`ismaelrakoto.com`)"
+      - "traefik.http.routers.portfolio.entrypoints=websecure"
+      - "traefik.http.routers.portfolio.tls.certresolver=leresolver"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
