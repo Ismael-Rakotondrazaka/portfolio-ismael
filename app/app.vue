@@ -14,7 +14,7 @@ import 'vue-sonner/style.css';
 import { Toaster } from '@/components/ui/sonner';
 
 useSeoMeta({
-  ogImage: '/card-RAKOTONDRAZAKA Fitia Ismael.png',
+  ogImage: '/card-rakotondrazaka-fitia-ismael.png',
   twitterCard: 'summary',
   twitterDescription:
     'RAKOTONDRAZAKA Fitia Ismael, un développeur professionnel',

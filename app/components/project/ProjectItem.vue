@@ -54,7 +54,7 @@ import type { Project } from '~/utils';
 
 import { ButtonGroup } from '~/components/ui/button-group';
 
-interface Props extends Project {
+interface Props extends /* @vue-ignore */ Project {
   rank: number;
 }
 

@@ -10,7 +10,7 @@ import type { SidebarMenuButtonVariants } from '.';
 
 import { sidebarMenuButtonVariants } from '.';
 
-export interface SidebarMenuButtonProps extends PrimitiveProps {
+export interface SidebarMenuButtonProps extends /* @vue-ignore */ PrimitiveProps {
   class?: HTMLAttributes['class'];
   isActive?: boolean;
   size?: SidebarMenuButtonVariants['size'];

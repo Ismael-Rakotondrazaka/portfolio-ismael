@@ -112,7 +112,7 @@
                 },
               }"
               target="_blank"
-              to="/documents/CV-RAKOTONDRAZAKA Fitia Ismael.pdf"
+              to="/documents/cv-rakotondrazaka-fitia-ismael.pdf"
               :external="true"
               class="text-nowrap"
             >

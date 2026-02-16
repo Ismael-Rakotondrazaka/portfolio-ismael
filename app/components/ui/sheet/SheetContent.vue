@@ -15,7 +15,7 @@ import { cn } from '@/lib/utils';
 
 import SheetOverlay from './SheetOverlay.vue';
 
-interface SheetContentProps extends DialogContentProps {
+interface SheetContentProps extends /* @vue-ignore */ DialogContentProps {
   class?: HTMLAttributes['class'];
   side?: 'bottom' | 'left' | 'right' | 'top';
 }
