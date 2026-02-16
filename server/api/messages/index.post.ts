@@ -1,6 +1,6 @@
-import { StoreMessageBodySchema } from "~/utils";
+import { StoreMessageBodySchema } from '#shared/utils';
 
-const __handler__: ToEventHandler<StoreMessageRequest> = async (event) => {
+const __handler__: ToEventHandler<StoreMessageRequest> = async event => {
   const translator = await Translator.new(event);
 
   try {
@@ -8,25 +8,37 @@ const __handler__: ToEventHandler<StoreMessageRequest> = async (event) => {
     const requestInputGetter = new RequestInputGetter(event, validator);
 
     const body = await requestInputGetter.getValidatedBody(
-      StoreMessageBodySchema,
+      StoreMessageBodySchema
     );
 
-    await MessageEmail.sendToInformation({
-      email: body.email,
-      content: body.content,
-      name: body.name,
-      phoneNumber: body.phoneNumber,
-    });
+    const [contactEmailResult] = await Promise.allSettled([
+      sendContactEmail({
+        content: body.content,
+        email: body.email,
+        name: body.name,
+        phoneNumber: body.phoneNumber,
+      }),
+      sendContactedAcknowledgementEmail({
+        email: body.email,
+        name: body.name,
+      }),
+    ]);
 
-    await MessageEmail.sendAcknowledgment({
-      email: body.email,
-      name: body.name,
-    });
-
-    return {
-      // @ts-expect-error Type instantiation is excessively deep and possibly infinite
-      message: translator.t("messages.store.success"),
-    };
+    if (
+      contactEmailResult.status === 'fulfilled' &&
+      contactEmailResult.value.success
+    ) {
+      return {
+        message: translator.t('messages.store.success'),
+      };
+    } else {
+      throw Exception.internalServer({
+        data: {},
+        event,
+        message: translator.t('messages.store.error'),
+        translator,
+      });
+    }
   } catch (error) {
     throw Exception.fromUnknown({
       error,

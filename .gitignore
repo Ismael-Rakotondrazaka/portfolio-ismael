@@ -1,34 +1,49 @@
-# Nuxt dev/build outputs
-.output
-.data
-.nuxt
-.nitro
-.cache
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+
+# Build outputs
+.next
+out
+build
 dist
 
-# Node dependencies
-node_modules
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+.DS_Store
+*.pem
+.fleet
+.idea
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Logs
 logs
 *.log
-
-# Misc
-.DS_Store
-.fleet
-.idea
 
 # Local env files
 .env
 .env.*
 !.env.example
 
-# VS Code
-.vscode
+# Vercel
+.vercel
 
-# Secret files
-.secret
+# Supabase
+.supabase
 
-# Temporary files
-.temp
-*.tmp
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache

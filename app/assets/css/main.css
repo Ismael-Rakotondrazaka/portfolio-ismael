@@ -1,0 +1,22 @@
+html,
+body {
+    font-family: "Fira Code", monospace !important;
+}
+
+.bg-move {
+    --bg-size: 400%;
+    background: linear-gradient(90deg,
+            var(--color-highlight),
+            var(--color-primary),
+            var(--color-highlight)) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 8s infinite linear;
+}
+
+@keyframes move-bg {
+    to {
+        background-position: var(--bg-size) 0;
+    }
+}

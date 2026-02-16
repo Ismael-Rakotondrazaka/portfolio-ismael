@@ -1,2 +1,2 @@
-export * from "./emailSender";
-export * from "./messageEmail";
+export * from './email.service';
+export * from './email.type';

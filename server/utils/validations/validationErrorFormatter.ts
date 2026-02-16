@@ -1,13 +1,15 @@
-import type { z } from "zod";
-import type { ErrorResponseData } from "../responses/errorResponse";
+import type { z } from 'zod';
+
+import type { ErrorResponseData } from '../../../shared/types/responses/errorResponse';
 
 export type FormattedValidationError<TInput> = Partial<
   Record<Extract<keyof TInput, string>, string>
 >;
 
+// eslint-disable-next-line @typescript-eslint/no-extraneous-class
 export abstract class ValidationErrorFormatter {
   public static format<T extends z.ZodTypeAny>(
-    error: z.ZodError<T>,
+    error: z.ZodError<T>
   ): FormattedValidationError<T> {
     const getEventQuerySuccessParseResult: z.typeToFlattenedError<T, string> =
       error.flatten((issue: z.ZodIssue) => issue.message);
