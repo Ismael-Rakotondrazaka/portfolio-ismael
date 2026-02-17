@@ -6,6 +6,9 @@ services:
       context: .
       args:
         APP_VERSION: ${APP_VERSION:-latest}
+        NUXT_SITE_URL: ${NUXT_SITE_URL}
+        NUXT_PUBLIC_SITE_URL: ${NUXT_PUBLIC_SITE_URL}
+        NUXT_PUBLIC_APP_VERSION: ${NUXT_PUBLIC_APP_VERSION}
     environment:
       NUXT_PUBLIC_APP_URL: ${NUXT_PUBLIC_APP_URL}
       NUXT_PUBLIC_APP_VERSION: ${NUXT_PUBLIC_APP_VERSION}
