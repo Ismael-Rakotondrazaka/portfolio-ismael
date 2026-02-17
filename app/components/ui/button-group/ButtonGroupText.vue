@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 
 import type { ButtonGroupVariants } from '.';
 
-interface Props extends /* @vue-ignore */ PrimitiveProps {
+interface Props extends PrimitiveProps {
   class?: HTMLAttributes['class'];
   orientation?: ButtonGroupVariants['orientation'];
 }

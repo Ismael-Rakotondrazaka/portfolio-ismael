@@ -79,7 +79,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     brevoSmtpKey: '',
     public: {
-      appVersion: '',
+      appVersion: '1.0.0',
       contactEmail: '',
       contactFullName: '',
       contactPhoneNumber: '',

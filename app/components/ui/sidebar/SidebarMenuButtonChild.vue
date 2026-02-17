@@ -10,7 +10,7 @@ import type { SidebarMenuButtonVariants } from '.';
 
 import { sidebarMenuButtonVariants } from '.';
 
-export interface SidebarMenuButtonProps extends /* @vue-ignore */ PrimitiveProps {
+export interface SidebarMenuButtonProps extends PrimitiveProps {
   class?: HTMLAttributes['class'];
   isActive?: boolean;
   size?: SidebarMenuButtonVariants['size'];
@@ -19,6 +19,7 @@ export interface SidebarMenuButtonProps extends /* @vue-ignore */ PrimitiveProps
 
 const props = withDefaults(defineProps<SidebarMenuButtonProps>(), {
   as: 'button',
+  asChild: false,
   class: undefined,
   size: 'default',
   variant: 'default',
