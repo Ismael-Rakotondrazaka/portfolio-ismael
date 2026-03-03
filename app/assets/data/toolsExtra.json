@@ -28,7 +28,16 @@
     "title": "Linux",
     "iconName": "internal:linux",
     "bgColor": "#FFCE14",
-    "color": "#000"
+    "color": "#000",
+    "mastered": true
+  },
+  {
+    "type": "icon",
+    "title": "Vitest",
+    "iconName": "internal:vitest",
+    "bgColor": "#FCC72B",
+    "color": "#000",
+    "mastered": true
   },
   {
     "type": "icon",
