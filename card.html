@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Card - Ismael</title>
+    <style>
+      :root {
+        --dark-blue: #001f3f;
+        --bright-blue: #00b4ff;
+        --text-gray: #4a5568;
+        --bg-white: #ffffff;
+      }
+
+      body {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f0f2f5;
+      }
+
+      .card {
+        background: var(--bg-white);
+        width: 900px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .content {
+        flex: 1;
+        z-index: 2;
+      }
+
+      .tagline {
+        color: var(--bright-blue);
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+      }
+
+      .name {
+        color: var(--dark-blue);
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 0 0 30px 0;
+        text-transform: uppercase;
+      }
+
+      .portfolio-url {
+        color: var(--text-gray);
+        font-size: 1.4rem;
+        text-decoration: none;
+      }
+
+      /* Profile Image Container */
+      .image-section {
+        width: 320px;
+        height: 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* The Dark Blue Circle */
+      .circle-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--dark-blue);
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      /* The Organic Bright Blue Shape */
+      .shape-bg {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        background-color: var(--bright-blue);
+        z-index: 2;
+        /* Creates the "blob" look from the image */
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        transform: rotate(-10deg);
+      }
+
+      .profile-img {
+        position: relative;
+        z-index: 3;
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        /* INSERT YOUR IMAGE STYLES HERE */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="content">
+        <div class="tagline">Développeur full-stack</div>
+        <h1 class="name">RAKOTONDRAZAKA<br />Fitia Ismael</h1>
+        <a href="https://www.ismaelrakoto.com" class="portfolio-url">
+          ismaelrakoto.com
+        </a>
+      </div>
+
+      <div class="image-section">
+        <div
+          class="profile-img"
+          style="display: flex; align-items: flex-end; justify-content: center"
+        >
+          <img
+            src="./public/images/profiles/profile-circle-196x196.png"
+            alt="Ismael's Portrait"
+            style="
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+              border-radius: 100%;
+            "
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
