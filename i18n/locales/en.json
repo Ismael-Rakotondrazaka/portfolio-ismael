@@ -142,6 +142,11 @@
   },
   "experiences": {
     "title": "Experiences",
+    "elano": {
+      "description": "As a Full-Stack Developer, I contribute to impactful projects, helping startups and scaleups transform their ideas into concrete solutions.",
+      "post": "Full-Stack Developer, Freelance",
+      "period": "September 2025 – Present"
+    },
     "mit": {
       "description": "Project carried out independently, from design to production. Complete online training platform for Malagasy teachers with module management, quizzes, guided productions, corrected assessments, automatic attestations, instant forum and email/SMS reminders.",
       "post": "Web Developer, Freelance",
@@ -150,7 +155,7 @@
     "oceantrade": {
       "description": "Redesign of the websites for the Viseo Group and Oceantrade, from initial conception to final deployment.",
       "post": "Intern Developer",
-      "period": "September - December 2023"
+      "period": "September 2023 - December 2023"
     }
   },
   "educations": {
