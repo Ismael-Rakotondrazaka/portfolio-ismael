@@ -3,10 +3,10 @@
     "name": "openmind",
     "description": "projects.OpenMind.description",
     "imgSrc": "/images/illustrations/illustration-openmind.png",
-    "technos": ["Nuxt", "Vue", "PrimeVue", "Prisma", "PostgreSQL"],
+    "technos": ["Nuxt", "Vue", "Shadcn", "Reka UI", "Supabase", "PostgreSQL"],
     "imgAlt": "Illustration openmind",
     "source": "https://github.com/Ismael-Rakotondrazaka/openmind",
-    "demo": "https://openmind.onrender.com"
+    "demo": "https://openmind.ismaelrakoto.com"
   },
   {
     "name": "campus-flow",

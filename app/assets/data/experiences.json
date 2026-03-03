@@ -1,17 +1,22 @@
 [
   {
     "company": {
+      "name": "Elano Tech",
+      "website": "https://elano.io"
+    },
+    "period": "experiences.elano.period",
+    "description": "experiences.elano.description",
+    "technos": ["Supabase", "Next.js", "React", "Stripe", "React Native"],
+    "post": "experiences.elano.post"
+  },
+  {
+    "company": {
       "name": "MALAGASY INNOVATIVE TEACHERS",
       "website": "https://www.innovativeteachers.net"
     },
     "period": "experiences.mit.period",
     "description": "experiences.mit.description",
-    "technos": [
-      "Nuxt.js",
-      "Vue.js",
-      "PostgreSQL",
-      "Google Cloud Platforme"
-    ],
+    "technos": ["Nuxt.js", "Vue.js", "PostgreSQL", "Google Cloud Platforme"],
     "post": "experiences.mit.post"
   },
   {
@@ -21,11 +26,7 @@
     },
     "period": "experiences.oceantrade.period",
     "description": "experiences.oceantrade.description",
-    "technos": [
-      "Nuxt.js",
-      "Vue.js",
-      "MySQL"
-    ],
+    "technos": ["Nuxt.js", "Vue.js", "MySQL"],
     "post": "experiences.oceantrade.post"
   }
 ]
