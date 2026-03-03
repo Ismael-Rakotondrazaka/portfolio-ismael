@@ -1,75 +1,101 @@
-# Nuxt Minimal Starter
+# Portfolio — RAKOTONDRAZAKA Fitia Ismael
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Personal portfolio built with Nuxt 4, featuring multilingual content, project/experience showcases, and a contact flow with server-side validation + Brevo email delivery.
 
-## Setup
+## Live website
 
-Make sure to install dependencies:
+- https://ismaelrakoto.com
+
+## Features
+
+- Bilingual UI (`fr`, `en`) with `@nuxtjs/i18n`
+- Portfolio sections: welcome, about, skills, projects, experience, education, contact
+- Contact form with schema validation (`zod`, `vee-validate`) and server API endpoint
+- Email notifications via Brevo transactional templates
+- SEO modules (`@nuxtjs/seo`, sitemap, schema.org identity metadata)
+- UI stack based on Tailwind CSS + shadcn-nuxt/reka-ui components
+
+## Tech stack
+
+- Nuxt 4 + Vue 3 + TypeScript
+- Pinia, VueUse, VueUse Motion
+- Tailwind CSS 4
+- Zod / vee-validate
+- Brevo SDK (transactional email)
+
+## Project structure
+
+- `app/` — application pages, components, composables, stores, assets
+- `server/` — API routes and server utilities (email, validation, exceptions)
+- `shared/` — shared types and schemas used by app + server
+- `i18n/` — locale configuration and translation files
+
+## Local development
+
+### 1) Install dependencies
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+### 2) Configure environment variables
 
-Start the development server on `http://localhost:3000`:
+Create your local env file from the example:
 
 ```bash
-# npm
+# macOS / Linux
+cp .env.example .env
+
+# Windows (PowerShell)
+Copy-Item .env.example .env
+```
+
+Required variables (from `.env.example`):
+
+- `APP_VERSION`
+- `NUXT_PUBLIC_APP_VERSION`
+- `NUXT_PUBLIC_APP_URL`
+- `NUXT_SITE_URL`
+- `NUXT_PUBLIC_SITE_URL`
+- `NUXT_BREVO_SMTP_KEY`
+- `NUXT_PUBLIC_CONTACT_EMAIL`
+- `NUXT_PUBLIC_CONTACT_FULL_NAME`
+- `NUXT_PUBLIC_CONTACT_PHONE_NUMBER`
+
+### 3) Start the app
+
+```bash
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+App runs on `http://localhost:3000`.
 
-Build the application for production:
+## Available scripts
+
+- `npm run dev` — start development server
+- `npm run build` — build for production
+- `npm run preview` — preview production build
+- `npm run generate` — generate static output (where applicable)
+- `npm run typecheck` — run Nuxt/Vue type checks
+- `npm run lint` — lint project
+- `npm run lint:fix` — lint and auto-fix
+
+## Docker
+
+This repository includes a production Docker setup:
+
+- `Dockerfile` builds and runs the Nuxt output (`.output/server/index.mjs`)
+- `docker-compose.yml` defines the `app` service and expected env vars
+
+Run with Docker Compose:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+docker compose up --build -d
 ```
 
-Locally preview production build:
+## Contact API
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Endpoint: `POST /api/messages`
+- Validates payload on server and sends:
+  - notification email to portfolio owner
+  - acknowledgement email to sender
