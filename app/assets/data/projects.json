@@ -3,7 +3,14 @@
     "name": "openmind",
     "description": "projects.OpenMind.description",
     "imgSrc": "/images/illustrations/illustration-openmind.png",
-    "technos": ["Nuxt", "Vue", "Shadcn", "Reka UI", "Supabase", "PostgreSQL"],
+    "technos": [
+      "Nuxt",
+      "Vue",
+      "Shadcn Vue",
+      "Reka UI",
+      "Supabase",
+      "PostgreSQL"
+    ],
     "imgAlt": "Illustration openmind",
     "source": "https://github.com/Ismael-Rakotondrazaka/openmind",
     "demo": "https://openmind.ismaelrakoto.com"
@@ -48,7 +55,7 @@
     "description": "projects.portfolio-ismael.description",
     "imgSrc": "/images/illustrations/illustration-portfolio-ismael.png",
     "imgAlt": "Illustration Portfolio Ismael",
-    "technos": ["Nuxt", "Naive UI", "Tailwind CSS"],
+    "technos": ["Nuxt", "Shadcn Vue", "Reka UI", "Tailwind CSS"],
     "source": "https://github.com/Ismael-Rakotondrazaka/portfolio-ismael",
     "demo": "https://portfolio-ismael.onrender.com"
   },

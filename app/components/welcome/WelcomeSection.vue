@@ -25,7 +25,7 @@
 
     <div
       id="home"
-      class="mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-center justify-center xl:justify-between"
+      class="mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl grid-cols-1 items-center justify-items-center xl:grid-cols-2 xl:justify-items-stretch"
     >
       <div class="mb-10 w-full p-3 md:mb-0 lg:w-auto">
         <div class="mb-5">
@@ -139,7 +139,8 @@
             },
           },
         }"
-        sizes="sm:90vw md:50vw lg:400px"
+        class="w-56 justify-self-center md:w-72 lg:w-80"
+        sizes="sm:70vw md:40vw lg:320px"
         src="/images/profiles/profile.png"
         format="webp"
         alt="Ismael profile image"

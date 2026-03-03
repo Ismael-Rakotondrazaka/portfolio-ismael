@@ -36,7 +36,8 @@
     "title": "React (16+)",
     "iconName": "internal:react",
     "bgColor": "#61DAFB",
-    "color": "#000"
+    "color": "#000",
+    "mastered": true
   },
   {
     "type": "icon",
