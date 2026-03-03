@@ -1,1 +1,1 @@
-export * from "./satinizer";
+export * from './satinizer';

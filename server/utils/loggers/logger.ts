@@ -1,24 +1,24 @@
-import type { Logger as WinstonLogger } from "winston";
-import { createLogger, format, transports } from "winston";
-import DailyRotateFile from "winston-daily-rotate-file";
+import type { Logger as WinstonLogger } from 'winston';
 
-const { combine, timestamp, printf, colorize } = format;
+import { createLogger, format, transports } from 'winston';
+
+const { colorize, combine, printf, timestamp } = format;
 
 /**
  * Custom log format
  */
-const logFormat = printf(({ level, message, timestamp, path }) => {
+const logFormat = printf(({ level, message, path, timestamp }) => {
   return `timestamp=${timestamp} level=${level} path="${path}" message="${message}"`;
 });
 
-export interface LogMetadata {
-  path: string;
-}
-
 export interface LogEntry {
-  level: "info" | "warn" | "error" | "debug";
+  level: 'debug' | 'error' | 'info' | 'warn';
   message: string;
   metadata: LogMetadata;
+}
+
+export interface LogMetadata extends Record<string, unknown> {
+  path: string;
 }
 
 export class Logger {
@@ -27,19 +27,12 @@ export class Logger {
 
   private constructor() {
     this.logger = createLogger({
-      level: "info",
       format: combine(timestamp(), logFormat),
+      level: 'info',
       transports: [
         // Console transport for all logs
         new transports.Console({
           format: combine(colorize(), timestamp(), logFormat),
-        }),
-        // File transport for error logs
-        new DailyRotateFile({
-          filename: "error-%DATE%.log",
-          datePattern: "YYYY-MM-DD",
-          level: "error",
-          dirname: "./logs",
         }),
       ],
     });
@@ -52,23 +45,23 @@ export class Logger {
     return Logger.instance;
   }
 
+  debug(message: string, metadata: LogMetadata): void {
+    this.log({ level: 'debug', message, metadata });
+  }
+
+  error(message: string, metadata: LogMetadata): void {
+    this.log({ level: 'error', message, metadata });
+  }
+
+  info(message: string, metadata: LogMetadata): void {
+    this.log({ level: 'info', message, metadata });
+  }
+
   log({ level, message, metadata }: LogEntry): void {
     this.logger.log(level, message, metadata);
   }
 
-  info(message: string, metadata: LogMetadata): void {
-    this.log({ level: "info", message, metadata });
-  }
-
   warn(message: string, metadata: LogMetadata): void {
-    this.log({ level: "warn", message, metadata });
-  }
-
-  error(message: string, metadata: LogMetadata): void {
-    this.log({ level: "error", message, metadata });
-  }
-
-  debug(message: string, metadata: LogMetadata): void {
-    this.log({ level: "debug", message, metadata });
+    this.log({ level: 'warn', message, metadata });
   }
 }

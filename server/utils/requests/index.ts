@@ -1,1 +1,1 @@
-export * from "./requestInputGetter";
+export * from './requestInputGetter';

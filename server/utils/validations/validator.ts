@@ -1,26 +1,29 @@
-import type { z } from "zod";
-import { zfd } from "zod-form-data";
-import { Exception } from "../exceptions/exception";
-import type { Translator } from "../translations/translator";
+import type { z } from 'zod';
+
+import { zfd } from 'zod-form-data';
+
+import type { Translator } from '../translations/translator';
+
+import { Exception } from '../exceptions/exception';
 import {
-  ValidationErrorFormatter,
   type FormattedValidationError,
-} from "./validationErrorFormatter";
-import { ValidationErrorTranslator } from "./validationErrorTranslator";
+  ValidationErrorFormatter,
+} from './validationErrorFormatter';
+import { ValidationErrorTranslator } from './validationErrorTranslator';
 
 export type ValidationSafeResult<T extends z.ZodTypeAny> =
   | {
-      isSuccess: true;
       data: z.output<T>;
+      isSuccess: true;
     }
   | {
-      isSuccess: false;
       error: FormattedValidationError<z.input<T>>;
+      isSuccess: false;
     };
 
 export class Validator {
-  #translator: Translator;
   #errorTranslator: ValidationErrorTranslator;
+  #translator: Translator;
 
   constructor(translator: Translator) {
     this.#translator = translator;
@@ -29,7 +32,7 @@ export class Validator {
 
   public async validate<T extends z.ZodTypeAny>(
     schema: T,
-    input: unknown,
+    input: unknown
   ): Promise<z.output<T>> {
     const spr: z.SafeParseReturnType<z.input<T>, z.output<T>> = await zfd
       .formData(schema)
@@ -42,14 +45,14 @@ export class Validator {
     }
 
     throw Exception.badRequest({
-      translator: this.#translator,
       data: ValidationErrorFormatter.format(spr.error),
+      translator: this.#translator,
     });
   }
 
   public async validateSafe<T extends z.ZodTypeAny>(
     schema: T,
-    input: unknown,
+    input: unknown
   ): Promise<ValidationSafeResult<T>> {
     const spr: z.SafeParseReturnType<z.input<T>, z.output<T>> = zfd
       .formData(schema)
@@ -59,13 +62,13 @@ export class Validator {
 
     if (spr.success) {
       return {
-        isSuccess: true,
         data: spr.data,
+        isSuccess: true,
       };
     } else {
       return {
-        isSuccess: false,
         error: ValidationErrorFormatter.format(spr.error),
+        isSuccess: false,
       };
     }
   }
