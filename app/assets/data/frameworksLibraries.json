@@ -40,6 +40,14 @@
   },
   {
     "type": "icon",
+    "title": "Nuxt (3+)",
+    "iconName": "internal:nuxt",
+    "bgColor": "#00c58e",
+    "color": "#000",
+    "mastered": true
+  },
+  {
+    "type": "icon",
     "title": "Laravel (8+)",
     "iconName": "internal:laravel",
     "bgColor": "#FD4F31",
@@ -47,11 +55,10 @@
   },
   {
     "type": "icon",
-    "title": "Nuxt (3+)",
-    "iconName": "internal:nuxt",
-    "bgColor": "#00c58e",
-    "color": "#000",
-    "mastered": true
+    "title": "React Native",
+    "iconName": "internal:react-native",
+    "bgColor": "#61dafb",
+    "color": "#000"
   },
   {
     "type": "icon",
