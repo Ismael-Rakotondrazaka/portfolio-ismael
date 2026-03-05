@@ -130,6 +130,19 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
+    sitemaps: {
+      index: [
+        {
+          sitemap: 'https://hello.ismaelrakoto.com/sitemap.xml',
+        },
+        {
+          sitemap: 'https://openmind.ismaelrakoto.com/sitemap_index.xml',
+        },
+        {
+          sitemap: 'https://minili.ismaelrakoto.com/sitemap.xml',
+        },
+      ],
+    },
     zeroRuntime: true,
   },
 
