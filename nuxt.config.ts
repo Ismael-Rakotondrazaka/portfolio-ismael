@@ -12,13 +12,7 @@ export default defineNuxtConfig({
 
   i18n: {
     defaultLocale: 'fr',
-    detectBrowserLanguage: {
-      alwaysRedirect: true,
-      cookieKey: 'i18n_redirected',
-      fallbackLocale: 'fr',
-      redirectOn: 'root',
-      useCookie: true,
-    },
+    detectBrowserLanguage: false,
     experimental: {
       localeDetector: './localeDetector.ts',
     },
