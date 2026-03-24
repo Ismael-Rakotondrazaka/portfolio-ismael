@@ -2,7 +2,8 @@
   <div>
     <ul class="mb-10">
       <ProjectItem
-        v-for="(project, i) in projectsToShow"
+        v-for="(project, i) in projects"
+        v-show="i < count"
         :key="i"
         v-motion="{
           initial: {
@@ -55,7 +56,6 @@ const step = 3;
 const initial = 5;
 
 const count = ref(initial);
-const projectsToShow = computed(() => props.projects.slice(0, count.value));
 
 const showMoreHandler = () => {
   count.value += step;
