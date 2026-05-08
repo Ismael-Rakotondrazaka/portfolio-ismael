@@ -32,6 +32,11 @@ jobs:
         with:
           context: .
           push: true
+          build-args: |
+            APP_VERSION=${{ vars.APP_VERSION }}
+            NUXT_SITE_URL=${{ vars.NUXT_SITE_URL }}
+            NUXT_PUBLIC_SITE_URL=${{ vars.NUXT_PUBLIC_SITE_URL }}
+            NUXT_PUBLIC_APP_VERSION=${{ vars.NUXT_PUBLIC_APP_VERSION }}
           tags: |
             ghcr.io/ismael-rakotondrazaka/portfolio-ismael:latest
             ghcr.io/ismael-rakotondrazaka/portfolio-ismael:${{ github.sha }}
