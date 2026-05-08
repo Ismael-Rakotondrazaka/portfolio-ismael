@@ -1,8 +1,5 @@
 services:
   app:
-    image: portfolio:${APP_VERSION:-latest}
-    container_name: portfolio
-
     build:
       context: .
       args:
@@ -10,6 +7,8 @@ services:
         NUXT_SITE_URL: ${NUXT_SITE_URL}
         NUXT_PUBLIC_SITE_URL: ${NUXT_PUBLIC_SITE_URL}
         NUXT_PUBLIC_APP_VERSION: ${NUXT_PUBLIC_APP_VERSION}
+
+    image: portfolio:${APP_VERSION:-latest}
 
     environment:
       NUXT_PUBLIC_APP_URL: ${NUXT_PUBLIC_APP_URL}
@@ -22,33 +21,3 @@ services:
       NUXT_PUBLIC_CONTACT_PHONE_NUMBER: ${NUXT_PUBLIC_CONTACT_PHONE_NUMBER}
 
     restart: always
-
-    labels:
-      - "traefik.enable=true"
-
-      # -----------------------
-      # HTTP router (redirect)
-      # -----------------------
-      - "traefik.http.routers.portfolio-http.rule=Host(`ismaelrakoto.com`) || Host(`www.ismaelrakoto.com`)"
-      - "traefik.http.routers.portfolio-http.entrypoints=web"
-      - "traefik.http.routers.portfolio-http.middlewares=portfolio-redirect"
-
-      # redirect middleware
-      - "traefik.http.middlewares.portfolio-redirect.redirectscheme.scheme=https"
-
-      # -----------------------
-      # HTTPS router
-      # -----------------------
-      - "traefik.http.routers.portfolio-https.rule=Host(`ismaelrakoto.com`) || Host(`www.ismaelrakoto.com`)"
-      - "traefik.http.routers.portfolio-https.entrypoints=websecure"
-      - "traefik.http.routers.portfolio-https.tls.certresolver=leresolver"
-
-      # tell traefik which port the container exposes
-      - "traefik.http.services.portfolio.loadbalancer.server.port=3000"
-
-    networks:
-      - web
-
-networks:
-  web:
-    external: true
