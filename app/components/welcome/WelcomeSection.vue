@@ -141,7 +141,7 @@
         }"
         class="w-56 justify-self-center md:w-72 lg:w-80"
         sizes="sm:70vw md:40vw lg:320px"
-        src="/images/profiles/profile.png"
+        src="/images/profiles/profile-320x365.png"
         format="webp"
         alt="Ismael profile image"
       />

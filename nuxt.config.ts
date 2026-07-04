@@ -12,13 +12,7 @@ export default defineNuxtConfig({
 
   i18n: {
     defaultLocale: 'fr',
-    detectBrowserLanguage: {
-      alwaysRedirect: true,
-      cookieKey: 'i18n_redirected',
-      fallbackLocale: 'fr',
-      redirectOn: 'root',
-      useCookie: true,
-    },
+    detectBrowserLanguage: false,
     experimental: {
       localeDetector: './localeDetector.ts',
     },
@@ -130,6 +124,19 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
+    sitemaps: {
+      index: [
+        {
+          sitemap: 'https://hello.ismaelrakoto.com/sitemap.xml',
+        },
+        {
+          sitemap: 'https://openmind.ismaelrakoto.com/sitemap_index.xml',
+        },
+        {
+          sitemap: 'https://minili.ismaelrakoto.com/sitemap.xml',
+        },
+      ],
+    },
     zeroRuntime: true,
   },
 
