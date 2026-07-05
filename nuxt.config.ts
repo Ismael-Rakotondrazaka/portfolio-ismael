@@ -144,11 +144,25 @@ export default defineNuxtConfig({
           'wss:',
           'https://www.google.com',
           'https://www.recaptcha.net',
+          'https://ipwho.is',
         ],
-        'frame-src': ["'self'", 'https://www.google.com', 'https://www.recaptcha.net'],
-        'img-src': ["'self'", 'data:'],
-        // reCAPTCHA's badge widget sets one inline event handler attribute;
-        // allow only that exact handler instead of loosening the directive.
+        'frame-src': [
+          "'self'",
+          'https://www.google.com',
+          'https://www.recaptcha.net',
+        ],
+        'img-src': ["'self'", 'data:', 'https://flagcdn.com'],
+        // no 'strict-dynamic': it doesn't propagate trust to the
+        // dynamically-injected reCAPTCHA script, so allowlist it directly.
+        'script-src': [
+          "'self'",
+          'https:',
+          "'unsafe-inline'",
+          'https://www.google.com',
+          'https://www.gstatic.com',
+          'https://www.recaptcha.net',
+        ],
+        // allows only reCAPTCHA's one known inline event handler
         'script-src-attr': [
           "'unsafe-hashes'",
           "'sha256-bwK6T5wZVTANitXbrTsel7kl/PyCjCd/Dq5Qoz3imjM='",
@@ -235,6 +249,8 @@ export default defineNuxtConfig({
         'vue-sonner',
         'zod',
         '@unhead/schema-org/vue',
+        'base-vue-phone-input',
+        'libphonenumber-js',
       ],
     },
     plugins: [

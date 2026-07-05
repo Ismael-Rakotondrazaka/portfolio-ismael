@@ -1,8 +1,7 @@
 import { logger } from '../loggers/logger';
 import type { RecaptchaVerificationResult } from './recaptcha.type';
 
-const RECAPTCHA_VERIFY_URL =
-  'https://www.google.com/recaptcha/api/siteverify';
+const RECAPTCHA_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
 const RECAPTCHA_MIN_SCORE = 0.5;
 
 type GoogleRecaptchaSiteVerifyResponse = {

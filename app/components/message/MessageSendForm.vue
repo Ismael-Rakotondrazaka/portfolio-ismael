@@ -133,7 +133,7 @@ const createMessageHandler = handleSubmit(async values => {
             </Field>
           </VeeField>
 
-          <VeeField v-slot="{ field, errors }" name="phoneNumber">
+          <!-- <VeeField v-slot="{ field, errors }" name="phoneNumber">
             <Field :data-invalid="!!errors.length">
               <FieldLabel for="phoneNumber">
                 {{ $t('messages.store.form.phoneNumber.label') }}
@@ -143,6 +143,20 @@ const createMessageHandler = handleSubmit(async values => {
                 v-bind="field"
                 :placeholder="$t('messages.store.form.phoneNumber.placeholder')"
                 :aria-invalid="!!errors.length"
+              />
+              <FieldError v-if="errors.length" :errors="errors" />
+            </Field>
+          </VeeField> -->
+
+          <VeeField v-slot="{ field, errors }" name="phoneNumber">
+            <Field :data-invalid="!!errors.length">
+              <FieldLabel for="phoneNumber">
+                {{ $t('messages.store.form.phoneNumber.label') }}
+              </FieldLabel>
+              <PhoneInput
+                id="phoneNumber"
+                :aria-invalid="!!errors.length"
+                @on-update:model-value="field['onUpdate:modelValue']"
               />
               <FieldError v-if="errors.length" :errors="errors" />
             </Field>
