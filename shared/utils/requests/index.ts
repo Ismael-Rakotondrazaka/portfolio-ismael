@@ -1,5 +1,6 @@
-import type { ErrorResponseData } from '~~/shared/types/responses/errorResponse';
 import type { ReasonPhrases, StatusCodes } from 'http-status-codes';
+
+import type { ErrorResponseData } from '~~/shared/types/responses/errorResponse';
 
 export interface Request<
   TOutput = Record<string, never>,

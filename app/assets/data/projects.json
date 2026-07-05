@@ -19,10 +19,10 @@
     "name": "campus-flow",
     "description": "projects.CampusFlow.description",
     "imgSrc": "/images/illustrations/illustration-campus-flow.png",
-    "technos": ["React", "Nitro (Nuxt server engine)", "Prisma", "PostgreSQL"],
+    "technos": ["Nuxt", "Vue", "Prisma", "PostgreSQL"],
     "imgAlt": "Illustration campus-flow",
     "source": "https://github.com/Ismael-Rakotondrazaka/campus-flow",
-    "demo": "https://lumierebourg.vercel.app"
+    "demo": "https://campus-flow.ismaelrakoto.com"
   },
   {
     "name": "mi-chat",
@@ -57,7 +57,7 @@
     "imgAlt": "Illustration Portfolio Ismael",
     "technos": ["Nuxt", "Shadcn Vue", "Reka UI", "Tailwind CSS"],
     "source": "https://github.com/Ismael-Rakotondrazaka/portfolio-ismael",
-    "demo": "https://portfolio-ismael.onrender.com"
+    "demo": "https://www.ismaelrakoto.com"
   },
   {
     "name": "QuizWiz",
@@ -116,7 +116,7 @@
     "imgAlt": "Illustration DHTML-2022",
     "technos": ["HTML", "CSS", "Javascript"],
     "source": "https://github.com/Ismael-Rakotondrazaka/dhtml-2022",
-    "demo": "https://dhtml-2022.onrender.com"
+    "demo": "https://dhtml-2022.ismaelrakoto.com"
   },
   {
     "name": "Coffee Aroma",

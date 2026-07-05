@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '#components';
-
 import {
   Sidebar,
   SidebarContent,
@@ -11,6 +9,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
+import { Icon } from '#components';
 import menus from '~/assets/data/menus.json';
 
 const onSelect = (id: string) => {

@@ -44,7 +44,7 @@
                 },
               },
             }"
-            class="text-lg md:text-2xl"
+            class="text-muted-foreground text-base tracking-wide uppercase md:text-lg"
           >
             {{ $t('welcome.greeting') }}
           </p>
@@ -66,7 +66,7 @@
                 },
               },
             }"
-            class="text-highlight text-2xl font-bold md:text-4xl"
+            class="text-highlight mt-2 text-3xl leading-tight font-bold tracking-tight md:text-5xl lg:text-6xl"
           >
             {{ $t('author.fullName') }}
           </h1>

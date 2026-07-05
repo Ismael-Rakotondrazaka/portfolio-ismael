@@ -1,67 +1,51 @@
-import type { Logger as WinstonLogger } from 'winston';
+import type { Logger as PinoLogger } from 'pino';
+import pino from 'pino';
 
-import { createLogger, format, transports } from 'winston';
+import { getRequestContext } from './async-local-context';
 
-const { colorize, combine, printf, timestamp } = format;
-
-/**
- * Custom log format
- */
-const logFormat = printf(({ level, message, path, timestamp }) => {
-  return `timestamp=${timestamp} level=${level} path="${path}" message="${message}"`;
+const pinoInstance = pino({
+  level: process.env.NODE_ENV === 'production' ? 'info' : 'debug',
+  ...(process.env.NODE_ENV !== 'production' && {
+    transport: {
+      options: {
+        colorize: true,
+        ignore: 'pid,hostname',
+        translateTime: 'UTC:yyyy-mm-dd HH:MM:ss.l o',
+      },
+      target: 'pino-pretty',
+    },
+  }),
 });
 
-export interface LogEntry {
-  level: 'debug' | 'error' | 'info' | 'warn';
-  message: string;
-  metadata: LogMetadata;
-}
-
-export interface LogMetadata extends Record<string, unknown> {
-  path: string;
-}
-
-export class Logger {
-  private static instance: Logger;
-  private logger: WinstonLogger;
-
-  private constructor() {
-    this.logger = createLogger({
-      format: combine(timestamp(), logFormat),
-      level: 'info',
-      transports: [
-        // Console transport for all logs
-        new transports.Console({
-          format: combine(colorize(), timestamp(), logFormat),
-        }),
-      ],
-    });
+class ContextAwareLogger {
+  child(bindings: object): PinoLogger {
+    return this.getPinoLogger().child(bindings);
   }
 
-  public static getInstance(): Logger {
-    if (!Logger.instance) {
-      Logger.instance = new Logger();
-    }
-    return Logger.instance;
-  }
+  debug: PinoLogger['debug'] = (...args: Parameters<PinoLogger['debug']>) => {
+    (this.getPinoLogger().debug as (...a: unknown[]) => void)(...args);
+  };
 
-  debug(message: string, metadata: LogMetadata): void {
-    this.log({ level: 'debug', message, metadata });
-  }
+  error: PinoLogger['error'] = (...args: Parameters<PinoLogger['error']>) => {
+    (this.getPinoLogger().error as (...a: unknown[]) => void)(...args);
+  };
 
-  error(message: string, metadata: LogMetadata): void {
-    this.log({ level: 'error', message, metadata });
-  }
+  fatal: PinoLogger['fatal'] = (...args: Parameters<PinoLogger['fatal']>) => {
+    (this.getPinoLogger().fatal as (...a: unknown[]) => void)(...args);
+  };
 
-  info(message: string, metadata: LogMetadata): void {
-    this.log({ level: 'info', message, metadata });
-  }
+  info: PinoLogger['info'] = (...args: Parameters<PinoLogger['info']>) => {
+    (this.getPinoLogger().info as (...a: unknown[]) => void)(...args);
+  };
 
-  log({ level, message, metadata }: LogEntry): void {
-    this.logger.log(level, message, metadata);
-  }
+  warn: PinoLogger['warn'] = (...args: Parameters<PinoLogger['warn']>) => {
+    (this.getPinoLogger().warn as (...a: unknown[]) => void)(...args);
+  };
 
-  warn(message: string, metadata: LogMetadata): void {
-    this.log({ level: 'warn', message, metadata });
+  private getPinoLogger(): PinoLogger {
+    const context = getRequestContext();
+    return context ? pinoInstance.child(context) : pinoInstance;
   }
 }
+
+export const logger = new ContextAwareLogger();

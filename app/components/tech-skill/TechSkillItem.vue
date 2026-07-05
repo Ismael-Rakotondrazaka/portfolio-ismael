@@ -1,6 +1,6 @@
 <template>
   <li
-    class="group ring-primary hover:bg-primary! relative inline-block rounded-md border-2 border-white p-1 ring-2 transition-all hover:text-white! lg:p-3"
+    class="group hover:bg-primary! relative inline-block rounded-md p-1 transition-all hover:text-white! lg:p-3"
     :style="{
       backgroundColor: bgColor,
       color: color,
@@ -35,7 +35,12 @@
 </template>
 
 <script lang="ts" setup>
+import { useWindowSize } from '@vueuse/core';
+
 import type { TechSkill } from '~/utils';
+
+const { width } = useWindowSize();
+const isMobileOrTablet = computed(() => width.value <= 1280);
 
 withDefaults(defineProps<TechSkill>(), {
   bgColor: 'var(--color-secondary)',
@@ -45,9 +50,7 @@ withDefaults(defineProps<TechSkill>(), {
   mastered: false,
 });
 
-const { isMobileOrTablet } = useWindowWidthStore();
-
-const iconWidth = computed(() => (isMobileOrTablet ? '2rem' : '5rem'));
+const iconWidth = computed(() => (isMobileOrTablet.value ? '2rem' : '5rem'));
 </script>
 
 <style scoped></style>

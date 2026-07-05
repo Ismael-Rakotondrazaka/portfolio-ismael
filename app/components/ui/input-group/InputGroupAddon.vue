@@ -4,7 +4,6 @@ import type { HTMLAttributes } from 'vue';
 import { cn } from '@/lib/utils';
 
 import type { InputGroupVariants } from '.';
-
 import { inputGroupAddonVariants } from '.';
 
 const props = withDefaults(
