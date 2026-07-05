@@ -141,6 +141,23 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    optimizeDeps: {
+      include: [
+        '@vee-validate/zod',
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+        '@vueuse/core',
+        'class-variance-authority',
+        'clsx',
+        'lucide-vue-next',
+        'reka-ui',
+        'tailwind-merge',
+        'typed.js',
+        'vee-validate',
+        'vue-sonner',
+        'zod',
+      ],
+    },
     plugins: [
       tailwindcss() as Exclude<NuxtConfig['vite'], undefined>['plugins'],
     ],
