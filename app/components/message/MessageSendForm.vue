@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { toTypedSchema } from '@vee-validate/zod';
-import { useForm, Field as VeeField } from 'vee-validate';
+import { useForm } from 'vee-validate';
 import { toast } from 'vue-sonner';
 
 import { Button } from '@/components/ui/button';
@@ -35,7 +35,9 @@ const { handleSubmit, isSubmitting, resetForm, setErrors } = useForm({
     email: '',
     name: '',
   },
-  validationSchema: toTypedSchema(StoreMessageBodySchema),
+  validationSchema: toTypedSchema(
+    StoreMessageBodySchema.omit({ recaptchaToken: true })
+  ),
 });
 
 const buttonText = computed(() =>
@@ -46,12 +48,35 @@ const buttonText = computed(() =>
 
 const { error, execute, message } = await useStoreMessage();
 
+const { public: publicConfig } = useRuntimeConfig();
+const { onLoaded } = useScriptGoogleRecaptcha();
+
+const getRecaptchaToken = () =>
+  new Promise<string>((resolve, reject) => {
+    onLoaded(({ grecaptcha }) => {
+      grecaptcha
+        .execute(publicConfig.scripts.googleRecaptcha.siteKey, {
+          action: 'contact',
+        })
+        .then(resolve, reject);
+    });
+  });
+
 const createMessageHandler = handleSubmit(async values => {
-  await execute(values);
+  const recaptchaToken = await getRecaptchaToken().catch(() => undefined);
+
+  if (!recaptchaToken) {
+    toast.error(t('messages.store.recaptchaFailed'));
+    return;
+  }
+
+  await execute({ ...values, recaptchaToken });
 
   if (error.value !== undefined) {
-    setErrors(error.value.data);
-    toast.error(error.value.message);
+    if (error.value.data) {
+      setErrors(error.value.data);
+    }
+    toast.error(error.value.message ?? t('messages.store.error'));
   } else {
     toast.success(message.value!);
     setTimeout(() => {

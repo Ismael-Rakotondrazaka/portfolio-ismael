@@ -1,8 +1,7 @@
 import type { Brevo } from '@getbrevo/brevo';
 
-import type { EmailSendResult } from './email.type';
-
 import { useBrevo } from './brevo.client';
+import type { EmailSendResult } from './email.type';
 import { EmailTemplate, EmailTemplateBrevoId } from './email.type';
 
 export type ContactData = {

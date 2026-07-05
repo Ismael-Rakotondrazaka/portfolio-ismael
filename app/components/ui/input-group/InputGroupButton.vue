@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 import type { InputGroupButtonProps } from '.';
-
 import { inputGroupButtonVariants } from '.';
 
 const props = withDefaults(defineProps<InputGroupButtonProps>(), {

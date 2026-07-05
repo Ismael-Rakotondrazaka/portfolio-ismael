@@ -22,48 +22,54 @@
     </div>
 
     <div class="mx-auto w-full max-w-5xl">
-      <h1 class="text-gold mb-5 inline-block text-2xl font-bold">
+      <SectionTitle>
         {{ $t('skills.title') }}
-      </h1>
+      </SectionTitle>
     </div>
 
     <div class="mx-auto mb-10 w-full max-w-5xl">
-      <h2 class="bg-primary text-gold mb-0 px-3 py-5 text-xl font-bold">
+      <h2
+        class="bg-primary text-gold mb-5 rounded-lg px-3 py-5 text-xl font-bold"
+      >
         {{ $t('skills.technicalSkills.title') }}
       </h2>
 
-      <div class="">
-        <div
-          v-for="(skillGroup, i) in technicalSkills"
-          :key="i"
-          class="bg-secondary odd:bg-opacity-10 even:bg-opacity-20 px-3! py-5! pt-2"
-        >
-          <h3 class="text-primary mb-2 text-xl font-bold">
-            {{ skillGroup.title }}
-          </h3>
+      <div class="space-y-5">
+        <Card v-for="(skillGroup, i) in technicalSkills" :key="i">
+          <CardHeader>
+            <h3 class="text-primary not-[]:text-xl font-bold">
+              {{ skillGroup.title }}
+            </h3>
+          </CardHeader>
 
-          <TechSkillList :skills="skillGroup.skills" />
-        </div>
+          <CardContent>
+            <TechSkillList :skills="skillGroup.skills" />
+          </CardContent>
+        </Card>
       </div>
     </div>
 
     <div class="mx-auto w-full max-w-5xl">
-      <h2 class="bg-primary text-gold mb-0 px-3 py-5 text-xl font-bold">
+      <h2
+        class="bg-primary text-gold mb-5 rounded-lg px-3 py-5 text-xl font-bold"
+      >
         {{ $t('skills.softSkills.title') }}
       </h2>
 
-      <div
-        v-for="(skill, i) in softSkills"
-        :key="i"
-        class="bg-secondary odd:bg-opacity-10 even:bg-opacity-20 px-3 pt-2 pb-5"
-      >
-        <h3 class="text-primary mb-2 text-xl font-bold">
-          {{ skill.title }}
-        </h3>
+      <div class="space-y-5">
+        <Card v-for="(skill, i) in softSkills" :key="i">
+          <CardHeader>
+            <h3 class="text-primary text-xl font-bold">
+              {{ skill.title }}
+            </h3>
+          </CardHeader>
 
-        <p class="text-primary text-base whitespace-pre-wrap">
-          {{ skill.description }}
-        </p>
+          <CardContent>
+            <p class="text-primary text-base whitespace-pre-wrap">
+              {{ skill.description }}
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   </div>

@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import type { SelectItemProps } from 'reka-ui';
-import type { HTMLAttributes } from 'vue';
-
+import { Check } from '@lucide/vue';
 import { reactiveOmit } from '@vueuse/core';
-import { Check } from 'lucide-vue-next';
+import type { SelectItemProps } from 'reka-ui';
 import {
   SelectItem,
   SelectItemIndicator,
   SelectItemText,
   useForwardProps,
 } from 'reka-ui';
+import type { HTMLAttributes } from 'vue';
 
 import { cn } from '@/lib/utils';
 

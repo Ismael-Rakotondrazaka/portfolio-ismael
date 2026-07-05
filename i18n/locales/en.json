@@ -162,10 +162,16 @@
     "title": "Education",
     "list": [
       {
+        "title": "Master professionnel",
+        "description": "\"Software Engineering and Database\" course",
+        "location": "École Nationale d'Informatique - University of Fianarantsoa",
+        "period": "2024 - Present"
+      },
+      {
         "title": "Professional license",
         "description": "\"Software Engineering and Database\" course",
         "location": "École Nationale d'Informatique - University of Fianarantsoa",
-        "period": "2020 - Present"
+        "period": "2020 - 2024"
       },
       {
         "title": "Graduate from high school",
@@ -214,7 +220,8 @@
         }
       },
       "success": "Message sent successfully.",
-      "error": "An error occurred while sending the message."
+      "error": "An error occurred while sending the message.",
+      "recaptchaFailed": "reCAPTCHA verification failed. Please try again."
     }
   }
 }

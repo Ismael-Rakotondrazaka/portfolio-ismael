@@ -1,11 +1,9 @@
 import type { EventHandlerRequest, H3Event } from 'h3';
+import { ReasonPhrases, StatusCodes } from 'http-status-codes';
 import type { NuxtError } from 'nuxt/app';
 
-import { ReasonPhrases, StatusCodes } from 'http-status-codes';
-
+import { logger } from '../loggers/logger';
 import type { Translator } from '../translations';
-
-import { Logger } from '../loggers/logger';
 
 export class Exception<TData> extends Error {
   readonly data: TData;
@@ -72,12 +70,14 @@ export class Exception<TData> extends Error {
     if (error instanceof Exception) {
       return error;
     } else {
-      Logger.getInstance().error(
-        error instanceof Error ? error.message : translator.t('errors.default'),
-        {
-          path: event.path,
-        }
-      );
+      logger.error({
+        err:
+          error instanceof Error
+            ? error
+            : new Error(translator.t('errors.default')),
+        event: 'http.server.error',
+        path: event.path,
+      });
 
       return new Exception({
         data: {},
@@ -98,9 +98,10 @@ export class Exception<TData> extends Error {
     const message =
       arg.message ?? translator.t('errors.requests.defaults.internalServer');
 
-    Logger.getInstance().error('Internal Server error', {
-      path: event.path,
-    });
+    logger.error(
+      { event: 'http.server.error', path: event.path },
+      'Internal Server error'
+    );
 
     return new Exception({
       data,

@@ -4,7 +4,7 @@
     class="relative flex min-h-screen flex-row items-center justify-center py-20"
   >
     <div
-      class="absolute right-[20%] bottom-[5%] w-7 md:w-12 lg:right-auto lg:left-[20%] lg:w-20"
+      class="absolute right-[20%] bottom-[1%] w-7 md:w-12 lg:right-auto lg:left-[20%] lg:w-20"
     >
       <Icon
         name="mdi:medal"
@@ -12,7 +12,7 @@
       />
     </div>
 
-    <div class="absolute top-[10%] left-[30%] w-7 md:w-12 lg:w-20">
+    <div class="absolute top-[10%] left-[50%] w-7 md:w-12 lg:w-20">
       <Icon
         name="mdi:briefcase"
         class="text-highlight text-3xl hover:animate-bounce md:text-5xl"
@@ -29,9 +29,11 @@
     </div>
 
     <div class="w-full max-w-5xl">
-      <h1 class="text-gold mb-5 text-center text-2xl font-bold">
-        {{ $t('experiences.title') }}
-      </h1>
+      <div class="mx-auto w-full max-w-5xl">
+        <SectionTitle>
+          {{ $t('experiences.title') }}
+        </SectionTitle>
+      </div>
 
       <ExperienceList :experiences="experiences" />
     </div>
@@ -39,9 +41,8 @@
 </template>
 
 <script lang="ts" setup>
-import type { Experience } from '~/utils';
-
 import experiencesRaw from '~/assets/data/experiences.json';
+import type { Experience } from '~/utils';
 
 const { t } = useI18n({
   useScope: 'global',

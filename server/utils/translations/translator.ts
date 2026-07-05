@@ -1,9 +1,8 @@
-import type { EventHandlerRequest, H3Event } from 'h3';
-
 import {
   type useTranslation as IUseTranslation,
   useTranslation,
 } from '@intlify/h3';
+import type { EventHandlerRequest, H3Event } from 'h3';
 
 type DateFunction = (date: Date) => string;
 // @ts-check

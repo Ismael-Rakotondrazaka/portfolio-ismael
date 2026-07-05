@@ -11,6 +11,18 @@ const __handler__: ToEventHandler<StoreMessageRequest> = async event => {
       StoreMessageBodySchema
     );
 
+    const recaptchaVerification = await verifyRecaptchaToken(
+      body.recaptchaToken
+    );
+
+    if (!recaptchaVerification.success) {
+      throw Exception.badRequest({
+        data: {},
+        message: translator.t('messages.store.recaptchaFailed'),
+        translator,
+      });
+    }
+
     const [contactEmailResult] = await Promise.allSettled([
       sendContactEmail({
         content: body.content,
