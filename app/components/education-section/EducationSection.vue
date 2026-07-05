@@ -29,9 +29,9 @@
     </div>
 
     <div class="w-full max-w-5xl">
-      <h1 class="text-gold mb-5 text-center text-2xl font-bold">
+      <SectionTitle>
         {{ $t('educations.title') }}
-      </h1>
+      </SectionTitle>
 
       <EducationList :educations="educations" />
     </div>

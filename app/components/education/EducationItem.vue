@@ -1,20 +1,35 @@
 <template>
-  <li class="px-3 pt-2 pb-5">
-    <h2 class="text-primary mb-3 text-xl font-bold">
-      {{ title }}
-    </h2>
+  <li class="">
+    <Card>
+      <CardHeader>
+        <CardTitle>
+          <h2 class="text-primary text-xl font-bold">
+            {{ title }}
+          </h2>
+        </CardTitle>
 
-    <p v-if="description" class="text-primary mb-1 text-base">
-      {{ description }}
-    </p>
+        <CardAction v-if="period">
+          <p
+            class="inline-block rounded-full border border-slate-300 bg-slate-200 p-1 px-3 text-sm whitespace-nowrap text-black"
+          >
+            {{ period }}
+          </p>
+        </CardAction>
+      </CardHeader>
 
-    <p v-if="location" class="text-primary mb-1 text-base">
-      {{ location }}
-    </p>
+      <CardContent v-if="description">
+        <p class="text-primary text-base">
+          {{ description }}
+        </p>
+      </CardContent>
 
-    <p v-if="period" class="text-primary text-sm">
-      {{ period }}
-    </p>
+      <CardFooter v-if="location">
+        <p class="text-primary text-base">
+          <Icon name="mdi:map-marker" size="1rem" />
+          {{ location }}
+        </p>
+      </CardFooter>
+    </Card>
   </li>
 </template>
 

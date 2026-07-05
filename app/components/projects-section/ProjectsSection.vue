@@ -1,8 +1,10 @@
 <template>
   <div id="projects" class="bg-primary min-h-screen py-20">
-    <h1 class="text-gold mb-5 text-center text-2xl font-bold">
-      {{ $t('projects.title') }}
-    </h1>
+    <div class="mx-auto w-full max-w-5xl">
+      <SectionTitle>
+        {{ $t('projects.title') }}
+      </SectionTitle>
+    </div>
 
     <div class="p-3">
       <ProjectList :projects="projects" />

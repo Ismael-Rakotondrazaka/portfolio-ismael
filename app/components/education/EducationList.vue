@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="space-y-5">
     <EducationItem
       v-for="(education, i) in educations"
       :key="i"
@@ -7,7 +7,6 @@
       :description="education.description"
       :location="education.location"
       :period="education.period"
-      class="odd:bg-highlight/20 even:bg-highlight/10"
     />
   </ul>
 </template>

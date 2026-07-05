@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="space-y-5">
     <ExperienceListItem
       v-for="(experience, i) in experiences"
       :key="i"
@@ -8,7 +8,6 @@
       :description="experience.description"
       :technos="experience.technos"
       :post="experience.post"
-      class="odd:bg-highlight/20 even:bg-highlight/10"
     />
   </ul>
 </template>

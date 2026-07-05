@@ -6,7 +6,6 @@ import SheetTitle from '@/components/ui/sheet/SheetTitle.vue';
 import { cn } from '@/lib/utils';
 
 import type { SidebarProps } from '.';
-
 import { SIDEBAR_WIDTH_MOBILE, useSidebar } from './utils';
 
 defineOptions({

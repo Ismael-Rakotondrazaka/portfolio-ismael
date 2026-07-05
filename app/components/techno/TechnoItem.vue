@@ -1,6 +1,6 @@
 <template>
   <li
-    class="inline-block rounded-md bg-sky-500 p-1 px-3 text-sm whitespace-nowrap text-black"
+    class="inline-block rounded-md border border-slate-300 bg-slate-200 p-1 px-3 text-sm whitespace-nowrap text-black"
   >
     {{ techno }}
   </li>

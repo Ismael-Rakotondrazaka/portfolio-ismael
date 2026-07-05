@@ -47,3 +47,6 @@ logs
 .nuxt
 .nitro
 .cache
+
+# Temporary files
+temp

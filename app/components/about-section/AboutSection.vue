@@ -4,9 +4,9 @@
     class="bg-primary flex min-h-screen flex-col items-center justify-center px-3 py-20"
   >
     <div class="mb-12 max-w-2xl">
-      <h1 class="text-gold mb-3 inline-block text-2xl font-bold">
+      <SectionTitle>
         {{ $t('about.title') }}
-      </h1>
+      </SectionTitle>
 
       <p class="mb-3 text-base tracking-wide text-white">
         {{ $t('about.p1') }}

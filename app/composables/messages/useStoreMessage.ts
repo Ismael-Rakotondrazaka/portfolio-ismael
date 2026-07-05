@@ -1,6 +1,7 @@
+import type { FetchError } from 'ofetch';
+
 import type { AsyncDataExecuteOptions } from '#app/composables/asyncData';
 import type { StoreMessageBody } from '#shared/utils/schemas/messages/storeMessage';
-import type { FetchError } from 'ofetch';
 
 import { useFormatFetchErrorData } from '../requests/useFormatFetchErrorData';
 
@@ -14,7 +15,7 @@ export const useStoreMessage = async () => {
     'accept-language': locale.value,
   }));
 
-  const { data, error, execute, status } = await useFetch<
+  const { data, error, execute, status } = await useCsrfFetch<
     StoreMessageData,
     FetchError<StoreMessageError>
   >('/api/messages', {

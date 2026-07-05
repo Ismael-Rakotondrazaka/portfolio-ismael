@@ -4,7 +4,6 @@ import type { HTMLAttributes } from 'vue';
 import { cn } from '@/lib/utils';
 
 import type { ButtonGroupVariants } from '.';
-
 import { buttonGroupVariants } from '.';
 
 const props = defineProps<{

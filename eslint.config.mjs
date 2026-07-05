@@ -1,6 +1,7 @@
 // @ts-check
+import prettierConfig from 'eslint-config-prettier';
 import perfectionist from 'eslint-plugin-perfectionist';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
 import withNuxt from './.nuxt/eslint.config.mjs';
 
@@ -9,45 +10,36 @@ const ignores = [
   '.next/**',
   'out/**',
   'build/**',
-  'next-env.d.ts',
-  'types/database/schema.ts',
-  'scripts',
-  'core/**',
-  'tests',
-  'apify',
+  'scripts/**',
+  'tests/**',
+  '.output/**',
+  '.nuxt/**',
+  '.data/**',
+  'old/**',
+  'docs/**',
+  '**/*.md',
 ];
 
 export default withNuxt([
   {
     ignores,
+  },
+  {
     rules: {
+      'no-console': 'error',
       'vue/html-self-closing': 'off',
     },
   },
+  perfectionist.configs['recommended-alphabetical'],
   {
-    ...eslintPluginPrettierRecommended,
-    ignores,
+    plugins: { 'simple-import-sort': simpleImportSort },
     rules: {
-      'prettier/prettier': [
-        'error',
-        {
-          arrowParens: 'avoid',
-          bracketSameLine: false,
-          bracketSpacing: true,
-          endOfLine: 'lf',
-          jsxSingleQuote: true,
-          plugins: ['prettier-plugin-tailwindcss'],
-          printWidth: 80,
-          proseWrap: 'preserve',
-          quoteProps: 'as-needed',
-          semi: true,
-          singleQuote: true,
-          tabWidth: 2,
-          trailingComma: 'es5',
-          useTabs: false,
-        },
-      ],
+      'perfectionist/sort-exports': 'off',
+      'perfectionist/sort-imports': 'off',
+      'perfectionist/sort-named-imports': 'off',
+      'simple-import-sort/exports': 'error',
+      'simple-import-sort/imports': 'error',
     },
   },
-  perfectionist.configs['recommended-alphabetical'],
+  prettierConfig,
 ]);

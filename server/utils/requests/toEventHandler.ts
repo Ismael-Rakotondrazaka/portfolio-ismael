@@ -1,5 +1,6 @@
-import type { Request } from '~~/shared/utils/requests/index';
 import type { EventHandler } from 'h3';
+
+import type { Request } from '~~/shared/utils/requests/index';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ToEventHandler<R extends Request<any, any, any, any>> =

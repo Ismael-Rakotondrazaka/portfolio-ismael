@@ -145,10 +145,16 @@
     "title": "Éducation",
     "list": [
       {
+        "title": "Master professionnel",
+        "description": "\"Software Engineering and Database\" course",
+        "location": "École Nationale d'Informatique - University of Fianarantsoa",
+        "period": "2024 - Present"
+      },
+      {
         "title": "Licence professionnelle",
         "description": "Génie Logicielle et Base de Données",
         "location": "École Nationale d'Informatique - Université de Fianarantsoa",
-        "period": "2022 - Présent"
+        "period": "2022 - 2024"
       },
       {
         "title": "Obtention du baccalauréat",
@@ -214,7 +220,8 @@
         }
       },
       "success": "Message envoyé avec succès.",
-      "error": "Une erreur est survenue lors de l'envoi du message."
+      "error": "Une erreur est survenue lors de l'envoi du message.",
+      "recaptchaFailed": "La vérification reCAPTCHA a échoué. Veuillez réessayer."
     }
   }
 }
