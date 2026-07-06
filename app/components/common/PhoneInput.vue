@@ -15,7 +15,7 @@
               variant="outline"
               class="flex gap-1 rounded-s-lg rounded-e-none px-3"
             >
-              <FlagComponent :country="inputValue" />
+              <FlagComponent :country="inputValue ?? ''" />
               <ChevronsUpDown class="-mr-2 h-4 w-4 opacity-50" />
             </Button>
           </PopoverTrigger>
@@ -38,7 +38,7 @@
                       }
                     "
                   >
-                    <FlagComponent :country="option?.iso2" />
+                    <FlagComponent :country="option?.iso2 ?? ''" />
                     <span class="flex-1 text-sm">{{ option.name }}</span>
                     <span class="text-foreground/50 text-sm">{{
                       option.dialCode

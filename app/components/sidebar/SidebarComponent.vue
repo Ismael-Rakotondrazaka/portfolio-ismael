@@ -62,7 +62,11 @@ const config = useRuntimeConfig();
           <SidebarMenu>
             <SidebarMenuItem v-for="menu in menuOptions" :key="menu.key">
               <SidebarMenuButton as-child>
-                <button @click="onSelect(menu.key)">
+                <button
+                  data-track="nav_section_clicked"
+                  :data-track-section="menu.key"
+                  @click="onSelect(menu.key)"
+                >
                   <Icon :name="menu.icon" size="16px" class="shrink-0" />
                   <span>{{ menu.label }}</span>
                 </button>

@@ -38,6 +38,8 @@ jobs:
             NUXT_PUBLIC_SITE_URL=${{ vars.NUXT_PUBLIC_SITE_URL }}
             NUXT_PUBLIC_APP_VERSION=${{ vars.NUXT_PUBLIC_APP_VERSION }}
             NUXT_PUBLIC_SCRIPTS_GOOGLE_RECAPTCHA_SITE_KEY=${{ vars.NUXT_PUBLIC_SCRIPTS_GOOGLE_RECAPTCHA_SITE_KEY }}
+            NUXT_PUBLIC_OPENPANEL_CLIENT_ID=${{ vars.NUXT_PUBLIC_OPENPANEL_CLIENT_ID }}
+            NUXT_PUBLIC_OPENPANEL_API_URL=${{ vars.NUXT_PUBLIC_OPENPANEL_API_URL }}
           tags: |
             ghcr.io/ismael-rakotondrazaka/portfolio-ismael:latest
             ghcr.io/ismael-rakotondrazaka/portfolio-ismael:${{ github.sha }}

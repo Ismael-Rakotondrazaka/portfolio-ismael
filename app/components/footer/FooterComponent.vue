@@ -18,7 +18,14 @@
           variant="link"
           class="text-white"
         >
-          <NuxtLink :href="link.href" target="_blank" class="">
+          <NuxtLink
+            :href="link.href"
+            target="_blank"
+            class=""
+            data-track="social_link_clicked"
+            :data-track-link_text="link.text"
+            data-track-location="footer"
+          >
             <Icon :name="link.icon" size="2rem" />
             <p class="">
               {{ link.text }}

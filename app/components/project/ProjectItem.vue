@@ -31,13 +31,27 @@
             </div>
             <ButtonGroup class="w-full">
               <Button v-if="source" variant="default" class="w-1/2!" as-child>
-                <NuxtLink :href="source" target="_blank" class="text-base">
+                <NuxtLink
+                  :href="source"
+                  target="_blank"
+                  class="text-base"
+                  data-track="project_link_clicked"
+                  :data-track-project_name="name"
+                  data-track-link_type="source"
+                >
                   <Icon name="mdi:code-tags" />
                   Source
                 </NuxtLink>
               </Button>
               <Button v-if="demo" variant="default" class="w-1/2!" as-child>
-                <NuxtLink :href="demo" target="_blank" class="text-base">
+                <NuxtLink
+                  :href="demo"
+                  target="_blank"
+                  class="text-base"
+                  data-track="project_link_clicked"
+                  :data-track-project_name="name"
+                  data-track-link_type="demo"
+                >
                   <Icon name="mdi:earth" />
                   Demo
                 </NuxtLink>

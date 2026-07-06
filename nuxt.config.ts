@@ -86,10 +86,17 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     'nuxt-security',
     '@nuxt/scripts',
+    '@openpanel/nuxt',
   ],
 
   ogImage: {
     enabled: false,
+  },
+
+  openpanel: {
+    apiUrl: process.env.NUXT_PUBLIC_OPENPANEL_API_URL,
+    clientId: process.env.NUXT_PUBLIC_OPENPANEL_CLIENT_ID,
+    trackAttributes: true,
   },
 
   routeRules: {
@@ -145,7 +152,11 @@ export default defineNuxtConfig({
           'https://www.google.com',
           'https://www.recaptcha.net',
           'https://ipwho.is',
-        ],
+          // trailing slash makes this a path-prefix match, covering /api/track etc.
+          process.env.NUXT_PUBLIC_OPENPANEL_API_URL
+            ? `${process.env.NUXT_PUBLIC_OPENPANEL_API_URL}/`
+            : undefined,
+        ].filter((value): value is string => !!value),
         'frame-src': [
           "'self'",
           'https://www.google.com',

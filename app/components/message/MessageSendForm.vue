@@ -48,6 +48,8 @@ const buttonText = computed(() =>
 
 const { error, execute, message } = await useStoreMessage();
 
+const op = useOpenPanel();
+
 const { public: publicConfig } = useRuntimeConfig();
 const { onLoaded } = useScriptGoogleRecaptcha();
 
@@ -73,11 +75,13 @@ const createMessageHandler = handleSubmit(async values => {
   await execute({ ...values, recaptchaToken });
 
   if (error.value !== undefined) {
+    op.track('contact_form_submitted', { status: 'error' });
     if (error.value.data) {
       setErrors(error.value.data);
     }
     toast.error(error.value.message ?? t('messages.store.error'));
   } else {
+    op.track('contact_form_submitted', { status: 'success' });
     toast.success(message.value!);
     setTimeout(() => {
       resetForm();
@@ -190,7 +194,11 @@ const createMessageHandler = handleSubmit(async values => {
     </CardContent>
     <CardFooter>
       <Field orientation="horizontal">
-        <Button type="submit" form="message-store">
+        <Button
+          type="submit"
+          form="message-store"
+          data-track="contact_form_submit_clicked"
+        >
           <Icon name="mdi:send" size="1rem" />
           {{ buttonText }}
         </Button>
