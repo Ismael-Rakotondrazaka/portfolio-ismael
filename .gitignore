@@ -50,3 +50,6 @@ logs
 
 # Temporary files
 temp
+
+# Sentry Config File
+.env.sentry-build-plugin

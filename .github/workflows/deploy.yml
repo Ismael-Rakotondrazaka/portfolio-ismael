@@ -32,6 +32,8 @@ jobs:
         with:
           context: .
           push: true
+          secrets: |
+            sentry_auth_token=${{ secrets.SENTRY_AUTH_TOKEN }}
           build-args: |
             APP_VERSION=${{ vars.APP_VERSION }}
             NUXT_SITE_URL=${{ vars.NUXT_SITE_URL }}

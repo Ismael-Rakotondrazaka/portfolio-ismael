@@ -70,14 +70,18 @@ export class Exception<TData> extends Error {
     if (error instanceof Exception) {
       return error;
     } else {
-      logger.error({
-        err:
-          error instanceof Error
-            ? error
-            : new Error(translator.t('errors.default')),
-        event: 'http.server.error',
-        path: event.path,
-      });
+      const normalizedError =
+        error instanceof Error
+          ? error
+          : new Error(translator.t('errors.default'));
+      logger.error(
+        {
+          err: normalizedError,
+          event: 'http.server.error',
+          path: event.path,
+        },
+        `Unhandled server error: ${normalizedError.message}`
+      );
 
       return new Exception({
         data: {},
@@ -100,7 +104,7 @@ export class Exception<TData> extends Error {
 
     logger.error(
       { event: 'http.server.error', path: event.path },
-      'Internal Server error'
+      `Internal server error: ${message}`
     );
 
     return new Exception({

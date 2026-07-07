@@ -44,9 +44,11 @@ export async function verifyRecaptchaToken(
 
     return { score: response.score, success };
   } catch (error) {
+    const normalizedError =
+      error instanceof Error ? error : new Error(String(error));
     logger.error(
-      { err: error, event: 'recaptcha.verification.error' },
-      'reCAPTCHA verification request failed'
+      { err: normalizedError, event: 'recaptcha.verification.error' },
+      `reCAPTCHA verification request failed: ${normalizedError.message}`
     );
 
     return { success: false };

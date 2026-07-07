@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 # ---------- BUILD STAGE ----------
 FROM node:24-alpine AS builder
 
@@ -20,7 +22,13 @@ COPY package.json package-lock.json ./
 RUN npm ci --ignore-scripts
 
 COPY . .
-RUN npm run build
+# Sourcemap upload to Sentry/GlitchTip needs SENTRY_AUTH_TOKEN at build time;
+# mounted as a BuildKit secret (not ARG/ENV) so it never lands in image layers.
+RUN --mount=type=secret,id=sentry_auth_token,required=false \
+  if [ -f /run/secrets/sentry_auth_token ]; then \
+  export SENTRY_AUTH_TOKEN="$(cat /run/secrets/sentry_auth_token)"; \
+  fi; \
+  npm run build
 
 # ---------- PRODUCTION STAGE ----------
 FROM node:24-alpine

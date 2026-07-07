@@ -36,7 +36,6 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/tailwind.css', '~/assets/css/main.css'],
-
   devtools: { enabled: true },
 
   i18n: {
@@ -87,6 +86,7 @@ export default defineNuxtConfig({
     'nuxt-security',
     '@nuxt/scripts',
     '@openpanel/nuxt',
+    '@sentry/nuxt/module',
   ],
 
   ogImage: {
@@ -112,6 +112,7 @@ export default defineNuxtConfig({
       contactEmail: '',
       contactFullName: '',
       contactPhoneNumber: '',
+      sentryDsn: '',
     },
     recaptchaSecretKey: '',
   },
@@ -152,6 +153,7 @@ export default defineNuxtConfig({
           'https://www.google.com',
           'https://www.recaptcha.net',
           'https://ipwho.is',
+          'https://ite.ismaelrakoto.com',
           // trailing slash makes this a path-prefix match, covering /api/track etc.
           process.env.NUXT_PUBLIC_OPENPANEL_API_URL
             ? `${process.env.NUXT_PUBLIC_OPENPANEL_API_URL}/`
@@ -186,6 +188,12 @@ export default defineNuxtConfig({
       maxRequestSizeInBytes: 500_000,
       maxUploadFileRequestInBytes: 500_000,
     },
+  },
+
+  sentry: {
+    org: 'ismael-rakoto',
+    project: 'portfolio',
+    sentryUrl: 'https://ite.ismaelrakoto.com/',
   },
 
   shadcn: {
@@ -229,6 +237,10 @@ export default defineNuxtConfig({
       ],
     },
     zeroRuntime: true,
+  },
+
+  sourcemap: {
+    client: 'hidden',
   },
 
   veeValidate: {
